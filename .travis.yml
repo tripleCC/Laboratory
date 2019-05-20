@@ -5,8 +5,8 @@
 osx_image: xcode10
 language: ruby
 before_install:
-- gem install rest-client --no-rdoc --no-ri --no-document --quiet
-- gem install redcarpet --no-rdoc --no-ri --no-document --quiet
-- gem install parallel --no-rdoc --no-ri --no-document --quiet
+- gem install rest-client --no-document --quiet
+- gem install redcarpet --no-document --quiet
+- gem install parallel --no-document --quiet
 script:
 - ruby link-checker.rb
