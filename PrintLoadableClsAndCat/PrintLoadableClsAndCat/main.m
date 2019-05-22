@@ -12,7 +12,7 @@
 @interface A : NSObject
 @end
 @implementation A
-+ (void)load { }
+//+ (void)load { }
 @end
 
 @implementation A (ACategory)

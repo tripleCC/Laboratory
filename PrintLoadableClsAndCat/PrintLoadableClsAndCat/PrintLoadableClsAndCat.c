@@ -43,6 +43,7 @@ void pl_print_loadable_clss_and_cats(void *func) {
     for (unsigned int i = 0; i < bytes / sizeof(Category); i++) {
         Category cat = cats[i];
         Class cls = (Class)((void *)cat + sizeof(char *));
+        // DO NOT use cat->cls! cls may be cat->cls->isa instead
         printf("%s(%s)\n", object_getClassName((id)cls), *((char **)cat));
     }
 }
