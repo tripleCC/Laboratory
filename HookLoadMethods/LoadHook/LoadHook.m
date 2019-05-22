@@ -149,11 +149,11 @@ static void printLoadInfoWappers(void) {
     for (LHLoadInfo *info in infos) {
         totalDuration += info.duration;
     }
-    printf("\n\t\t\tTotal load time: %f milliseconds", totalDuration * 1000);
+    printf("\n\t\t\t\t\t\t\tTotal load time: %f milliseconds", totalDuration * 1000);
     for (LHLoadInfo *info in infos) {
         NSString *clsname = [NSString stringWithFormat:@"%@", info.clsname];
         if (info.catname) clsname = [NSString stringWithFormat:@"%@(%@)", clsname, info.catname];
-        printf("\n%30s load time: %f milliseconds", [clsname cStringUsingEncoding:NSUTF8StringEncoding], info.duration * 1000);
+        printf("\n%40s load time: %f milliseconds", [clsname cStringUsingEncoding:NSUTF8StringEncoding], info.duration * 1000);
     }
     printf("\n");
 }
