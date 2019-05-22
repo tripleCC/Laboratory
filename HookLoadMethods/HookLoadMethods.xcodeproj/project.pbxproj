@@ -16,7 +16,7 @@
 		D65351B022958335000560E1 /* LoadHook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65351A922958335000560E1 /* LoadHook.framework */; };
 		D65351B122958335000560E1 /* LoadHook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D65351A922958335000560E1 /* LoadHook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D65351B52295833F000560E1 /* LoadHook.m in Sources */ = {isa = PBXBuildFile; fileRef = D653517D2294106F000560E1 /* LoadHook.m */; };
-		D65351B6229583E6000560E1 /* LoadHook.h in Headers */ = {isa = PBXBuildFile; fileRef = D65351A22295249C000560E1 /* LoadHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D65351B8229589C6000560E1 /* LoadHook.h in Headers */ = {isa = PBXBuildFile; fileRef = D65351B7229589C6000560E1 /* LoadHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +55,9 @@
 		D653515C2293E79A000560E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D653515D2293E79A000560E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D653517D2294106F000560E1 /* LoadHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadHook.m; sourceTree = "<group>"; };
-		D65351A22295249C000560E1 /* LoadHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoadHook.h; path = ../HookFramework/LoadHook.h; sourceTree = "<group>"; };
 		D65351A922958335000560E1 /* LoadHook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadHook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65351AC22958335000560E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D65351B7229589C6000560E1 /* LoadHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadHook.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 		D65351AA22958335000560E1 /* LoadHook */ = {
 			isa = PBXGroup;
 			children = (
-				D65351A22295249C000560E1 /* LoadHook.h */,
+				D65351B7229589C6000560E1 /* LoadHook.h */,
 				D653517D2294106F000560E1 /* LoadHook.m */,
 				D65351AC22958335000560E1 /* Info.plist */,
 			);
@@ -130,7 +130,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65351B6229583E6000560E1 /* LoadHook.h in Headers */,
+				D65351B8229589C6000560E1 /* LoadHook.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

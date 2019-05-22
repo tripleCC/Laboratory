@@ -1,0 +1,6 @@
+framework module LoadHook {
+  umbrella header "LoadHook.h"
+
+  export *
+  module * { export * }
+}
