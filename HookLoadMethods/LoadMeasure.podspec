@@ -19,8 +19,8 @@ LoadMeasure measure load time consumption.
   s.homepage         = 'https://github.com/tripleCC/Laboratory/tree/master/HookLoadMethods'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'tripleCC' => 'triplec.linux@gmail.com' }
-  s.source           = { :http => 'https://github.com/tripleCC/Laboratory/blob/master/HookLoadMethods/LoadMeasure.framework.zip'}
+  s.source           = { :git => 'https://github.com/tripleCC/Laboratory.git', :tag => s.version}
   s.ios.deployment_target = '8.0'
   
-  s.vendored_frameworks = "#{s.name}.framework"
+  s.vendored_frameworks = "HookLoadMethods/#{s.name}.framework"
 end
