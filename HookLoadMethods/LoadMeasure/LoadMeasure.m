@@ -183,19 +183,20 @@ static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper) {
     unsigned int count = 0;
     Class metaCls = object_getClass(infoWrapper.cls);
     Method *methodList = class_copyMethodList(metaCls, &count);
-    for (unsigned int i = 0; i < count; i++) {
+    for (unsigned int i = 0, j = 0; i < count; i++) {
         Method method = methodList[i];
         SEL sel = method_getName(method);
         const char *name = sel_getName(sel);
         if (!strcmp(name, "load")) {
             LMLoadInfo *info = nil;
-            if (i > infoWrapper.infos.count - 1) {
+            if (j > infoWrapper.infos.count - 1) {
                 info = [[LMLoadInfo alloc] initWithClass:infoWrapper.cls];
                 [infoWrapper insertLoadInfo:info];
                 LMAllLoadNumber++;
             } else {
-                info = infoWrapper.infos[i];
+                info = infoWrapper.infos[j];
             }
+            ++j;
             swizzleLoadMethod(infoWrapper.cls, method, info);
         }
     }

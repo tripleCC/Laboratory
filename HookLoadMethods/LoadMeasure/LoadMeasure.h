@@ -1,13 +1,13 @@
 //
-//  LoadHook.h
-//  HookFramework
+//  LoadMeasure.h
+//  LoadMeasure
 //
 //  Created by tripleCC on 5/22/19.
 //  Copyright © 2019 tripleCC. All rights reserved.
 //
 
-#ifndef LoadHook_h
-#define LoadHook_h
+#ifndef LoadMeasure_h
+#define LoadMeasure_h
 
 #import <Foundation/Foundation.h>
 
@@ -27,4 +27,4 @@
 
 extern const NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers;
 
-#endif /* LoadHook_h */
+#endif /* LoadMeasure_h */
