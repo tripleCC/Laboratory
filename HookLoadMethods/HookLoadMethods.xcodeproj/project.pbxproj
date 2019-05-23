@@ -17,6 +17,10 @@
 		D65351CB229643CF000560E1 /* LoadMeasure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D65351C3229643CF000560E1 /* LoadMeasure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D65351CF2296451E000560E1 /* LoadMeasure.h in Headers */ = {isa = PBXBuildFile; fileRef = D65351B7229589C6000560E1 /* LoadMeasure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D65351D022964526000560E1 /* LoadMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = D653517D2294106F000560E1 /* LoadMeasure.m */; };
+		D68CAB1D22969F4D009FC77C /* DynamicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68CAB1622969F4D009FC77C /* DynamicFramework.framework */; };
+		D68CAB1E22969F4D009FC77C /* DynamicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D68CAB1622969F4D009FC77C /* DynamicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D68CAB2422969F5B009FC77C /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D68CAB2222969F5B009FC77C /* DynamicFramework.h */; };
+		D68CAB2522969F5B009FC77C /* DynamicFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = D68CAB2322969F5B009FC77C /* DynamicFramework.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D65351C2229643CF000560E1;
 			remoteInfo = LoadMeasure;
+		};
+		D68CAB1B22969F4D009FC77C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D65351432293E796000560E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D68CAB1522969F4D009FC77C;
+			remoteInfo = DynamicFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,6 +48,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D65351CB229643CF000560E1 /* LoadMeasure.framework in Embed Frameworks */,
+				D68CAB1E22969F4D009FC77C /* DynamicFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +70,10 @@
 		D65351B7229589C6000560E1 /* LoadMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMeasure.h; sourceTree = "<group>"; };
 		D65351C3229643CF000560E1 /* LoadMeasure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoadMeasure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65351C6229643CF000560E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68CAB1622969F4D009FC77C /* DynamicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68CAB1922969F4D009FC77C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68CAB2222969F5B009FC77C /* DynamicFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicFramework.h; sourceTree = "<group>"; };
+		D68CAB2322969F5B009FC77C /* DynamicFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicFramework.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +82,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65351CA229643CF000560E1 /* LoadMeasure.framework in Frameworks */,
+				D68CAB1D22969F4D009FC77C /* DynamicFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D65351C0229643CF000560E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68CAB1322969F4D009FC77C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,6 +108,7 @@
 			children = (
 				D653514D2293E796000560E1 /* HookLoadMethods */,
 				D65351C4229643CF000560E1 /* LoadMeasure */,
+				D68CAB1722969F4D009FC77C /* DynamicFramework */,
 				D653514C2293E796000560E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +118,7 @@
 			children = (
 				D653514B2293E796000560E1 /* HookLoadMethods.app */,
 				D65351C3229643CF000560E1 /* LoadMeasure.framework */,
+				D68CAB1622969F4D009FC77C /* DynamicFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +149,16 @@
 			path = LoadMeasure;
 			sourceTree = "<group>";
 		};
+		D68CAB1722969F4D009FC77C /* DynamicFramework */ = {
+			isa = PBXGroup;
+			children = (
+				D68CAB1922969F4D009FC77C /* Info.plist */,
+				D68CAB2222969F5B009FC77C /* DynamicFramework.h */,
+				D68CAB2322969F5B009FC77C /* DynamicFramework.m */,
+			);
+			path = DynamicFramework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,6 +167,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D65351CF2296451E000560E1 /* LoadMeasure.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68CAB1122969F4D009FC77C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68CAB2422969F5B009FC77C /* DynamicFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +194,7 @@
 			);
 			dependencies = (
 				D65351C9229643CF000560E1 /* PBXTargetDependency */,
+				D68CAB1C22969F4D009FC77C /* PBXTargetDependency */,
 			);
 			name = HookLoadMethods;
 			productName = HookLoadMethods;
@@ -174,6 +219,24 @@
 			productReference = D65351C3229643CF000560E1 /* LoadMeasure.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D68CAB1522969F4D009FC77C /* DynamicFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68CAB2122969F4D009FC77C /* Build configuration list for PBXNativeTarget "DynamicFramework" */;
+			buildPhases = (
+				D68CAB1122969F4D009FC77C /* Headers */,
+				D68CAB1222969F4D009FC77C /* Sources */,
+				D68CAB1322969F4D009FC77C /* Frameworks */,
+				D68CAB1422969F4D009FC77C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicFramework;
+			productName = DynamicFramework;
+			productReference = D68CAB1622969F4D009FC77C /* DynamicFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,6 +250,9 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					D65351C2229643CF000560E1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D68CAB1522969F4D009FC77C = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -206,6 +272,7 @@
 			targets = (
 				D653514A2293E796000560E1 /* HookLoadMethods */,
 				D65351C2229643CF000560E1 /* LoadMeasure */,
+				D68CAB1522969F4D009FC77C /* DynamicFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +289,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D65351C1229643CF000560E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68CAB1422969F4D009FC77C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,6 +323,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D68CAB1222969F4D009FC77C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68CAB2522969F5B009FC77C /* DynamicFramework.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -256,6 +338,11 @@
 			isa = PBXTargetDependency;
 			target = D65351C2229643CF000560E1 /* LoadMeasure */;
 			targetProxy = D65351C8229643CF000560E1 /* PBXContainerItemProxy */;
+		};
+		D68CAB1C22969F4D009FC77C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D68CAB1522969F4D009FC77C /* DynamicFramework */;
+			targetProxy = D68CAB1B22969F4D009FC77C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -479,6 +566,60 @@
 			};
 			name = Release;
 		};
+		D68CAB1F22969F4D009FC77C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DynamicFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caotai.DynamicFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D68CAB2022969F4D009FC77C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DynamicFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.caotai.DynamicFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +646,15 @@
 			buildConfigurations = (
 				D65351CC229643CF000560E1 /* Debug */,
 				D65351CD229643CF000560E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68CAB2122969F4D009FC77C /* Build configuration list for PBXNativeTarget "DynamicFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68CAB1F22969F4D009FC77C /* Debug */,
+				D68CAB2022969F4D009FC77C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

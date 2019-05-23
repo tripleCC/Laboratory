@@ -15,17 +15,6 @@
 NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers = nil;
 static NSInteger LMAllLoadNumber = 0;
 
-@interface LMLoadInfo () {
-    @package
-    SEL _sel;
-    CFAbsoluteTime _start;
-    CFAbsoluteTime _end;
-}
-
-- (instancetype)initWithClass:(Class)cls;
-- (instancetype)initWithCategory:(Category)cat;
-@end
-
 @interface LMLoadInfoWrapper () {
     @package
     NSMutableArray <LMLoadInfo *> *_infos;
@@ -45,6 +34,17 @@ static NSInteger LMAllLoadNumber = 0;
 - (void)insertLoadInfo:(LMLoadInfo *)info {
     [_infos insertObject:info atIndex:0];
 }
+@end
+
+@interface LMLoadInfo () {
+    @package
+    SEL _sel;
+    CFAbsoluteTime _start;
+    CFAbsoluteTime _end;
+}
+
+- (instancetype)initWithClass:(Class)cls;
+- (instancetype)initWithCategory:(Category)cat;
 @end
 
 @implementation LMLoadInfo
@@ -76,6 +76,16 @@ static NSInteger LMAllLoadNumber = 0;
 }
 @end
 
+static SEL getRandomLoadSelector(void);
+static void printLoadInfoWappers(void);
+static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper);
+static void swizzleLoadMethod(Class cls, Method method, LMLoadInfo *info);
+static NSArray <LMLoadInfo *> *getNoLazyArray(const struct mach_header *mhdr);
+static const struct mach_header **copyAllNoSystemImageHeader(unsigned int *outCount);
+static NSArray <LMLoadInfoWrapper *> *prepareMeasureForImageHeader(const struct mach_header *mhdr);
+static void *getDataSection(const struct mach_header *mhdr, const char *sectname, size_t *bytes);
+static NSDictionary <NSString *, LMLoadInfoWrapper *> *groupNoLazyArray(NSArray <LMLoadInfo *> *noLazyArray);
+
 static void *getDataSection(const struct mach_header *mhdr, const char *sectname, size_t *bytes) {
     void *data = getsectiondata((void *)mhdr, "__DATA", sectname, bytes);
     if (!data) {
@@ -88,7 +98,29 @@ static void *getDataSection(const struct mach_header *mhdr, const char *sectname
     return data;
 }
 
-static const struct mach_header *getImageHeaderForName(const char *name) {
+static const struct mach_header **copyAllNoSystemImageHeader(unsigned int *outCount) {
+    unsigned int imageCount = _dyld_image_count();
+    unsigned int count = 0;
+    const struct mach_header **mhdrList = NULL;
+    
+    if (imageCount > 0) {
+        mhdrList = (const struct mach_header **)malloc(sizeof(struct mach_header *) * imageCount);
+        for (unsigned int i = 0; i < imageCount; i++) {
+            const char *imageName = _dyld_get_image_name(i);
+            if (!strstr(imageName, "iPhoneOS.platform")) {
+                const struct mach_header *mhdr = _dyld_get_image_header(i);
+                mhdrList[count++] = mhdr;
+            }
+        }
+        mhdrList[count] = NULL;
+    }
+    
+    if (outCount) *outCount = count;
+    
+    return mhdrList;
+}
+
+__unused static const struct mach_header *getImageHeaderForName(const char *name) {
     unsigned int count = _dyld_image_count();
     for (unsigned int i = 0; i < count; i++) {
         const char *imageName = _dyld_get_image_name(i);
@@ -99,7 +131,7 @@ static const struct mach_header *getImageHeaderForName(const char *name) {
     return NULL;
 }
 
-static SEL randomLoadSelector(void) {
+static SEL getRandomLoadSelector(void) {
     return NSSelectorFromString([NSString stringWithFormat:@"_lh_hooking_%x_load", arc4random()]);
 }
 
@@ -161,7 +193,7 @@ static void printLoadInfoWappers(void) {
 static void swizzleLoadMethod(Class cls, Method method, LMLoadInfo *info) {
 retry:
     do {
-        SEL hookSel = randomLoadSelector();
+        SEL hookSel = getRandomLoadSelector();
         Class metaCls = object_getClass(cls);
         IMP hookImp = imp_implementationWithBlock(^ {
             info->_start = CFAbsoluteTimeGetCurrent();
@@ -203,15 +235,30 @@ static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper) {
     free(methodList);
 }
 
-__attribute__((constructor)) void LoadMeasure_Initializer(void) {
-    const char *main = [[NSBundle mainBundle].executablePath cStringUsingEncoding:NSUTF8StringEncoding];
-    const struct mach_header *mhdr = getImageHeaderForName(main);
+static NSArray <LMLoadInfoWrapper *> *prepareMeasureForImageHeader(const struct mach_header *mhdr) {
     NSArray <LMLoadInfo *> *infos = getNoLazyArray(mhdr);
-    LMAllLoadNumber = infos.count;
     NSDictionary <NSString *, LMLoadInfoWrapper *> *groupedInfos = groupNoLazyArray(infos);
+    
+    LMAllLoadNumber += infos.count;
     for (NSString *clsname in groupedInfos.allKeys) {
         LMLoadInfoWrapper *infoWrapper = groupedInfos[clsname];
         hookAllLoadMethods(infoWrapper);
     }
-    LMLoadInfoWappers = groupedInfos.allValues;
+    
+    return groupedInfos.allValues;
+}
+
+__attribute__((constructor)) static void LoadMeasure_Initializer(void) {
+    unsigned int count = 0;
+    const struct mach_header **mhdrList = copyAllNoSystemImageHeader(&count);
+    NSMutableArray <LMLoadInfoWrapper *> *allInfoWappers = [NSMutableArray array];
+    
+    for (unsigned int i = 0; i < count; i++) {
+        const struct mach_header *mhdr = mhdrList[i];
+        NSArray <LMLoadInfoWrapper *> *infoWrappers = prepareMeasureForImageHeader(mhdr);
+        [allInfoWappers addObjectsFromArray:infoWrappers];
+    }
+    
+    free(mhdrList);
+    LMLoadInfoWappers = allInfoWappers;
 }
