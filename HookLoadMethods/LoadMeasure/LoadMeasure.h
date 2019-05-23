@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LHLoadInfo : NSObject
+@interface LMLoadInfo : NSObject
 @property (assign, nonatomic, readonly) SEL sel;
 @property (copy, nonatomic, readonly) NSString *clsname;
 @property (copy, nonatomic, readonly) NSString *catname;
@@ -20,11 +20,11 @@
 @property (assign, nonatomic, readonly) CFAbsoluteTime duration;
 @end
 
-@interface LHLoadInfoWrapper : NSObject
+@interface LMLoadInfoWrapper : NSObject
 @property (assign, nonatomic, readonly) Class cls;
-@property (copy, nonatomic, readonly) NSArray <LHLoadInfo *> *infos;
+@property (copy, nonatomic, readonly) NSArray <LMLoadInfo *> *infos;
 @end
 
-extern const NSArray <LHLoadInfoWrapper *> *LHLoadInfoWappers;
+extern const NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers;
 
 #endif /* LoadHook_h */

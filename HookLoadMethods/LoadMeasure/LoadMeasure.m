@@ -10,12 +10,12 @@
 #include <mach-o/dyld.h>
 #include <objc/runtime.h>
 #include <mach-o/getsect.h>
-#import "LoadHook.h"
+#import "LoadMeasure.h"
 
-NSArray <LHLoadInfoWrapper *> *LHLoadInfoWappers = nil;
-static NSInteger LHAllLoadNumber = 0;
+NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers = nil;
+static NSInteger LMAllLoadNumber = 0;
 
-@interface LHLoadInfo () {
+@interface LMLoadInfo () {
     @package
     SEL _sel;
     CFAbsoluteTime _start;
@@ -26,14 +26,14 @@ static NSInteger LHAllLoadNumber = 0;
 - (instancetype)initWithCategory:(Category)cat;
 @end
 
-@interface LHLoadInfoWrapper () {
+@interface LMLoadInfoWrapper () {
     @package
-    NSMutableArray <LHLoadInfo *> *_infos;
+    NSMutableArray <LMLoadInfo *> *_infos;
 }
 - (instancetype)initWithClass:(Class)cls;
 @end
 
-@implementation LHLoadInfoWrapper
+@implementation LMLoadInfoWrapper
 - (instancetype)initWithClass:(Class)cls {
     if (self = [super init]) {
         _infos = [NSMutableArray array];
@@ -42,12 +42,12 @@ static NSInteger LHAllLoadNumber = 0;
     return self;
 }
 
-- (void)insertLoadInfo:(LHLoadInfo *)info {
+- (void)insertLoadInfo:(LMLoadInfo *)info {
     [_infos insertObject:info atIndex:0];
 }
 @end
 
-@implementation LHLoadInfo
+@implementation LMLoadInfo
 - (instancetype)initWithClass:(Class)cls {
     if (!cls) return nil;
     if (self = [super init]) {
@@ -103,32 +103,32 @@ static SEL randomLoadSelector(void) {
     return NSSelectorFromString([NSString stringWithFormat:@"_lh_hooking_%x_load", arc4random()]);
 }
 
-static NSArray <LHLoadInfo *> *getNoLazyArray(const struct mach_header *mhdr) {
+static NSArray <LMLoadInfo *> *getNoLazyArray(const struct mach_header *mhdr) {
     NSMutableArray *noLazyArray = [NSMutableArray new];
     unsigned long bytes = 0;
     Class *clses = (Class *)getDataSection(mhdr, "__objc_nlclslist", &bytes);
     for (unsigned int i = 0; i < bytes / sizeof(Class); i++) {
-        LHLoadInfo *info = [[LHLoadInfo alloc] initWithClass:clses[i]];
+        LMLoadInfo *info = [[LMLoadInfo alloc] initWithClass:clses[i]];
         [noLazyArray addObject:info];
     }
     
     bytes = 0;
     Category *cats = getDataSection(mhdr, "__objc_nlcatlist", &bytes);
     for (unsigned int i = 0; i < bytes / sizeof(Category); i++) {
-        LHLoadInfo *info = [[LHLoadInfo alloc] initWithCategory:cats[i]];
+        LMLoadInfo *info = [[LMLoadInfo alloc] initWithCategory:cats[i]];
         [noLazyArray addObject:info];
     }
     
     return noLazyArray;
 }
 
-static NSDictionary <NSString *, LHLoadInfoWrapper *> *groupNoLazyArray(NSArray <LHLoadInfo *> *noLazyArray) {
+static NSDictionary <NSString *, LMLoadInfoWrapper *> *groupNoLazyArray(NSArray <LMLoadInfo *> *noLazyArray) {
     NSMutableDictionary *noLazyMap = [NSMutableDictionary dictionary];
-    for (LHLoadInfo *info in noLazyArray) {
-        LHLoadInfoWrapper *infoWrapper = noLazyMap[info.clsname];
+    for (LMLoadInfo *info in noLazyArray) {
+        LMLoadInfoWrapper *infoWrapper = noLazyMap[info.clsname];
         if (!infoWrapper) {
             Class cls = objc_getClass([info.clsname cStringUsingEncoding:NSUTF8StringEncoding]);
-            infoWrapper = [[LHLoadInfoWrapper alloc] initWithClass:cls];
+            infoWrapper = [[LMLoadInfoWrapper alloc] initWithClass:cls];
         }
         [infoWrapper insertLoadInfo:info];
         noLazyMap[info.clsname] = infoWrapper;
@@ -139,18 +139,18 @@ static NSDictionary <NSString *, LHLoadInfoWrapper *> *groupNoLazyArray(NSArray 
 
 static void printLoadInfoWappers(void) {
     NSMutableArray *infos = [NSMutableArray array];
-    for (LHLoadInfoWrapper *infoWrapper in LHLoadInfoWappers) {
+    for (LMLoadInfoWrapper *infoWrapper in LMLoadInfoWappers) {
         [infos addObjectsFromArray:infoWrapper.infos];
     }
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"duration" ascending:NO];
     [infos sortUsingDescriptors:@[descriptor]];
     
     CFAbsoluteTime totalDuration = 0;
-    for (LHLoadInfo *info in infos) {
+    for (LMLoadInfo *info in infos) {
         totalDuration += info.duration;
     }
     printf("\n\t\t\t\t\t\t\tTotal load time: %f milliseconds", totalDuration * 1000);
-    for (LHLoadInfo *info in infos) {
+    for (LMLoadInfo *info in infos) {
         NSString *clsname = [NSString stringWithFormat:@"%@", info.clsname];
         if (info.catname) clsname = [NSString stringWithFormat:@"%@(%@)", clsname, info.catname];
         printf("\n%40s load time: %f milliseconds", [clsname cStringUsingEncoding:NSUTF8StringEncoding], info.duration * 1000);
@@ -158,7 +158,7 @@ static void printLoadInfoWappers(void) {
     printf("\n");
 }
 
-static void swizzleLoadMethod(Class cls, Method method, LHLoadInfo *info) {
+static void swizzleLoadMethod(Class cls, Method method, LMLoadInfo *info) {
 retry:
     do {
         SEL hookSel = randomLoadSelector();
@@ -167,7 +167,7 @@ retry:
             info->_start = CFAbsoluteTimeGetCurrent();
             ((void (*)(Class, SEL))objc_msgSend)(cls, hookSel);
             info->_end = CFAbsoluteTimeGetCurrent();
-            if (!--LHAllLoadNumber) printLoadInfoWappers();
+            if (!--LMAllLoadNumber) printLoadInfoWappers();
         });
         
         BOOL didAddMethod = class_addMethod(metaCls, hookSel, hookImp, method_getTypeEncoding(method));
@@ -179,7 +179,7 @@ retry:
     } while(0);
 }
 
-static void hookAllLoadMethods(LHLoadInfoWrapper *infoWrapper) {
+static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper) {
     unsigned int count = 0;
     Class metaCls = object_getClass(infoWrapper.cls);
     Method *methodList = class_copyMethodList(metaCls, &count);
@@ -188,11 +188,11 @@ static void hookAllLoadMethods(LHLoadInfoWrapper *infoWrapper) {
         SEL sel = method_getName(method);
         const char *name = sel_getName(sel);
         if (!strcmp(name, "load")) {
-            LHLoadInfo *info = nil;
+            LMLoadInfo *info = nil;
             if (i > infoWrapper.infos.count - 1) {
-                info = [[LHLoadInfo alloc] initWithClass:infoWrapper.cls];
+                info = [[LMLoadInfo alloc] initWithClass:infoWrapper.cls];
                 [infoWrapper insertLoadInfo:info];
-                LHAllLoadNumber++;
+                LMAllLoadNumber++;
             } else {
                 info = infoWrapper.infos[i];
             }
@@ -202,15 +202,15 @@ static void hookAllLoadMethods(LHLoadInfoWrapper *infoWrapper) {
     free(methodList);
 }
 
-__attribute__((constructor)) void LoadHook_Initializer(void) {
+__attribute__((constructor)) void LoadMeasure_Initializer(void) {
     const char *main = [[NSBundle mainBundle].executablePath cStringUsingEncoding:NSUTF8StringEncoding];
     const struct mach_header *mhdr = getImageHeaderForName(main);
-    NSArray <LHLoadInfo *> *infos = getNoLazyArray(mhdr);
-    LHAllLoadNumber = infos.count;
-    NSDictionary <NSString *, LHLoadInfoWrapper *> *groupedInfos = groupNoLazyArray(infos);
+    NSArray <LMLoadInfo *> *infos = getNoLazyArray(mhdr);
+    LMAllLoadNumber = infos.count;
+    NSDictionary <NSString *, LMLoadInfoWrapper *> *groupedInfos = groupNoLazyArray(infos);
     for (NSString *clsname in groupedInfos.allKeys) {
-        LHLoadInfoWrapper *infoWrapper = groupedInfos[clsname];
+        LMLoadInfoWrapper *infoWrapper = groupedInfos[clsname];
         hookAllLoadMethods(infoWrapper);
     }
-    LHLoadInfoWappers = groupedInfos.allValues;
+    LMLoadInfoWappers = groupedInfos.allValues;
 }
