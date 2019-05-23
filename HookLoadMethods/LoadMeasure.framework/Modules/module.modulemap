@@ -1,0 +1,6 @@
+framework module LoadMeasure {
+  umbrella header "LoadMeasure.h"
+
+  export *
+  module * { export * }
+}
