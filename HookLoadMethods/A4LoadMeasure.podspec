@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
   s.name             = 'A4LoadMeasure'
   s.version          = '0.1.0'
 
-  s.summary          = 'measure load time consumption.'
+  s.summary          = 'Measure load method execution time.'
 
   s.description      = <<-DESC
-LoadMeasure measure load time consumption.
+A tool used to measure load method execution time.
                        DESC
 
   s.homepage         = 'https://github.com/tripleCC/Laboratory/tree/master/HookLoadMethods'
