@@ -78,10 +78,11 @@ static NSInteger LMAllLoadNumber = 0;
 
 static SEL getRandomLoadSelector(void);
 static void printLoadInfoWappers(void);
+static bool isSelfDefinedImage(const char *imageName);
 static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper);
 static void swizzleLoadMethod(Class cls, Method method, LMLoadInfo *info);
 static NSArray <LMLoadInfo *> *getNoLazyArray(const struct mach_header *mhdr);
-static const struct mach_header **copyAllNoSystemImageHeader(unsigned int *outCount);
+static const struct mach_header **copyAllSelfDefinedImageHeader(unsigned int *outCount);
 static NSArray <LMLoadInfoWrapper *> *prepareMeasureForImageHeader(const struct mach_header *mhdr);
 static void *getDataSection(const struct mach_header *mhdr, const char *sectname, size_t *bytes);
 static NSDictionary <NSString *, LMLoadInfoWrapper *> *groupNoLazyArray(NSArray <LMLoadInfo *> *noLazyArray);
@@ -98,7 +99,13 @@ static void *getDataSection(const struct mach_header *mhdr, const char *sectname
     return data;
 }
 
-static const struct mach_header **copyAllNoSystemImageHeader(unsigned int *outCount) {
+static bool isSelfDefinedImage(const char *imageName) {
+    return !strstr(imageName, "/Developer/Platforms/") &&
+        !strstr(imageName, "/System/Library/") &&
+        !strstr(imageName, "/usr/lib/");
+}
+
+static const struct mach_header **copyAllSelfDefinedImageHeader(unsigned int *outCount) {
     unsigned int imageCount = _dyld_image_count();
     unsigned int count = 0;
     const struct mach_header **mhdrList = NULL;
@@ -107,7 +114,7 @@ static const struct mach_header **copyAllNoSystemImageHeader(unsigned int *outCo
         mhdrList = (const struct mach_header **)malloc(sizeof(struct mach_header *) * imageCount);
         for (unsigned int i = 0; i < imageCount; i++) {
             const char *imageName = _dyld_get_image_name(i);
-            if (!strstr(imageName, "iPhoneOS.platform")) {
+            if (isSelfDefinedImage(imageName)) {
                 const struct mach_header *mhdr = _dyld_get_image_header(i);
                 mhdrList[count++] = mhdr;
             }
@@ -250,7 +257,7 @@ static NSArray <LMLoadInfoWrapper *> *prepareMeasureForImageHeader(const struct 
 
 __attribute__((constructor)) static void LoadMeasure_Initializer(void) {
     unsigned int count = 0;
-    const struct mach_header **mhdrList = copyAllNoSystemImageHeader(&count);
+    const struct mach_header **mhdrList = copyAllSelfDefinedImageHeader(&count);
     NSMutableArray <LMLoadInfoWrapper *> *allInfoWappers = [NSMutableArray array];
     
     for (unsigned int i = 0; i < count; i++) {
