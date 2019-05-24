@@ -1,6 +1,6 @@
 //
-//  LoadHook.m
-//  HookFramework
+//  A4LoadMeasure.m
+//  A4LoadMeasure
 //
 //  Created by tripleCC on 5/21/19.
 //  Copyright © 2019 tripleCC. All rights reserved.
@@ -10,7 +10,7 @@
 #include <mach-o/dyld.h>
 #include <objc/runtime.h>
 #include <mach-o/getsect.h>
-#import "LoadMeasure.h"
+#import "A4LoadMeasure.h"
 
 NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers = nil;
 static NSInteger LMAllLoadNumber = 0;

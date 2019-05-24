@@ -10,6 +10,13 @@
 
 @implementation DynamicFramework
 + (void)load {
-    NSLog(@"-----------");
+    NSLog(@"DynamicFramework");
+}
+@end
+
+
+@implementation DynamicFramework(sleep_1_s)
++ (void)load {
+    sleep(1);
 }
 @end

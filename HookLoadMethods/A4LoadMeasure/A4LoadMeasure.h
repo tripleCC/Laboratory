@@ -1,13 +1,13 @@
 //
-//  LoadMeasure.h
-//  LoadMeasure
+//  A4LoadMeasure.h
+//  A4LoadMeasure
 //
 //  Created by tripleCC on 5/22/19.
 //  Copyright © 2019 tripleCC. All rights reserved.
 //
 
-#ifndef LoadMeasure_h
-#define LoadMeasure_h
+#ifndef A4LoadMeasure_h
+#define A4LoadMeasure_h
 
 #import <Foundation/Foundation.h>
 
@@ -27,4 +27,4 @@
 
 extern const NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers;
 
-#endif /* LoadMeasure_h */
+#endif /* A4LoadMeasure_h */

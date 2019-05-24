@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D65351C2229643CF000560E1"
-               BuildableName = "LoadMeasure.framework"
-               BlueprintName = "LoadMeasure"
+               BlueprintIdentifier = "D6FBB48E2297C0E3006AF87F"
+               BuildableName = "A4LoadMeasure.framework"
+               BlueprintName = "A4LoadMeasure"
                ReferencedContainer = "container:HookLoadMethods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D65351C2229643CF000560E1"
-            BuildableName = "LoadMeasure.framework"
-            BlueprintName = "LoadMeasure"
+            BlueprintIdentifier = "D6FBB48E2297C0E3006AF87F"
+            BuildableName = "A4LoadMeasure.framework"
+            BlueprintName = "A4LoadMeasure"
             ReferencedContainer = "container:HookLoadMethods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D65351C2229643CF000560E1"
-            BuildableName = "LoadMeasure.framework"
-            BlueprintName = "LoadMeasure"
+            BlueprintIdentifier = "D6FBB48E2297C0E3006AF87F"
+            BuildableName = "A4LoadMeasure.framework"
+            BlueprintName = "A4LoadMeasure"
             ReferencedContainer = "container:HookLoadMethods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
