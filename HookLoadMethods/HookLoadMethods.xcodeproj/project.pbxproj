@@ -15,7 +15,7 @@
 		D653515E2293E79A000560E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D653515D2293E79A000560E1 /* main.m */; };
 		D68CAB1D22969F4D009FC77C /* DynamicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68CAB1622969F4D009FC77C /* DynamicFramework.framework */; };
 		D68CAB1E22969F4D009FC77C /* DynamicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D68CAB1622969F4D009FC77C /* DynamicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D68CAB2422969F5B009FC77C /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D68CAB2222969F5B009FC77C /* DynamicFramework.h */; };
+		D68CAB2422969F5B009FC77C /* DynamicFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D68CAB2222969F5B009FC77C /* DynamicFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D68CAB2522969F5B009FC77C /* DynamicFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = D68CAB2322969F5B009FC77C /* DynamicFramework.m */; };
 		D6FBB4962297C0E3006AF87F /* A4LoadMeasure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FBB48F2297C0E3006AF87F /* A4LoadMeasure.framework */; };
 		D6FBB4972297C0E3006AF87F /* A4LoadMeasure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6FBB48F2297C0E3006AF87F /* A4LoadMeasure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };

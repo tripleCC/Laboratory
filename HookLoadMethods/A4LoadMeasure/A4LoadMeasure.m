@@ -197,6 +197,18 @@ static void printLoadInfoWappers(void) {
     printf("\n");
 }
 
+__unused static void replaceLoadImplementation(Method method, LMLoadInfo *info) {
+    // The selector is not available as a parameter to this block
+    IMP hookImp = imp_implementationWithBlock(^(Class cls){
+        info->_start = CFAbsoluteTimeGetCurrent();
+        ((void (*)(Class, SEL))objc_msgSend)(cls, @selector(load));
+        info->_end = CFAbsoluteTimeGetCurrent();
+        if (!--LMAllLoadNumber) printLoadInfoWappers();
+    });
+    
+    method_setImplementation(method, hookImp);
+}
+
 static void swizzleLoadMethod(Class cls, Method method, LMLoadInfo *info) {
 retry:
     do {
