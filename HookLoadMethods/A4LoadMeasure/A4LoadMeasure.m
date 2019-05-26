@@ -78,6 +78,7 @@ static NSInteger LMAllLoadNumber = 0;
 
 static SEL getRandomLoadSelector(void);
 static void printLoadInfoWappers(void);
+static bool shouldRejectClass(NSString *name);
 static bool isSelfDefinedImage(const char *imageName);
 static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper);
 static void swizzleLoadMethod(Class cls, Method method, LMLoadInfo *info);
@@ -142,20 +143,26 @@ static SEL getRandomLoadSelector(void) {
     return NSSelectorFromString([NSString stringWithFormat:@"_lh_hooking_%x_load", arc4random()]);
 }
 
+static bool shouldRejectClass(NSString *name) {
+    if (!name) return true;
+    NSArray *rejectClses = @[@"__ARCLite__"];
+    return [rejectClses containsObject:name];
+}
+
 static NSArray <LMLoadInfo *> *getNoLazyArray(const struct mach_header *mhdr) {
     NSMutableArray *noLazyArray = [NSMutableArray new];
     unsigned long bytes = 0;
     Class *clses = (Class *)getDataSection(mhdr, "__objc_nlclslist", &bytes);
     for (unsigned int i = 0; i < bytes / sizeof(Class); i++) {
         LMLoadInfo *info = [[LMLoadInfo alloc] initWithClass:clses[i]];
-        [noLazyArray addObject:info];
+        if (!shouldRejectClass(info.clsname)) [noLazyArray addObject:info];
     }
     
     bytes = 0;
     Category *cats = getDataSection(mhdr, "__objc_nlcatlist", &bytes);
     for (unsigned int i = 0; i < bytes / sizeof(Category); i++) {
         LMLoadInfo *info = [[LMLoadInfo alloc] initWithCategory:cats[i]];
-        [noLazyArray addObject:info];
+        if (!shouldRejectClass(info.clsname)) [noLazyArray addObject:info];
     }
     
     return noLazyArray;
