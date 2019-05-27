@@ -101,9 +101,10 @@ static void *getDataSection(const struct mach_header *mhdr, const char *sectname
 }
 
 static bool isSelfDefinedImage(const char *imageName) {
-    return !strstr(imageName, "/Developer/Platforms/") &&
-        !strstr(imageName, "/System/Library/") &&
-        !strstr(imageName, "/usr/lib/");
+    return !strstr(imageName, "/Xcode.app/") &&
+    !strstr(imageName, "/Library/PrivateFrameworks/") &&
+    !strstr(imageName, "/System/Library/") &&
+    !strstr(imageName, "/usr/lib/");
 }
 
 static const struct mach_header **copyAllSelfDefinedImageHeader(unsigned int *outCount) {
