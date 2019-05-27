@@ -206,10 +206,11 @@ static void printLoadInfoWappers(void) {
 }
 
 __unused static void replaceLoadImplementation(Method method, LMLoadInfo *info) {
+    IMP imp = method_getImplementation(method);
     // The selector is not available as a parameter to this block
     IMP hookImp = imp_implementationWithBlock(^(Class cls){
         info->_start = CFAbsoluteTimeGetCurrent();
-        ((void (*)(Class, SEL))objc_msgSend)(cls, @selector(load));
+        imp();
         info->_end = CFAbsoluteTimeGetCurrent();
         if (!--LMAllLoadNumber) printLoadInfoWappers();
     });
