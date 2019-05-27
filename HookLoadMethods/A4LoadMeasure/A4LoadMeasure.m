@@ -276,6 +276,7 @@ static NSArray <LMLoadInfoWrapper *> *prepareMeasureForImageHeader(const struct 
 }
 
 __attribute__((constructor)) static void LoadMeasure_Initializer(void) {
+    CFAbsoluteTime begin = CFAbsoluteTimeGetCurrent();
     unsigned int count = 0;
     const struct mach_header **mhdrList = copyAllSelfDefinedImageHeader(&count);
     NSMutableArray <LMLoadInfoWrapper *> *allInfoWappers = [NSMutableArray array];
@@ -288,4 +289,6 @@ __attribute__((constructor)) static void LoadMeasure_Initializer(void) {
     
     free(mhdrList);
     LMLoadInfoWappers = allInfoWappers;
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    printf("\n\t\t\t\t\tLoad Measure Initializer Time: %f milliseconds\n", (end - begin) * 1000);
 }
