@@ -1,0 +1,16 @@
+PODS:
+  - TDFModuleKit (1.0.6)
+
+DEPENDENCIES:
+  - TDFModuleKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TDFModuleKit
+
+SPEC CHECKSUMS:
+  TDFModuleKit: cc9694a3e2834c79260247f393709e5e7e0694e8
+
+PODFILE CHECKSUM: f509165dbc4a9f590ac2ebd97e0252231e8cf2e9
+
+COCOAPODS: 1.6.1

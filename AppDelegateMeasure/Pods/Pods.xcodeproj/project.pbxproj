@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09EB85B828F65666270215E58BC831FF /* TDFModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE0179C2B1943E00D87499D6F1373EB /* TDFModule.m */; };
+		13EC42D274C75A1C2819D1E719F7F2EE /* TDFApplicationDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B72AC000FBA55D64453150725E1E0E2E /* TDFApplicationDelegateProxy.m */; };
+		15476D4952F41746DC415A44DD8BC4A8 /* TDFModuleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D2CFDFD3CFA7900D3660AA95BCFCF24C /* TDFModuleManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		20FD4E2C72273B06A49D5C163E93C2E6 /* TDFModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B078C2D44605EAC65CB97E81E1874A07 /* TDFModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34840E52CAE405B29C2E004F396198A2 /* Pods-AppDelegateMeasure-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90EA36F178613B871FB7445842755F9C /* Pods-AppDelegateMeasure-dummy.m */; };
+		607F41E22F7D8986BFD32E0B9651562F /* TDFModuleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CE3A0A1DDC4F759C48A785512FFF94CB /* TDFModuleKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		928EE108422E798BE1726E1E7F926DA1 /* TDFModuleKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB36F17AF441A3DD8E1623621B7EF383 /* TDFModuleKit-dummy.m */; };
+		B2A5A7BAA6996087C2BAA4B010DF5DE1 /* TDFModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 624DA9F4663763C0DF498A9BCFFF735B /* TDFModuleManager.m */; };
+		CD29FB4DDF106F37BF8FF6F1658399DB /* TDFApplicationDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB12491EB112D3CDC183C56A3329AC9 /* TDFApplicationDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F99B50E38D92B0683DC7365A80103C7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 569935876E0C8F60B331F19C9409325E;
+			remoteInfo = TDFModuleKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B0DCCE79CD57427D59E052E0492CE5 /* libTDFModuleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTDFModuleKit.a; path = libTDFModuleKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F523CE20F9EE50E712A6BFC3AD5A6A8 /* Pods-AppDelegateMeasure-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppDelegateMeasure-acknowledgements.plist"; sourceTree = "<group>"; };
+		452AD3D408DAE84C65BAE69D960C23BD /* libPods-AppDelegateMeasure.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AppDelegateMeasure.a"; path = "libPods-AppDelegateMeasure.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB12491EB112D3CDC183C56A3329AC9 /* TDFApplicationDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFApplicationDelegateProxy.h; path = TDFModuleKit/Classes/TDFApplicationDelegateProxy.h; sourceTree = "<group>"; };
+		624DA9F4663763C0DF498A9BCFFF735B /* TDFModuleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDFModuleManager.m; path = TDFModuleKit/Classes/TDFModuleManager.m; sourceTree = "<group>"; };
+		7DE0179C2B1943E00D87499D6F1373EB /* TDFModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDFModule.m; path = TDFModuleKit/Classes/TDFModule.m; sourceTree = "<group>"; };
+		85267B08FFA8755E4F917BB6CA202F15 /* Pods-AppDelegateMeasure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppDelegateMeasure.release.xcconfig"; sourceTree = "<group>"; };
+		90EA36F178613B871FB7445842755F9C /* Pods-AppDelegateMeasure-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppDelegateMeasure-dummy.m"; sourceTree = "<group>"; };
+		9682BD2051C3219A38E95C8BB4EC6BB1 /* TDFModuleKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDFModuleKit.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B078C2D44605EAC65CB97E81E1874A07 /* TDFModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFModule.h; path = TDFModuleKit/Classes/TDFModule.h; sourceTree = "<group>"; };
+		B72AC000FBA55D64453150725E1E0E2E /* TDFApplicationDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDFApplicationDelegateProxy.m; path = TDFModuleKit/Classes/TDFApplicationDelegateProxy.m; sourceTree = "<group>"; };
+		BAF42A68D751C613A966EFA74EA4EA5C /* Pods-AppDelegateMeasure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppDelegateMeasure.debug.xcconfig"; sourceTree = "<group>"; };
+		CB36F17AF441A3DD8E1623621B7EF383 /* TDFModuleKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDFModuleKit-dummy.m"; sourceTree = "<group>"; };
+		CE3A0A1DDC4F759C48A785512FFF94CB /* TDFModuleKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFModuleKit.h; path = TDFModuleKit/Classes/TDFModuleKit.h; sourceTree = "<group>"; };
+		D2CFDFD3CFA7900D3660AA95BCFCF24C /* TDFModuleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFModuleManager.h; path = TDFModuleKit/Classes/TDFModuleManager.h; sourceTree = "<group>"; };
+		E93B52E2EB7AA656267B5E2028768FAD /* TDFModuleKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDFModuleKit-prefix.pch"; sourceTree = "<group>"; };
+		FE0073142A256228CD059418066C2229 /* Pods-AppDelegateMeasure-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppDelegateMeasure-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D0845BCD2D689F0F1D8C3E92413BBE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70B433DFD72BAC3F66B61EF01DCA1D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4023358366F674BC8C6FB4D22C225B64 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9682BD2051C3219A38E95C8BB4EC6BB1 /* TDFModuleKit.xcconfig */,
+				CB36F17AF441A3DD8E1623621B7EF383 /* TDFModuleKit-dummy.m */,
+				E93B52E2EB7AA656267B5E2028768FAD /* TDFModuleKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TDFModuleKit";
+			sourceTree = "<group>";
+		};
+		8CDF8E10AA09F4D600657E3FC3C59C21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABB64BD441AFE52FB3B82E15BD24A8B9 /* TDFModuleKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ABB64BD441AFE52FB3B82E15BD24A8B9 /* TDFModuleKit */ = {
+			isa = PBXGroup;
+			children = (
+				5DB12491EB112D3CDC183C56A3329AC9 /* TDFApplicationDelegateProxy.h */,
+				B72AC000FBA55D64453150725E1E0E2E /* TDFApplicationDelegateProxy.m */,
+				B078C2D44605EAC65CB97E81E1874A07 /* TDFModule.h */,
+				7DE0179C2B1943E00D87499D6F1373EB /* TDFModule.m */,
+				CE3A0A1DDC4F759C48A785512FFF94CB /* TDFModuleKit.h */,
+				D2CFDFD3CFA7900D3660AA95BCFCF24C /* TDFModuleManager.h */,
+				624DA9F4663763C0DF498A9BCFFF735B /* TDFModuleManager.m */,
+				4023358366F674BC8C6FB4D22C225B64 /* Support Files */,
+			);
+			name = TDFModuleKit;
+			path = TDFModuleKit;
+			sourceTree = "<group>";
+		};
+		C36E82CD21D9A91F81125ADE13156F85 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F71C1404F6BD5C4F4AB399EA6252AE31 /* Pods-AppDelegateMeasure */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				8CDF8E10AA09F4D600657E3FC3C59C21 /* Pods */,
+				E7BA67094E3E3330E9BADACA294E4863 /* Products */,
+				C36E82CD21D9A91F81125ADE13156F85 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7BA67094E3E3330E9BADACA294E4863 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				452AD3D408DAE84C65BAE69D960C23BD /* libPods-AppDelegateMeasure.a */,
+				00B0DCCE79CD57427D59E052E0492CE5 /* libTDFModuleKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F71C1404F6BD5C4F4AB399EA6252AE31 /* Pods-AppDelegateMeasure */ = {
+			isa = PBXGroup;
+			children = (
+				FE0073142A256228CD059418066C2229 /* Pods-AppDelegateMeasure-acknowledgements.markdown */,
+				2F523CE20F9EE50E712A6BFC3AD5A6A8 /* Pods-AppDelegateMeasure-acknowledgements.plist */,
+				90EA36F178613B871FB7445842755F9C /* Pods-AppDelegateMeasure-dummy.m */,
+				BAF42A68D751C613A966EFA74EA4EA5C /* Pods-AppDelegateMeasure.debug.xcconfig */,
+				85267B08FFA8755E4F917BB6CA202F15 /* Pods-AppDelegateMeasure.release.xcconfig */,
+			);
+			name = "Pods-AppDelegateMeasure";
+			path = "Target Support Files/Pods-AppDelegateMeasure";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		091A8F79409B455264F2D0A2ECFB99D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD29FB4DDF106F37BF8FF6F1658399DB /* TDFApplicationDelegateProxy.h in Headers */,
+				20FD4E2C72273B06A49D5C163E93C2E6 /* TDFModule.h in Headers */,
+				607F41E22F7D8986BFD32E0B9651562F /* TDFModuleKit.h in Headers */,
+				15476D4952F41746DC415A44DD8BC4A8 /* TDFModuleManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7509FD85405305508D4024BD3BD42E23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3DE167C442D3FC8450DA2D2A515C3867 /* Pods-AppDelegateMeasure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16E466E38D611BA192B293505274E2DC /* Build configuration list for PBXNativeTarget "Pods-AppDelegateMeasure" */;
+			buildPhases = (
+				7509FD85405305508D4024BD3BD42E23 /* Headers */,
+				7455FD879113BB320F51CA9BF5521EEF /* Sources */,
+				8D0845BCD2D689F0F1D8C3E92413BBE4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB04EDCA7F1AFF7D3D6104BBC965752 /* PBXTargetDependency */,
+			);
+			name = "Pods-AppDelegateMeasure";
+			productName = "Pods-AppDelegateMeasure";
+			productReference = 452AD3D408DAE84C65BAE69D960C23BD /* libPods-AppDelegateMeasure.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		569935876E0C8F60B331F19C9409325E /* TDFModuleKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23C0D57EAF634DAC220FFEFE9A31DED9 /* Build configuration list for PBXNativeTarget "TDFModuleKit" */;
+			buildPhases = (
+				091A8F79409B455264F2D0A2ECFB99D7 /* Headers */,
+				84862090D97B95E5F53E2072F589C0F0 /* Sources */,
+				F70B433DFD72BAC3F66B61EF01DCA1D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDFModuleKit;
+			productName = TDFModuleKit;
+			productReference = 00B0DCCE79CD57427D59E052E0492CE5 /* libTDFModuleKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E7BA67094E3E3330E9BADACA294E4863 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE167C442D3FC8450DA2D2A515C3867 /* Pods-AppDelegateMeasure */,
+				569935876E0C8F60B331F19C9409325E /* TDFModuleKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7455FD879113BB320F51CA9BF5521EEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34840E52CAE405B29C2E004F396198A2 /* Pods-AppDelegateMeasure-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84862090D97B95E5F53E2072F589C0F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EC42D274C75A1C2819D1E719F7F2EE /* TDFApplicationDelegateProxy.m in Sources */,
+				09EB85B828F65666270215E58BC831FF /* TDFModule.m in Sources */,
+				928EE108422E798BE1726E1E7F926DA1 /* TDFModuleKit-dummy.m in Sources */,
+				B2A5A7BAA6996087C2BAA4B010DF5DE1 /* TDFModuleManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEB04EDCA7F1AFF7D3D6104BBC965752 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TDFModuleKit;
+			target = 569935876E0C8F60B331F19C9409325E /* TDFModuleKit */;
+			targetProxy = F99B50E38D92B0683DC7365A80103C7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0DAFEA829B869DECD2E7901180A486EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9682BD2051C3219A38E95C8BB4EC6BB1 /* TDFModuleKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TDFModuleKit/TDFModuleKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TDFModuleKit;
+				PRODUCT_NAME = TDFModuleKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		56E8DD82DD06950D3A8C74FCB81832D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9682BD2051C3219A38E95C8BB4EC6BB1 /* TDFModuleKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TDFModuleKit/TDFModuleKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TDFModuleKit;
+				PRODUCT_NAME = TDFModuleKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62CF51465F77FB72FB4923540BC37211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF42A68D751C613A966EFA74EA4EA5C /* Pods-AppDelegateMeasure.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C07FF7036E446CFD417D5335D82DF53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85267B08FFA8755E4F917BB6CA202F15 /* Pods-AppDelegateMeasure.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16E466E38D611BA192B293505274E2DC /* Build configuration list for PBXNativeTarget "Pods-AppDelegateMeasure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CF51465F77FB72FB4923540BC37211 /* Debug */,
+				6C07FF7036E446CFD417D5335D82DF53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23C0D57EAF634DAC220FFEFE9A31DED9 /* Build configuration list for PBXNativeTarget "TDFModuleKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DAFEA829B869DECD2E7901180A486EF /* Debug */,
+				56E8DD82DD06950D3A8C74FCB81832D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */,
+				3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

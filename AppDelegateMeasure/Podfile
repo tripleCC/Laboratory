@@ -1,0 +1,3 @@
+target 'AppDelegateMeasure' do 
+	pod 'TDFModuleKit'
+end
