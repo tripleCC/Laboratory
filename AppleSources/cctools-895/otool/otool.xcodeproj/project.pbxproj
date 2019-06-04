@@ -1,0 +1,200 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D6F0DBC822A66455002FBC96 /* ppc_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ppc_disasm.c; sourceTree = "<group>"; };
+		D6F0DBC922A66455002FBC96 /* dyld_bind_info.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dyld_bind_info.c; sourceTree = "<group>"; };
+		D6F0DBCA22A66455002FBC96 /* arm_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arm_disasm.c; sourceTree = "<group>"; };
+		D6F0DBCB22A66455002FBC96 /* m88k_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m88k_disasm.h; sourceTree = "<group>"; };
+		D6F0DBCC22A66455002FBC96 /* i860_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = i860_disasm.c; sourceTree = "<group>"; };
+		D6F0DBCD22A66455002FBC96 /* ofile_print.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofile_print.h; sourceTree = "<group>"; };
+		D6F0DBCE22A66455002FBC96 /* i386_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = i386_disasm.c; sourceTree = "<group>"; };
+		D6F0DBCF22A66455002FBC96 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D6F0DBD022A66455002FBC96 /* print_objc2_32bit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_objc2_32bit.c; sourceTree = "<group>"; };
+		D6F0DBD122A66455002FBC96 /* m68k_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m68k_disasm.c; sourceTree = "<group>"; };
+		D6F0DBD222A66455002FBC96 /* arm64_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arm64_disasm.c; sourceTree = "<group>"; };
+		D6F0DBD322A66455002FBC96 /* cxa_demangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cxa_demangle.h; sourceTree = "<group>"; };
+		D6F0DBD422A66455002FBC96 /* coff_print.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = coff_print.c; sourceTree = "<group>"; };
+		D6F0DBD522A66455002FBC96 /* print_objc2_64bit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_objc2_64bit.c; sourceTree = "<group>"; };
+		D6F0DBD622A66455002FBC96 /* sparc_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sparc_disasm.h; sourceTree = "<group>"; };
+		D6F0DBD722A66455002FBC96 /* hppa_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hppa_disasm.h; sourceTree = "<group>"; };
+		D6F0DBD822A66455002FBC96 /* notify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = notify.h; sourceTree = "<group>"; };
+		D6F0DBD922A66455002FBC96 /* arm_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arm_disasm.h; sourceTree = "<group>"; };
+		D6F0DBDA22A66455002FBC96 /* print_bitcode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_bitcode.c; sourceTree = "<group>"; };
+		D6F0DBDB22A66455002FBC96 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		D6F0DBDC22A66455002FBC96 /* dyld_bind_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dyld_bind_info.h; sourceTree = "<group>"; };
+		D6F0DBDD22A66455002FBC96 /* ppc_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppc_disasm.h; sourceTree = "<group>"; };
+		D6F0DBDE22A66455002FBC96 /* ofile_print.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ofile_print.c; sourceTree = "<group>"; };
+		D6F0DBDF22A66455002FBC96 /* m88k_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m88k_disasm.c; sourceTree = "<group>"; };
+		D6F0DBE022A66455002FBC96 /* i860_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i860_disasm.h; sourceTree = "<group>"; };
+		D6F0DBE122A66455002FBC96 /* m68k_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = m68k_disasm.h; sourceTree = "<group>"; };
+		D6F0DBE222A66455002FBC96 /* arm64_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arm64_disasm.h; sourceTree = "<group>"; };
+		D6F0DBE322A66455002FBC96 /* i386_disasm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i386_disasm.h; sourceTree = "<group>"; };
+		D6F0DBE422A66455002FBC96 /* hppa_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hppa_disasm.c; sourceTree = "<group>"; };
+		D6F0DBE522A66455002FBC96 /* otool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = otool.h; sourceTree = "<group>"; };
+		D6F0DBE622A66455002FBC96 /* sparc_disasm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sparc_disasm.c; sourceTree = "<group>"; };
+		D6F0DBE722A66455002FBC96 /* notify.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = notify.c; sourceTree = "<group>"; };
+		D6F0DBE822A66455002FBC96 /* print_objc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print_objc.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D6F0DBC222A66455002FBC96 = {
+			isa = PBXGroup;
+			children = (
+				D6F0DBC822A66455002FBC96 /* ppc_disasm.c */,
+				D6F0DBC922A66455002FBC96 /* dyld_bind_info.c */,
+				D6F0DBCA22A66455002FBC96 /* arm_disasm.c */,
+				D6F0DBCB22A66455002FBC96 /* m88k_disasm.h */,
+				D6F0DBCC22A66455002FBC96 /* i860_disasm.c */,
+				D6F0DBCD22A66455002FBC96 /* ofile_print.h */,
+				D6F0DBCE22A66455002FBC96 /* i386_disasm.c */,
+				D6F0DBCF22A66455002FBC96 /* Makefile */,
+				D6F0DBD022A66455002FBC96 /* print_objc2_32bit.c */,
+				D6F0DBD122A66455002FBC96 /* m68k_disasm.c */,
+				D6F0DBD222A66455002FBC96 /* arm64_disasm.c */,
+				D6F0DBD322A66455002FBC96 /* cxa_demangle.h */,
+				D6F0DBD422A66455002FBC96 /* coff_print.c */,
+				D6F0DBD522A66455002FBC96 /* print_objc2_64bit.c */,
+				D6F0DBD622A66455002FBC96 /* sparc_disasm.h */,
+				D6F0DBD722A66455002FBC96 /* hppa_disasm.h */,
+				D6F0DBD822A66455002FBC96 /* notify.h */,
+				D6F0DBD922A66455002FBC96 /* arm_disasm.h */,
+				D6F0DBDA22A66455002FBC96 /* print_bitcode.c */,
+				D6F0DBDB22A66455002FBC96 /* main.c */,
+				D6F0DBDC22A66455002FBC96 /* dyld_bind_info.h */,
+				D6F0DBDD22A66455002FBC96 /* ppc_disasm.h */,
+				D6F0DBDE22A66455002FBC96 /* ofile_print.c */,
+				D6F0DBDF22A66455002FBC96 /* m88k_disasm.c */,
+				D6F0DBE022A66455002FBC96 /* i860_disasm.h */,
+				D6F0DBE122A66455002FBC96 /* m68k_disasm.h */,
+				D6F0DBE222A66455002FBC96 /* arm64_disasm.h */,
+				D6F0DBE322A66455002FBC96 /* i386_disasm.h */,
+				D6F0DBE422A66455002FBC96 /* hppa_disasm.c */,
+				D6F0DBE522A66455002FBC96 /* otool.h */,
+				D6F0DBE622A66455002FBC96 /* sparc_disasm.c */,
+				D6F0DBE722A66455002FBC96 /* notify.c */,
+				D6F0DBE822A66455002FBC96 /* print_objc.c */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D6F0DBC722A66455002FBC96 /* otool */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D6F0DBE922A66455002FBC96 /* Build configuration list for PBXLegacyTarget "otool" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/songruiwang/GitHub/Laboratory/AppleSources/cctools-895/otool";
+			dependencies = (
+			);
+			name = otool;
+			passBuildSettingsInEnvironment = 1;
+			productName = otool;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		D6F0DBC322A66455002FBC96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = D6F0DBC622A66455002FBC96 /* Build configuration list for PBXProject "otool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6F0DBC222A66455002FBC96;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F0DBC722A66455002FBC96 /* otool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D6F0DBC422A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D6F0DBC522A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		D6F0DBEA22A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = otool;
+			};
+			name = Debug;
+		};
+		D6F0DBEB22A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = otool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F0DBC622A66455002FBC96 /* Build configuration list for PBXProject "otool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DBC422A66455002FBC96 /* Debug */,
+				D6F0DBC522A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F0DBE922A66455002FBC96 /* Build configuration list for PBXLegacyTarget "otool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DBEA22A66455002FBC96 /* Debug */,
+				D6F0DBEB22A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F0DBC322A66455002FBC96 /* Project object */;
+}

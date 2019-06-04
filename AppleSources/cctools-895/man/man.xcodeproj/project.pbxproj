@@ -1,0 +1,232 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D6F0DB6F22A66455002FBC96 /* redo_prebinding.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = redo_prebinding.3; sourceTree = "<group>"; };
+		D6F0DB7022A66455002FBC96 /* lipo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lipo.1; sourceTree = "<group>"; };
+		D6F0DB7122A66455002FBC96 /* size.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = size.1; sourceTree = "<group>"; };
+		D6F0DB7222A66455002FBC96 /* as.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = as.1; sourceTree = "<group>"; };
+		D6F0DB7322A66455002FBC96 /* NSObjectFileImage_priv.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = NSObjectFileImage_priv.3; sourceTree = "<group>"; };
+		D6F0DB7422A66455002FBC96 /* install_name_tool.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = install_name_tool.1; sourceTree = "<group>"; };
+		D6F0DB7522A66455002FBC96 /* getsegbyname.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = getsegbyname.3; sourceTree = "<group>"; };
+		D6F0DB7622A66455002FBC96 /* codesign_allocate.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = codesign_allocate.1; sourceTree = "<group>"; };
+		D6F0DB7722A66455002FBC96 /* ranlib.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ranlib.1; sourceTree = "<group>"; };
+		D6F0DB7822A66455002FBC96 /* dyld_debug.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = dyld_debug.3; sourceTree = "<group>"; };
+		D6F0DB7922A66455002FBC96 /* nmedit.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = nmedit.1; sourceTree = "<group>"; };
+		D6F0DB7A22A66455002FBC96 /* nm-classic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "nm-classic.1"; sourceTree = "<group>"; };
+		D6F0DB7B22A66455002FBC96 /* bitcode_strip.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = bitcode_strip.1; sourceTree = "<group>"; };
+		D6F0DB7C22A66455002FBC96 /* getsectdatafromheader.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = getsectdatafromheader.3; sourceTree = "<group>"; };
+		D6F0DB7D22A66455002FBC96 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D6F0DB7E22A66455002FBC96 /* a.out.5 */ = {isa = PBXFileReference; lastKnownFileType = text; path = a.out.5; sourceTree = "<group>"; };
+		D6F0DB7F22A66455002FBC96 /* segedit.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = segedit.1; sourceTree = "<group>"; };
+		D6F0DB8022A66455002FBC96 /* Mach-O.5 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Mach-O.5"; sourceTree = "<group>"; };
+		D6F0DB8122A66455002FBC96 /* seg_addr_table.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = seg_addr_table.1; sourceTree = "<group>"; };
+		D6F0DB8222A66455002FBC96 /* get_end.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = get_end.3; sourceTree = "<group>"; };
+		D6F0DB8322A66455002FBC96 /* arch.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = arch.3; sourceTree = "<group>"; };
+		D6F0DB8422A66455002FBC96 /* NSModule.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = NSModule.3; sourceTree = "<group>"; };
+		D6F0DB8522A66455002FBC96 /* dyld.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = dyld.1; sourceTree = "<group>"; };
+		D6F0DB8622A66455002FBC96 /* mtoc.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = mtoc.1; sourceTree = "<group>"; };
+		D6F0DB8722A66455002FBC96 /* cmpdylib.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cmpdylib.1; sourceTree = "<group>"; };
+		D6F0DB8822A66455002FBC96 /* strings.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = strings.1; sourceTree = "<group>"; };
+		D6F0DB8922A66455002FBC96 /* kld.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = kld.3; sourceTree = "<group>"; };
+		D6F0DB8A22A66455002FBC96 /* NSObjectFileImage.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = NSObjectFileImage.3; sourceTree = "<group>"; };
+		D6F0DB8B22A66455002FBC96 /* checksyms.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = checksyms.1; sourceTree = "<group>"; };
+		D6F0DB8C22A66455002FBC96 /* getsectdata.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = getsectdata.3; sourceTree = "<group>"; };
+		D6F0DB8D22A66455002FBC96 /* redo_prebinding.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = redo_prebinding.1; sourceTree = "<group>"; };
+		D6F0DB8E22A66455002FBC96 /* ranlib.5 */ = {isa = PBXFileReference; lastKnownFileType = text; path = ranlib.5; sourceTree = "<group>"; };
+		D6F0DB8F22A66455002FBC96 /* end.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = end.3; sourceTree = "<group>"; };
+		D6F0DB9022A66455002FBC96 /* strip.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = strip.1; sourceTree = "<group>"; };
+		D6F0DB9122A66455002FBC96 /* check_dylib.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = check_dylib.1; sourceTree = "<group>"; };
+		D6F0DB9222A66455002FBC96 /* getsectbyname.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = getsectbyname.3; sourceTree = "<group>"; };
+		D6F0DB9322A66455002FBC96 /* nm.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = nm.1; sourceTree = "<group>"; };
+		D6F0DB9422A66455002FBC96 /* libtool.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = libtool.1; sourceTree = "<group>"; };
+		D6F0DB9522A66455002FBC96 /* size-classic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "size-classic.1"; sourceTree = "<group>"; };
+		D6F0DB9622A66455002FBC96 /* getsectbynamefromheader.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = getsectbynamefromheader.3; sourceTree = "<group>"; };
+		D6F0DB9722A66455002FBC96 /* llvm-otool.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "llvm-otool.1"; sourceTree = "<group>"; };
+		D6F0DB9822A66455002FBC96 /* dyld.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = dyld.3; sourceTree = "<group>"; };
+		D6F0DB9922A66455002FBC96 /* stab.5 */ = {isa = PBXFileReference; lastKnownFileType = text; path = stab.5; sourceTree = "<group>"; };
+		D6F0DB9A22A66455002FBC96 /* otool.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = otool.1; sourceTree = "<group>"; };
+		D6F0DB9B22A66455002FBC96 /* pagestuff.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = pagestuff.1; sourceTree = "<group>"; };
+		D6F0DB9C22A66455002FBC96 /* otool-classic.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "otool-classic.1"; sourceTree = "<group>"; };
+		D6F0DB9D22A66455002FBC96 /* ctf_insert.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ctf_insert.1; sourceTree = "<group>"; };
+		D6F0DB9E22A66455002FBC96 /* indr.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = indr.1; sourceTree = "<group>"; };
+		D6F0DB9F22A66455002FBC96 /* libsyminfo.3 */ = {isa = PBXFileReference; lastKnownFileType = text; path = libsyminfo.3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D6F0DB6922A66455002FBC96 = {
+			isa = PBXGroup;
+			children = (
+				D6F0DB6F22A66455002FBC96 /* redo_prebinding.3 */,
+				D6F0DB7022A66455002FBC96 /* lipo.1 */,
+				D6F0DB7122A66455002FBC96 /* size.1 */,
+				D6F0DB7222A66455002FBC96 /* as.1 */,
+				D6F0DB7322A66455002FBC96 /* NSObjectFileImage_priv.3 */,
+				D6F0DB7422A66455002FBC96 /* install_name_tool.1 */,
+				D6F0DB7522A66455002FBC96 /* getsegbyname.3 */,
+				D6F0DB7622A66455002FBC96 /* codesign_allocate.1 */,
+				D6F0DB7722A66455002FBC96 /* ranlib.1 */,
+				D6F0DB7822A66455002FBC96 /* dyld_debug.3 */,
+				D6F0DB7922A66455002FBC96 /* nmedit.1 */,
+				D6F0DB7A22A66455002FBC96 /* nm-classic.1 */,
+				D6F0DB7B22A66455002FBC96 /* bitcode_strip.1 */,
+				D6F0DB7C22A66455002FBC96 /* getsectdatafromheader.3 */,
+				D6F0DB7D22A66455002FBC96 /* Makefile */,
+				D6F0DB7E22A66455002FBC96 /* a.out.5 */,
+				D6F0DB7F22A66455002FBC96 /* segedit.1 */,
+				D6F0DB8022A66455002FBC96 /* Mach-O.5 */,
+				D6F0DB8122A66455002FBC96 /* seg_addr_table.1 */,
+				D6F0DB8222A66455002FBC96 /* get_end.3 */,
+				D6F0DB8322A66455002FBC96 /* arch.3 */,
+				D6F0DB8422A66455002FBC96 /* NSModule.3 */,
+				D6F0DB8522A66455002FBC96 /* dyld.1 */,
+				D6F0DB8622A66455002FBC96 /* mtoc.1 */,
+				D6F0DB8722A66455002FBC96 /* cmpdylib.1 */,
+				D6F0DB8822A66455002FBC96 /* strings.1 */,
+				D6F0DB8922A66455002FBC96 /* kld.3 */,
+				D6F0DB8A22A66455002FBC96 /* NSObjectFileImage.3 */,
+				D6F0DB8B22A66455002FBC96 /* checksyms.1 */,
+				D6F0DB8C22A66455002FBC96 /* getsectdata.3 */,
+				D6F0DB8D22A66455002FBC96 /* redo_prebinding.1 */,
+				D6F0DB8E22A66455002FBC96 /* ranlib.5 */,
+				D6F0DB8F22A66455002FBC96 /* end.3 */,
+				D6F0DB9022A66455002FBC96 /* strip.1 */,
+				D6F0DB9122A66455002FBC96 /* check_dylib.1 */,
+				D6F0DB9222A66455002FBC96 /* getsectbyname.3 */,
+				D6F0DB9322A66455002FBC96 /* nm.1 */,
+				D6F0DB9422A66455002FBC96 /* libtool.1 */,
+				D6F0DB9522A66455002FBC96 /* size-classic.1 */,
+				D6F0DB9622A66455002FBC96 /* getsectbynamefromheader.3 */,
+				D6F0DB9722A66455002FBC96 /* llvm-otool.1 */,
+				D6F0DB9822A66455002FBC96 /* dyld.3 */,
+				D6F0DB9922A66455002FBC96 /* stab.5 */,
+				D6F0DB9A22A66455002FBC96 /* otool.1 */,
+				D6F0DB9B22A66455002FBC96 /* pagestuff.1 */,
+				D6F0DB9C22A66455002FBC96 /* otool-classic.1 */,
+				D6F0DB9D22A66455002FBC96 /* ctf_insert.1 */,
+				D6F0DB9E22A66455002FBC96 /* indr.1 */,
+				D6F0DB9F22A66455002FBC96 /* libsyminfo.3 */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D6F0DB6E22A66455002FBC96 /* man */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D6F0DBA022A66455002FBC96 /* Build configuration list for PBXLegacyTarget "man" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/songruiwang/GitHub/Laboratory/AppleSources/cctools-895/man";
+			dependencies = (
+			);
+			name = man;
+			passBuildSettingsInEnvironment = 1;
+			productName = man;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		D6F0DB6A22A66455002FBC96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = D6F0DB6D22A66455002FBC96 /* Build configuration list for PBXProject "man" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6F0DB6922A66455002FBC96;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F0DB6E22A66455002FBC96 /* man */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D6F0DB6B22A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D6F0DB6C22A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		D6F0DBA122A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = man;
+			};
+			name = Debug;
+		};
+		D6F0DBA222A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = man;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F0DB6D22A66455002FBC96 /* Build configuration list for PBXProject "man" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DB6B22A66455002FBC96 /* Debug */,
+				D6F0DB6C22A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F0DBA022A66455002FBC96 /* Build configuration list for PBXLegacyTarget "man" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DBA122A66455002FBC96 /* Debug */,
+				D6F0DBA222A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F0DB6A22A66455002FBC96 /* Project object */;
+}

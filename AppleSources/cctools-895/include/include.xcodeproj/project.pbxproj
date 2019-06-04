@@ -1,0 +1,164 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D6F0DAC722A66455002FBC96 /* coff */ = {isa = PBXFileReference; lastKnownFileType = folder; path = coff; sourceTree = "<group>"; };
+		D6F0DAC822A66455002FBC96 /* cbt */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cbt; sourceTree = "<group>"; };
+		D6F0DAC922A66455002FBC96 /* standalone */ = {isa = PBXFileReference; lastKnownFileType = folder; path = standalone; sourceTree = "<group>"; };
+		D6F0DACA22A66455002FBC96 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D6F0DACB22A66455002FBC96 /* i386 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = i386; sourceTree = "<group>"; };
+		D6F0DACC22A66455002FBC96 /* xar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xar; sourceTree = "<group>"; };
+		D6F0DACD22A66455002FBC96 /* stuff */ = {isa = PBXFileReference; lastKnownFileType = folder; path = stuff; sourceTree = "<group>"; };
+		D6F0DACE22A66455002FBC96 /* gnu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gnu; sourceTree = "<group>"; };
+		D6F0DACF22A66455002FBC96 /* architecture */ = {isa = PBXFileReference; lastKnownFileType = folder; path = architecture; sourceTree = "<group>"; };
+		D6F0DAD022A66455002FBC96 /* sys */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sys; sourceTree = "<group>"; };
+		D6F0DAD122A66455002FBC96 /* mach */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mach; sourceTree = "<group>"; };
+		D6F0DAD222A66455002FBC96 /* mach-o */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "mach-o"; sourceTree = "<group>"; };
+		D6F0DAD322A66455002FBC96 /* opcode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = opcode; sourceTree = "<group>"; };
+		D6F0DAD422A66455002FBC96 /* elf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = elf; sourceTree = "<group>"; };
+		D6F0DAD522A66455002FBC96 /* llvm-c */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "llvm-c"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D6F0DAC122A66455002FBC96 = {
+			isa = PBXGroup;
+			children = (
+				D6F0DAC722A66455002FBC96 /* coff */,
+				D6F0DAC822A66455002FBC96 /* cbt */,
+				D6F0DAC922A66455002FBC96 /* standalone */,
+				D6F0DACA22A66455002FBC96 /* Makefile */,
+				D6F0DACB22A66455002FBC96 /* i386 */,
+				D6F0DACC22A66455002FBC96 /* xar */,
+				D6F0DACD22A66455002FBC96 /* stuff */,
+				D6F0DACE22A66455002FBC96 /* gnu */,
+				D6F0DACF22A66455002FBC96 /* architecture */,
+				D6F0DAD022A66455002FBC96 /* sys */,
+				D6F0DAD122A66455002FBC96 /* mach */,
+				D6F0DAD222A66455002FBC96 /* mach-o */,
+				D6F0DAD322A66455002FBC96 /* opcode */,
+				D6F0DAD422A66455002FBC96 /* elf */,
+				D6F0DAD522A66455002FBC96 /* llvm-c */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D6F0DAC622A66455002FBC96 /* include */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D6F0DAD622A66455002FBC96 /* Build configuration list for PBXLegacyTarget "include" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/songruiwang/GitHub/Laboratory/AppleSources/cctools-895/include";
+			dependencies = (
+			);
+			name = include;
+			passBuildSettingsInEnvironment = 1;
+			productName = include;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		D6F0DAC222A66455002FBC96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = D6F0DAC522A66455002FBC96 /* Build configuration list for PBXProject "include" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6F0DAC122A66455002FBC96;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F0DAC622A66455002FBC96 /* include */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D6F0DAC322A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D6F0DAC422A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		D6F0DAD722A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = include;
+			};
+			name = Debug;
+		};
+		D6F0DAD822A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = include;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F0DAC522A66455002FBC96 /* Build configuration list for PBXProject "include" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DAC322A66455002FBC96 /* Debug */,
+				D6F0DAC422A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F0DAD622A66455002FBC96 /* Build configuration list for PBXLegacyTarget "include" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DAD722A66455002FBC96 /* Debug */,
+				D6F0DAD822A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F0DAC222A66455002FBC96 /* Project object */;
+}

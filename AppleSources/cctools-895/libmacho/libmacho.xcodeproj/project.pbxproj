@@ -1,0 +1,166 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D6F0DB2622A66455002FBC96 /* shlib.ofileList */ = {isa = PBXFileReference; lastKnownFileType = text; path = shlib.ofileList; sourceTree = "<group>"; };
+		D6F0DB2722A66455002FBC96 /* getsegbyname.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getsegbyname.c; sourceTree = "<group>"; };
+		D6F0DB2822A66455002FBC96 /* slot_name.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = slot_name.c; sourceTree = "<group>"; };
+		D6F0DB2922A66455002FBC96 /* i386_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = i386_swap.c; sourceTree = "<group>"; };
+		D6F0DB2A22A66455002FBC96 /* m88k_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m88k_swap.c; sourceTree = "<group>"; };
+		D6F0DB2B22A66455002FBC96 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D6F0DB2C22A66455002FBC96 /* arch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arch.c; sourceTree = "<group>"; };
+		D6F0DB2D22A66455002FBC96 /* get_end.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = get_end.c; sourceTree = "<group>"; };
+		D6F0DB2E22A66455002FBC96 /* dylib.ofileList */ = {isa = PBXFileReference; lastKnownFileType = text; path = dylib.ofileList; sourceTree = "<group>"; };
+		D6F0DB2F22A66455002FBC96 /* ppc_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ppc_swap.c; sourceTree = "<group>"; };
+		D6F0DB3022A66455002FBC96 /* sparc_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sparc_swap.c; sourceTree = "<group>"; };
+		D6F0DB3122A66455002FBC96 /* swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = swap.c; sourceTree = "<group>"; };
+		D6F0DB3222A66455002FBC96 /* hppa_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hppa_swap.c; sourceTree = "<group>"; };
+		D6F0DB3322A66455002FBC96 /* getsecbyname.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getsecbyname.c; sourceTree = "<group>"; };
+		D6F0DB3422A66455002FBC96 /* m68k_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = m68k_swap.c; sourceTree = "<group>"; };
+		D6F0DB3522A66455002FBC96 /* i860_swap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = i860_swap.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D6F0DB2022A66455002FBC96 = {
+			isa = PBXGroup;
+			children = (
+				D6F0DB2622A66455002FBC96 /* shlib.ofileList */,
+				D6F0DB2722A66455002FBC96 /* getsegbyname.c */,
+				D6F0DB2822A66455002FBC96 /* slot_name.c */,
+				D6F0DB2922A66455002FBC96 /* i386_swap.c */,
+				D6F0DB2A22A66455002FBC96 /* m88k_swap.c */,
+				D6F0DB2B22A66455002FBC96 /* Makefile */,
+				D6F0DB2C22A66455002FBC96 /* arch.c */,
+				D6F0DB2D22A66455002FBC96 /* get_end.c */,
+				D6F0DB2E22A66455002FBC96 /* dylib.ofileList */,
+				D6F0DB2F22A66455002FBC96 /* ppc_swap.c */,
+				D6F0DB3022A66455002FBC96 /* sparc_swap.c */,
+				D6F0DB3122A66455002FBC96 /* swap.c */,
+				D6F0DB3222A66455002FBC96 /* hppa_swap.c */,
+				D6F0DB3322A66455002FBC96 /* getsecbyname.c */,
+				D6F0DB3422A66455002FBC96 /* m68k_swap.c */,
+				D6F0DB3522A66455002FBC96 /* i860_swap.c */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D6F0DB2522A66455002FBC96 /* libmacho */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D6F0DB3622A66455002FBC96 /* Build configuration list for PBXLegacyTarget "libmacho" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/songruiwang/GitHub/Laboratory/AppleSources/cctools-895/libmacho";
+			dependencies = (
+			);
+			name = libmacho;
+			passBuildSettingsInEnvironment = 1;
+			productName = libmacho;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		D6F0DB2122A66455002FBC96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = D6F0DB2422A66455002FBC96 /* Build configuration list for PBXProject "libmacho" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6F0DB2022A66455002FBC96;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F0DB2522A66455002FBC96 /* libmacho */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D6F0DB2222A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D6F0DB2322A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		D6F0DB3722A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = libmacho;
+			};
+			name = Debug;
+		};
+		D6F0DB3822A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = libmacho;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F0DB2422A66455002FBC96 /* Build configuration list for PBXProject "libmacho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DB2222A66455002FBC96 /* Debug */,
+				D6F0DB2322A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F0DB3622A66455002FBC96 /* Build configuration list for PBXLegacyTarget "libmacho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DB3722A66455002FBC96 /* Debug */,
+				D6F0DB3822A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F0DB2122A66455002FBC96 /* Project object */;
+}

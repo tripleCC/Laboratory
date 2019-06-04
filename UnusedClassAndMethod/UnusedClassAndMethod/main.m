@@ -90,6 +90,8 @@ int main(int argc, const char * argv[]) {
     NSMutableDictionary *refclassMap = [NSMutableDictionary dictionary];
     NSMutableDictionary *nlclassMap = [NSMutableDictionary dictionary];
     NSMutableDictionary *cstringMap = [NSMutableDictionary dictionary];
+    NSMutableDictionary *selrefpointerMap = [NSMutableDictionary dictionary];
+    NSMutableDictionary *selrefMap = [NSMutableDictionary dictionary];
     
     for (int i = 0; i < mhdr->ncmds; i++) {
         struct load_command *cmd = copyBytes(file, offset, sizeof(struct load_command));
@@ -103,6 +105,7 @@ int main(int argc, const char * argv[]) {
                 NSNumber *pointer = @(nlist[i].n_value);
                 if (strlen(string + nlist[i].n_un.n_strx) > 0) {
                     NSString *key = [NSString stringWithCString:string + nlist[i].n_un.n_strx encoding:NSUTF8StringEncoding];
+                    printf("%s\n", string + nlist[i].n_un.n_strx);
                     if (key) {
                         if (pointerMap[pointer]) {
                             classMap[key] = @"";
@@ -112,6 +115,9 @@ int main(int argc, const char * argv[]) {
                         }
                         if (nlpointerMap[pointer]) {
                             nlclassMap[key] = @"";
+                        }
+                        if (selrefpointerMap[pointer]) {
+                            selrefMap[key] = @"";
                         }
                     }
                 }
@@ -153,6 +159,14 @@ int main(int argc, const char * argv[]) {
             if (!strcmp(cmd64->segname, "__DATA")) {
                 for (int i = 0; i < cmd64->nsects; i++) {
                     struct section_64 sec = secs[i];
+                    if (strstr(sec.sectname, "__objc_selrefs")) {
+                        uintptr_t *pointers = copyBytes(file, sec.offset, sec.size);
+                        for (int i = 0 ; i < sec.size / sizeof(uintptr_t); i++) {
+                            NSNumber *pointer = [NSNumber numberWithInteger:pointers[i]];
+                            selrefpointerMap[pointer] = @"";
+                        }
+                        free(pointers);
+                    }
 //                        printf("%s %s\n", sec.sectname, sec.segname);
                     if (strstr(sec.sectname, "__objc_classlist")) {
                         uintptr_t *pointers = copyBytes(file, sec.offset, sec.size);

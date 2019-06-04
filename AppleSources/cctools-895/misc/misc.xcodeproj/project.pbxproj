@@ -1,0 +1,178 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D6F0DBA922A66455002FBC96 /* checksyms.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checksyms.c; sourceTree = "<group>"; };
+		D6F0DBAA22A66455002FBC96 /* redo_prebinding.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = redo_prebinding.c; sourceTree = "<group>"; };
+		D6F0DBAB22A66455002FBC96 /* cmpdylib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmpdylib.c; sourceTree = "<group>"; };
+		D6F0DBAC22A66455002FBC96 /* seg_hack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seg_hack.c; sourceTree = "<group>"; };
+		D6F0DBAD22A66455002FBC96 /* strings.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = strings.c; sourceTree = "<group>"; };
+		D6F0DBAE22A66455002FBC96 /* strip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = strip.c; sourceTree = "<group>"; };
+		D6F0DBAF22A66455002FBC96 /* inout.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = inout.c; sourceTree = "<group>"; };
+		D6F0DBB022A66455002FBC96 /* nm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = nm.c; sourceTree = "<group>"; };
+		D6F0DBB122A66455002FBC96 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D6F0DBB222A66455002FBC96 /* libtool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = libtool.c; sourceTree = "<group>"; };
+		D6F0DBB322A66455002FBC96 /* check_dylib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = check_dylib.c; sourceTree = "<group>"; };
+		D6F0DBB422A66455002FBC96 /* indr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = indr.c; sourceTree = "<group>"; };
+		D6F0DBB522A66455002FBC96 /* ctf_insert.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ctf_insert.c; sourceTree = "<group>"; };
+		D6F0DBB622A66455002FBC96 /* pagestuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pagestuff.c; sourceTree = "<group>"; };
+		D6F0DBB722A66455002FBC96 /* install_name_tool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = install_name_tool.c; sourceTree = "<group>"; };
+		D6F0DBB822A66455002FBC96 /* lipo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lipo.c; sourceTree = "<group>"; };
+		D6F0DBB922A66455002FBC96 /* size.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = size.c; sourceTree = "<group>"; };
+		D6F0DBBA22A66455002FBC96 /* bitcode_strip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bitcode_strip.c; sourceTree = "<group>"; };
+		D6F0DBBB22A66455002FBC96 /* codesign_allocate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = codesign_allocate.c; sourceTree = "<group>"; };
+		D6F0DBBC22A66455002FBC96 /* segedit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = segedit.c; sourceTree = "<group>"; };
+		D6F0DBBD22A66455002FBC96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F0DBBE22A66455002FBC96 /* seg_addr_table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seg_addr_table.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D6F0DBA322A66455002FBC96 = {
+			isa = PBXGroup;
+			children = (
+				D6F0DBA922A66455002FBC96 /* checksyms.c */,
+				D6F0DBAA22A66455002FBC96 /* redo_prebinding.c */,
+				D6F0DBAB22A66455002FBC96 /* cmpdylib.c */,
+				D6F0DBAC22A66455002FBC96 /* seg_hack.c */,
+				D6F0DBAD22A66455002FBC96 /* strings.c */,
+				D6F0DBAE22A66455002FBC96 /* strip.c */,
+				D6F0DBAF22A66455002FBC96 /* inout.c */,
+				D6F0DBB022A66455002FBC96 /* nm.c */,
+				D6F0DBB122A66455002FBC96 /* Makefile */,
+				D6F0DBB222A66455002FBC96 /* libtool.c */,
+				D6F0DBB322A66455002FBC96 /* check_dylib.c */,
+				D6F0DBB422A66455002FBC96 /* indr.c */,
+				D6F0DBB522A66455002FBC96 /* ctf_insert.c */,
+				D6F0DBB622A66455002FBC96 /* pagestuff.c */,
+				D6F0DBB722A66455002FBC96 /* install_name_tool.c */,
+				D6F0DBB822A66455002FBC96 /* lipo.c */,
+				D6F0DBB922A66455002FBC96 /* size.c */,
+				D6F0DBBA22A66455002FBC96 /* bitcode_strip.c */,
+				D6F0DBBB22A66455002FBC96 /* codesign_allocate.c */,
+				D6F0DBBC22A66455002FBC96 /* segedit.c */,
+				D6F0DBBD22A66455002FBC96 /* Info.plist */,
+				D6F0DBBE22A66455002FBC96 /* seg_addr_table.c */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D6F0DBA822A66455002FBC96 /* misc */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D6F0DBBF22A66455002FBC96 /* Build configuration list for PBXLegacyTarget "misc" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/songruiwang/GitHub/Laboratory/AppleSources/cctools-895/misc";
+			dependencies = (
+			);
+			name = misc;
+			passBuildSettingsInEnvironment = 1;
+			productName = misc;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		D6F0DBA422A66455002FBC96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = D6F0DBA722A66455002FBC96 /* Build configuration list for PBXProject "misc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6F0DBA322A66455002FBC96;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F0DBA822A66455002FBC96 /* misc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D6F0DBA522A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D6F0DBA622A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		D6F0DBC022A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = misc;
+			};
+			name = Debug;
+		};
+		D6F0DBC122A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = misc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F0DBA722A66455002FBC96 /* Build configuration list for PBXProject "misc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DBA522A66455002FBC96 /* Debug */,
+				D6F0DBA622A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F0DBBF22A66455002FBC96 /* Build configuration list for PBXLegacyTarget "misc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DBC022A66455002FBC96 /* Debug */,
+				D6F0DBC122A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F0DBA422A66455002FBC96 /* Project object */;
+}

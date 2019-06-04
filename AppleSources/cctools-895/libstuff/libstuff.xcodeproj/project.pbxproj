@@ -1,0 +1,212 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D6F0DB3F22A66455002FBC96 /* reloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reloc.c; sourceTree = "<group>"; };
+		D6F0DB4022A66455002FBC96 /* set_arch_flag_name.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = set_arch_flag_name.c; sourceTree = "<group>"; };
+		D6F0DB4122A66455002FBC96 /* allocate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = allocate.c; sourceTree = "<group>"; };
+		D6F0DB4222A66455002FBC96 /* ofile_error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ofile_error.c; sourceTree = "<group>"; };
+		D6F0DB4322A66455002FBC96 /* vm_flush_cache.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vm_flush_cache.c; sourceTree = "<group>"; };
+		D6F0DB4422A66455002FBC96 /* symbol_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = symbol_list.c; sourceTree = "<group>"; };
+		D6F0DB4522A66455002FBC96 /* print.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print.c; sourceTree = "<group>"; };
+		D6F0DB4622A66455002FBC96 /* dylib_roots.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dylib_roots.c; sourceTree = "<group>"; };
+		D6F0DB4722A66455002FBC96 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		D6F0DB4822A66455002FBC96 /* execute.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = execute.c; sourceTree = "<group>"; };
+		D6F0DB4922A66455002FBC96 /* checkout.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checkout.c; sourceTree = "<group>"; };
+		D6F0DB4A22A66455002FBC96 /* fatal_arch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fatal_arch.c; sourceTree = "<group>"; };
+		D6F0DB4B22A66455002FBC96 /* lto.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lto.c; sourceTree = "<group>"; };
+		D6F0DB4C22A66455002FBC96 /* arch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arch.c; sourceTree = "<group>"; };
+		D6F0DB4D22A66455002FBC96 /* get_toc_byte_sex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = get_toc_byte_sex.c; sourceTree = "<group>"; };
+		D6F0DB4E22A66455002FBC96 /* guess_short_name.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = guess_short_name.c; sourceTree = "<group>"; };
+		D6F0DB4F22A66455002FBC96 /* ofile_get_word.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ofile_get_word.c; sourceTree = "<group>"; };
+		D6F0DB5022A66455002FBC96 /* dylib_table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dylib_table.c; sourceTree = "<group>"; };
+		D6F0DB5122A66455002FBC96 /* crc32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
+		D6F0DB5222A66455002FBC96 /* coff_bytesex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = coff_bytesex.c; sourceTree = "<group>"; };
+		D6F0DB5322A66455002FBC96 /* hash_string.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hash_string.c; sourceTree = "<group>"; };
+		D6F0DB5422A66455002FBC96 /* ofile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ofile.c; sourceTree = "<group>"; };
+		D6F0DB5522A66455002FBC96 /* SymLoc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SymLoc.c; sourceTree = "<group>"; };
+		D6F0DB5622A66455002FBC96 /* bytesex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bytesex.c; sourceTree = "<group>"; };
+		D6F0DB5722A66455002FBC96 /* rnd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rnd.c; sourceTree = "<group>"; };
+		D6F0DB5822A66455002FBC96 /* version_number.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = version_number.c; sourceTree = "<group>"; };
+		D6F0DB5922A66455002FBC96 /* get_arch_from_host.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = get_arch_from_host.c; sourceTree = "<group>"; };
+		D6F0DB5A22A66455002FBC96 /* unix_standard_mode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = unix_standard_mode.c; sourceTree = "<group>"; };
+		D6F0DB5B22A66455002FBC96 /* fatals.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fatals.c; sourceTree = "<group>"; };
+		D6F0DB5C22A66455002FBC96 /* best_arch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = best_arch.c; sourceTree = "<group>"; };
+		D6F0DB5D22A66455002FBC96 /* macosx_deployment_target.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = macosx_deployment_target.c; sourceTree = "<group>"; };
+		D6F0DB5E22A66455002FBC96 /* writeout.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = writeout.c; sourceTree = "<group>"; };
+		D6F0DB5F22A66455002FBC96 /* arch_usage.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arch_usage.c; sourceTree = "<group>"; };
+		D6F0DB6022A66455002FBC96 /* llvm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = llvm.c; sourceTree = "<group>"; };
+		D6F0DB6122A66455002FBC96 /* swap_headers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = swap_headers.c; sourceTree = "<group>"; };
+		D6F0DB6222A66455002FBC96 /* breakout.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = breakout.c; sourceTree = "<group>"; };
+		D6F0DB6322A66455002FBC96 /* seg_addr_table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seg_addr_table.c; sourceTree = "<group>"; };
+		D6F0DB6422A66455002FBC96 /* errors.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = errors.c; sourceTree = "<group>"; };
+		D6F0DB6522A66455002FBC96 /* hppa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hppa.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D6F0DB3922A66455002FBC96 = {
+			isa = PBXGroup;
+			children = (
+				D6F0DB3F22A66455002FBC96 /* reloc.c */,
+				D6F0DB4022A66455002FBC96 /* set_arch_flag_name.c */,
+				D6F0DB4122A66455002FBC96 /* allocate.c */,
+				D6F0DB4222A66455002FBC96 /* ofile_error.c */,
+				D6F0DB4322A66455002FBC96 /* vm_flush_cache.c */,
+				D6F0DB4422A66455002FBC96 /* symbol_list.c */,
+				D6F0DB4522A66455002FBC96 /* print.c */,
+				D6F0DB4622A66455002FBC96 /* dylib_roots.c */,
+				D6F0DB4722A66455002FBC96 /* Makefile */,
+				D6F0DB4822A66455002FBC96 /* execute.c */,
+				D6F0DB4922A66455002FBC96 /* checkout.c */,
+				D6F0DB4A22A66455002FBC96 /* fatal_arch.c */,
+				D6F0DB4B22A66455002FBC96 /* lto.c */,
+				D6F0DB4C22A66455002FBC96 /* arch.c */,
+				D6F0DB4D22A66455002FBC96 /* get_toc_byte_sex.c */,
+				D6F0DB4E22A66455002FBC96 /* guess_short_name.c */,
+				D6F0DB4F22A66455002FBC96 /* ofile_get_word.c */,
+				D6F0DB5022A66455002FBC96 /* dylib_table.c */,
+				D6F0DB5122A66455002FBC96 /* crc32.c */,
+				D6F0DB5222A66455002FBC96 /* coff_bytesex.c */,
+				D6F0DB5322A66455002FBC96 /* hash_string.c */,
+				D6F0DB5422A66455002FBC96 /* ofile.c */,
+				D6F0DB5522A66455002FBC96 /* SymLoc.c */,
+				D6F0DB5622A66455002FBC96 /* bytesex.c */,
+				D6F0DB5722A66455002FBC96 /* rnd.c */,
+				D6F0DB5822A66455002FBC96 /* version_number.c */,
+				D6F0DB5922A66455002FBC96 /* get_arch_from_host.c */,
+				D6F0DB5A22A66455002FBC96 /* unix_standard_mode.c */,
+				D6F0DB5B22A66455002FBC96 /* fatals.c */,
+				D6F0DB5C22A66455002FBC96 /* best_arch.c */,
+				D6F0DB5D22A66455002FBC96 /* macosx_deployment_target.c */,
+				D6F0DB5E22A66455002FBC96 /* writeout.c */,
+				D6F0DB5F22A66455002FBC96 /* arch_usage.c */,
+				D6F0DB6022A66455002FBC96 /* llvm.c */,
+				D6F0DB6122A66455002FBC96 /* swap_headers.c */,
+				D6F0DB6222A66455002FBC96 /* breakout.c */,
+				D6F0DB6322A66455002FBC96 /* seg_addr_table.c */,
+				D6F0DB6422A66455002FBC96 /* errors.c */,
+				D6F0DB6522A66455002FBC96 /* hppa.c */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D6F0DB3E22A66455002FBC96 /* libstuff */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D6F0DB6622A66455002FBC96 /* Build configuration list for PBXLegacyTarget "libstuff" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/songruiwang/GitHub/Laboratory/AppleSources/cctools-895/libstuff";
+			dependencies = (
+			);
+			name = libstuff;
+			passBuildSettingsInEnvironment = 1;
+			productName = libstuff;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		D6F0DB3A22A66455002FBC96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = D6F0DB3D22A66455002FBC96 /* Build configuration list for PBXProject "libstuff" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6F0DB3922A66455002FBC96;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F0DB3E22A66455002FBC96 /* libstuff */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D6F0DB3B22A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D6F0DB3C22A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		D6F0DB6722A66455002FBC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = libstuff;
+			};
+			name = Debug;
+		};
+		D6F0DB6822A66455002FBC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = libstuff;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F0DB3D22A66455002FBC96 /* Build configuration list for PBXProject "libstuff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DB3B22A66455002FBC96 /* Debug */,
+				D6F0DB3C22A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F0DB6622A66455002FBC96 /* Build configuration list for PBXLegacyTarget "libstuff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F0DB6722A66455002FBC96 /* Debug */,
+				D6F0DB6822A66455002FBC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F0DB3A22A66455002FBC96 /* Project object */;
+}
