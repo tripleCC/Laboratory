@@ -213,6 +213,7 @@ int main(int argc, const char * argv[]) {
     }
     
     free(mhdr);
+    
     fclose(file);
     
 //    }
