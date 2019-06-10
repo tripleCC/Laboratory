@@ -21,6 +21,7 @@
 #include <assert.h>
 #include "hash_table.h"
 #include "list.h"
+#include "thread_pool.h"
 
 static const unsigned long gMaxFileNumber = 1024 * 20;
 static const char *const gHeaderFileExtname = ".h";
@@ -76,8 +77,48 @@ void init_keyword_infos(fui_keyword_info *infos, size_t size);
 void free_list(const char *key, void *value) {
     fui_list_free((fui_list_ref)value);
 }
+
+void *check_file(void *argv) {
+    ObjcFile *file = argv;
+    int fd = open(file->path, O_RDONLY);
+    if (fd < 0) return NULL;
+    
+    off_t length = lseek(fd, 0, SEEK_END);
+    lseek(fd, 0, SEEK_SET);
+    char *contents = malloc(length);
+    if (!contents) return NULL;
+    puts(file->name);
+    if (read(fd, contents, length)) {
+        for (int j = 0; j < gHeaderFiles.next; j++) {
+            char *name = gHeaderFiles.files[j].name;
+            
+            if (!strncmp(name, file->name, strlen(name) - 2))
+                continue;
+            if (is_header_required(contents, length, name)) {
+                
+//                fui_list_ref value = NULL;
+//                fui_hash_table_get(hash, gHeaderFiles.files[j].path, (void **)&value);
+//                if (!value) {
+//                    fui_list_ref list = fui_list_allocate();
+//                    fui_list_add(list, gObjcFiles.files[i].path);
+//                    fui_hash_table_add(hash, gHeaderFiles.files[j].path, list);
+//                } else {
+//                    fui_list_add(value, gObjcFiles.files[i].path);
+//                }
+                
+            }
+        }
+    }
+    free(contents);
+    close(fd);
+    
+    return NULL;
+}
+
 int main(int argc, const char * argv[]) {
 
+    fui_thread_pool_ref pool = thread_pool_init();
+    
     init_keyword_infos(g_require_infos, sizeof(g_require_infos));
     fui_hash_table_ref hash = fui_hash_table_allocate();
     
@@ -86,45 +127,14 @@ int main(int argc, const char * argv[]) {
     findFiles(root, &gHeaderFiles, hasObjcHeaderExtname);
     findFiles(root, &gObjcFiles, hasObjcExtname);
     
-    for (int i = 0; i < gHeaderFiles.next; i++) {
-//        puts(gHeaderFiles.files[i].name);
-    }
-    
     for (int i = 0; i < gObjcFiles.next; i++) {
-        int fd = open(gObjcFiles.files[i].path, O_RDONLY);
-        if (fd < 0) return -1;
-        
-        off_t length = lseek(fd, 0, SEEK_END);
-        lseek(fd, 0, SEEK_SET);
-        char *contents = malloc(length);
-        if (!contents) return -1;
-        puts(gObjcFiles.files[i].name);
-        if (read(fd, contents, length)) {
-            for (int j = 0; j < gHeaderFiles.next; j++) {
-                char *name = gHeaderFiles.files[j].name;
-                
-                if (!strncmp(name, gObjcFiles.files[i].name, strlen(name) - 2))
-                    continue;
-                if (is_header_required(contents, length, name)) {
-                    
-                    fui_list_ref value = NULL;
-                    fui_hash_table_get(hash, gHeaderFiles.files[j].path, (void **)&value);
-                    if (!value) {
-                        fui_list_ref list = fui_list_allocate();
-                        fui_list_add(list, gObjcFiles.files[i].path);
-                        fui_hash_table_add(hash, gHeaderFiles.files[j].path, list);
-                    } else {
-                        fui_list_add(value, gObjcFiles.files[i].path);
-                    }
-                    
-                }
-            }
-        }
-        free(contents);
-        close(fd);
+        thread_pool_add_task(pool, check_file, &gObjcFiles.files[i]);
     }
+    thread_pool_wait(pool);
+    
     fui_hash_table_foreach(hash, free_list);
     fui_hash_table_free(hash);
+    thread_pool_destroy(pool);
 //
     return 0;
 }

@@ -87,9 +87,9 @@ fui_list_remove(fui_list_ref l, unsigned int i) {
         for (int j = 1; j <= i - 1; j++)
             node = node->next;
         
-        struct fui_list_node *target = node->next;
-        node->next = target->next;
-        node = target;
+        struct fui_list_node *prev = node->next;
+        node->next = prev->next;
+        node = prev;
     }
     
     l->number--;
