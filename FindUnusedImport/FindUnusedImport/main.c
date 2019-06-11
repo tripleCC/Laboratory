@@ -23,10 +23,9 @@
 #include "list.h"
 #include "thread_pool.h"
 
-static const unsigned long gMaxFileNumber = 1024 * 20;
-static const char *const gHeaderFileExtname = ".h";
-static const char *const gFileExtname[] = {
-    gHeaderFileExtname,
+static const char *const g_header_file_extname = ".h";
+static const char *const g_file_extname[] = {
+    g_header_file_extname,
     ".m",
     ".pch",
 //    "modulemap" 有伞头文件
@@ -35,37 +34,12 @@ static const char *const gFileExtname[] = {
 typedef struct {
     char name[NAME_MAX];
     char path[PATH_MAX];
-} ObjcFile;
-
-typedef struct {
-    ObjcFile files[gMaxFileNumber];
-    unsigned int next;
-    pthread_mutex_t lock;
-} FileList;
-
-
-void findFiles(const char *root, FileList *fileList, bool (*filter)(const char*));
-static inline bool hasObjcExtname(const char *file);
-static inline bool hasObjcHeaderExtname(const char *file);
-static inline bool hasExtname(const char *str, const char *extname);
-
-static FileList gHeaderFiles = {
-    { 0 },
-    0,
-    PTHREAD_MUTEX_INITIALIZER
-};
-
-static FileList gObjcFiles = {
-    { 0 },
-    0,
-    PTHREAD_MUTEX_INITIALIZER
-};
+} objc_file;
 
 typedef struct {
     size_t length;
     char keyword[15];
 } fui_keyword_info;
-
 
 static fui_keyword_info g_require_infos[] = {
     { 0, "#import" },
@@ -78,8 +52,48 @@ void free_list(const char *key, void *value) {
     fui_list_free((fui_list_ref)value);
 }
 
+fui_hash_table_ref map;
+pthread_mutex_t map_lock = PTHREAD_MUTEX_INITIALIZER;
+fui_thread_pool_ref pool;
+fui_list_ref headers;
+fui_list_ref objc_files;
+
+struct file_check_context {
+    objc_file *file;
+    char *contents;
+    unsigned long length;
+};
+
+void header_foreach(void *value, void *ctx) {
+    struct file_check_context *context = ctx;
+    objc_file *file = context->file;
+    char *contents = context->contents;
+    unsigned long length = context->length;
+    objc_file *header = value;
+    
+    if (strlen(header->name) == strlen(file->name) &&
+        !strncmp(header->name, file->name, strlen(header->name) - 2))
+        return;
+    
+    if (is_header_required(contents, length, header->name)) {
+        fui_list_ref value = NULL;
+        pthread_mutex_lock(&map_lock);
+        fui_hash_table_get(map, header->path, (void **)&value);
+        if (!value) {
+            fui_list_ref list = fui_list_allocate();
+            fui_list_add(list, file->path);
+            fui_hash_table_add(map, header->path, list);
+        } else {
+            fui_list_add(value, file->path);
+        }
+        pthread_mutex_unlock(&map_lock);
+    }
+    
+}
+
 void *check_file(void *argv) {
-    ObjcFile *file = argv;
+    objc_file *file = argv;
+    
     int fd = open(file->path, O_RDONLY);
     if (fd < 0) return NULL;
     
@@ -87,27 +101,15 @@ void *check_file(void *argv) {
     lseek(fd, 0, SEEK_SET);
     char *contents = malloc(length);
     if (!contents) return NULL;
-    puts(file->name);
+    
     if (read(fd, contents, length)) {
-        for (int j = 0; j < gHeaderFiles.next; j++) {
-            char *name = gHeaderFiles.files[j].name;
-            
-            if (!strncmp(name, file->name, strlen(name) - 2))
-                continue;
-            if (is_header_required(contents, length, name)) {
-                
-//                fui_list_ref value = NULL;
-//                fui_hash_table_get(hash, gHeaderFiles.files[j].path, (void **)&value);
-//                if (!value) {
-//                    fui_list_ref list = fui_list_allocate();
-//                    fui_list_add(list, gObjcFiles.files[i].path);
-//                    fui_hash_table_add(hash, gHeaderFiles.files[j].path, list);
-//                } else {
-//                    fui_list_add(value, gObjcFiles.files[i].path);
-//                }
-                
-            }
-        }
+        struct file_check_context *ctx = malloc(sizeof(struct file_check_context));
+        ctx->file = file;
+        ctx->contents = contents;
+        ctx->length = length;
+        
+        fui_list_foreach(headers, header_foreach, ctx);
+        free(ctx);
     }
     free(contents);
     close(fd);
@@ -115,40 +117,104 @@ void *check_file(void *argv) {
     return NULL;
 }
 
-int main(int argc, const char * argv[]) {
-
-    fui_thread_pool_ref pool = thread_pool_init();
+void find_files_with_filter(const char *root, fui_list_ref list, bool (*filter)(const char* )) {
+    struct dirent *ent = NULL;
+    DIR *dir = opendir(root);
     
-    init_keyword_infos(g_require_infos, sizeof(g_require_infos));
-    fui_hash_table_ref hash = fui_hash_table_allocate();
+    if (!dir) return;
     
-//    char *root = "/Users/songruiwang/Work/TDF/TDFNavigationBarKit/TDFNavigationBarKit/Classes";
-    char *root = "/Users/songruiwang/Work/TDF/restapp/RestApp";
-    findFiles(root, &gHeaderFiles, hasObjcHeaderExtname);
-    findFiles(root, &gObjcFiles, hasObjcExtname);
-    
-    for (int i = 0; i < gObjcFiles.next; i++) {
-        thread_pool_add_task(pool, check_file, &gObjcFiles.files[i]);
+    while (NULL != (ent = readdir(dir))) {
+        if (!strncmp(ent->d_name, ".", 1)) continue;
+        
+        switch (ent->d_type) {
+            case DT_DIR: {
+                char path[PATH_MAX] = { 0 };
+                snprintf(path, sizeof(path), "%s/%s", root, ent->d_name);
+                find_files_with_filter(path, list, filter);
+            } break;
+            case DT_REG: {
+                if (filter && filter(ent->d_name)) {
+                    objc_file *file = calloc(1, sizeof(objc_file));
+                    memcpy(file->name, ent->d_name, strlen(ent->d_name));
+                    snprintf(file->path, sizeof(file->path), "%s/%s", root, ent->d_name);
+                    fui_list_add(list, file);
+                }
+            } break;
+            default: break;
+        }
     }
-    thread_pool_wait(pool);
     
-    fui_hash_table_foreach(hash, free_list);
-    fui_hash_table_free(hash);
-    thread_pool_destroy(pool);
-//
-    return 0;
+    closedir(dir);
 }
 
-//if (*content == '\n') {
-//    content++;
-//    while (*content == ' ' || *content == '\t') content++;
-//    if (strncmp(content, "//", 2)) {
-//        content += 2;
-//        while (*content++ == '\n');
-//    }
-//}
+static inline bool has_extname(const char *file, const char *extname) {
+    if (!file || !extname) return false;
+    
+    size_t fsize = strlen(file);
+    size_t esize = strlen(extname);
+    if (esize > fsize) return false;
+    
+    return !strcmp(file + fsize - esize, extname);
+}
 
-//'#' ' '
+static bool has_objc_header_extname(const char *file) {
+    return has_extname(file, g_header_file_extname);
+}
+
+static bool has_objc_extname(const char *file) {
+    for (int i = 0; i < sizeof(g_file_extname) / sizeof(char *) - 1; i++) {
+        if (has_extname(file, g_file_extname[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void objc_file_foreach(void *value, void *ctx) {
+    thread_pool_add_task(pool, check_file, value);
+}
+
+int count = 0;
+void print_unused_import(void *value, void *ctx) {
+    fui_hash_table_ref map = ctx;
+    fui_list_ref list = NULL;
+    objc_file *file = value;
+    fui_hash_table_get(map, file->path, (void **)&list);
+    if (!list) {
+        count++;
+        printf("%s\n", file->name);
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    char *root = "/Users/songruiwang/Work/TDF/restapp/RestApp";
+    
+    headers = fui_list_allocate();
+    objc_files = fui_list_allocate();
+    pool = thread_pool_init();
+    map = fui_hash_table_allocate();
+    
+    find_files_with_filter(root, headers, has_objc_header_extname);
+    find_files_with_filter(root, objc_files, has_objc_extname);
+    
+    init_keyword_infos(g_require_infos, sizeof(g_require_infos));
+    fui_list_foreach(objc_files, objc_file_foreach, NULL);
+    
+    thread_pool_wait(pool);
+    
+    fui_list_foreach(headers, print_unused_import, map);
+    
+    printf("%d\n", count);
+    printf("%d\n", fui_list_get_number(headers));
+    fui_hash_table_foreach(map, free_list);
+    fui_hash_table_free(map);
+    fui_list_free(headers);
+    fui_list_free(objc_files);
+    thread_pool_destroy(pool);
+
+    
+    return 0;
+}
 
 void init_keyword_infos(fui_keyword_info *infos, size_t size) {
     for (int i = 0; i < size / sizeof(fui_keyword_info); i++) {
@@ -209,56 +275,4 @@ bool is_header_required(const char *content, unsigned long length, const char *n
     } while (content < content_end);
     
     return false;
-}
-
-void findFiles(const char *root, FileList *fileList, bool (*filter)(const char*)) {
-    struct dirent *ent = NULL;
-    DIR *dir = opendir(root);
-    
-    if (!dir) return;
-    
-    while (NULL != (ent = readdir(dir))) {
-        if (!strncmp(ent->d_name, ".", 1)) continue;
-        
-        switch (ent->d_type) {
-            case DT_DIR: {
-                char path[PATH_MAX] = { 0 };
-                snprintf(path, sizeof(path), "%s/%s", root, ent->d_name);
-                findFiles(path, fileList, filter);
-            } break;
-            case DT_REG: {
-                if (filter && filter(ent->d_name)) {
-                    ObjcFile *file = &fileList->files[fileList->next++];
-                    memcpy(file->name, ent->d_name, strlen(ent->d_name));
-                    snprintf(file->path, sizeof(file->path), "%s/%s", root, ent->d_name);
-                }
-            } break;
-            default: break;
-        }
-    }
-    
-    closedir(dir);
-}
-
-static bool hasObjcHeaderExtname(const char *file) {
-    return hasExtname(file, gHeaderFileExtname);
-}
-
-static bool hasObjcExtname(const char *file) {
-    for (int i = 0; i < sizeof(gFileExtname) / sizeof(char *) - 1; i++) {
-        if (hasExtname(file, gFileExtname[i])) {
-            return true;
-        }
-    }
-    return false;
-}
-
-static inline bool hasExtname(const char *file, const char *extname) {
-    if (!file || !extname) return false;
-    
-    size_t fsize = strlen(file);
-    size_t esize = strlen(extname);
-    if (esize > fsize) return false;
-
-    return !strcmp(file + fsize - esize, extname);
 }

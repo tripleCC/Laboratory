@@ -42,7 +42,8 @@ struct fui_thread_pool {
     struct fui_task_queue task_queue;
 };
 
-static void task_queue_init(fui_task_queue_t *q) {
+static void
+task_queue_init(fui_task_queue_t *q) {
     q->task_number = 0;
     q->tail = NULL;
     q->head = NULL;
@@ -53,7 +54,8 @@ static void task_queue_init(fui_task_queue_t *q) {
     pthread_cond_init(&q->task_cond, NULL);
 }
 
-static void task_queue_push(fui_task_queue_t *q, fui_task_t *t) {
+static void
+task_queue_push(fui_task_queue_t *q, fui_task_t *t) {
     t->next = NULL;
     
     pthread_mutex_lock(&q->rwlock);
@@ -71,7 +73,8 @@ static void task_queue_push(fui_task_queue_t *q, fui_task_t *t) {
     pthread_mutex_unlock(&q->rwlock);
 }
 
-static fui_task_t *task_queue_pop(fui_task_queue_t *q) {
+static fui_task_t *
+task_queue_pop(fui_task_queue_t *q) {
     pthread_mutex_lock(&q->rwlock);
     fui_task_t *t = q->head;
     if (q->task_number == 1) {
@@ -91,7 +94,8 @@ static fui_task_t *task_queue_pop(fui_task_queue_t *q) {
     return t;
 }
 
-static void task_queue_destroy(fui_task_queue_t *q) {
+static void
+task_queue_destroy(fui_task_queue_t *q) {
     pthread_mutex_lock(&q->rwlock);
     fui_task_t *t = q->head;
     fui_task_t *next = NULL;
@@ -106,7 +110,8 @@ static void task_queue_destroy(fui_task_queue_t *q) {
     pthread_mutex_unlock(&q->rwlock);
 }
 
-unsigned int task_queue_task_number(fui_task_queue_t *q) {
+static unsigned int
+task_queue_task_number(fui_task_queue_t *q) {
     pthread_mutex_lock(&q->rwlock);
     unsigned int n = q->task_number;
     pthread_mutex_unlock(&q->rwlock);
@@ -114,21 +119,24 @@ unsigned int task_queue_task_number(fui_task_queue_t *q) {
     return n;
 }
 
-void task_queue_cond_wait(fui_task_queue_t *q) {
+static void
+task_queue_cond_wait(fui_task_queue_t *q) {
     pthread_mutex_lock(&q->task_cond_lock);
     while (!q->task_cond_signaled)
         pthread_cond_wait(&q->task_cond, &q->task_cond_lock);
     pthread_mutex_unlock(&q->task_cond_lock);
 }
 
-void task_queue_cond_sinal(fui_task_queue_t *q) {
+static void
+task_queue_cond_sinal(fui_task_queue_t *q) {
     pthread_mutex_lock(&q->task_cond_lock);
     q->task_cond_signaled = true;
     pthread_cond_signal(&q->task_cond);
     pthread_mutex_unlock(&q->task_cond_lock);
 }
 
-void *task_worker(fui_thread_pool_ref p) {
+void *
+task_worker(fui_thread_pool_ref p) {
     char name[20] = {0};
     sprintf(name, "task worker %d", p->created_number);
     pthread_setname_np(name);
@@ -158,7 +166,8 @@ void *task_worker(fui_thread_pool_ref p) {
     return NULL;
 }
 
-int thread_pool_add_task(fui_thread_pool_ref p, void *(*func)(void *argv), void *argv) {
+int
+thread_pool_add_task(fui_thread_pool_ref p, void *(*func)(void *argv), void *argv) {
     fui_task_t *task = malloc(sizeof(fui_task_t));
     if (!task) return -1;
     
@@ -182,7 +191,8 @@ int thread_pool_add_task(fui_thread_pool_ref p, void *(*func)(void *argv), void 
     return 0;
 }
 
-void thread_pool_wait(fui_thread_pool_ref p) {
+void
+thread_pool_wait(fui_thread_pool_ref p) {
     pthread_mutex_lock(&p->number_lock);
     while (task_queue_task_number(&p->task_queue) ||
            p->working_number) {
@@ -191,7 +201,8 @@ void thread_pool_wait(fui_thread_pool_ref p) {
     pthread_mutex_unlock(&p->number_lock);
 }
 
-void thread_pool_destroy(fui_thread_pool_ref p) {
+void
+thread_pool_destroy(fui_thread_pool_ref p) {
     atomic_store(&g_atomic_threads_alive, false);
     
     while (p->created_number) {
@@ -203,7 +214,8 @@ void thread_pool_destroy(fui_thread_pool_ref p) {
     free(p);
 }
 
-fui_thread_pool_ref thread_pool_init(void) {
+fui_thread_pool_ref
+thread_pool_init(void) {
     atomic_store(&g_atomic_threads_alive, true);
     
     fui_thread_pool_ref p = calloc(1, sizeof(struct fui_thread_pool));

@@ -100,3 +100,18 @@ unsigned int
 fui_list_get_number(fui_list_ref l) {
     return l->number;
 }
+
+extern void
+fui_list_foreach(fui_list_ref l, fui_list_foreach_func each, void *context) {
+    if (!each) return;
+    
+    struct fui_list_node *node = l->node;
+    struct fui_list_node *next = NULL;
+    unsigned int number = l->number;
+    
+    while (number-- > 0) {
+        next = node->next;
+        each(node->value, context);
+        node = next;
+    }
+}

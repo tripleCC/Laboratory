@@ -16,6 +16,7 @@ extern "C" {
 #endif
 
 typedef struct fui_list *fui_list_ref;
+typedef void (fui_list_foreach_func)(void *value, void *context);
     
 extern fui_list_ref
 fui_list_allocate(void);
@@ -34,6 +35,9 @@ fui_list_get_number(fui_list_ref l);
     
 extern void
 fui_list_free(fui_list_ref l);
+    
+extern void
+fui_list_foreach(fui_list_ref l, fui_list_foreach_func each, void *context);
 #ifdef __cplusplus
 }
 #endif
