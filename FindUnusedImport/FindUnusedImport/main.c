@@ -102,6 +102,8 @@ void *check_file(void *argv) {
     char *contents = malloc(length);
     if (!contents) return NULL;
     
+//    printf("%s \n", file->path);
+    
     if (read(fd, contents, length)) {
         struct file_check_context *ctx = malloc(sizeof(struct file_check_context));
         ctx->file = file;
@@ -188,6 +190,13 @@ void print_unused_import(void *value, void *ctx) {
 
 int main(int argc, const char * argv[]) {
     char *root = "/Users/songruiwang/Work/TDF/restapp/RestApp";
+    
+    struct stat path_stat;
+    stat(root, &path_stat);
+    if (!S_ISDIR(path_stat.st_mode)) {
+        printf("\"%s\" isn't an available directory.\n", root);
+        return -1;
+    }
     
     headers = fui_list_allocate();
     objc_files = fui_list_allocate();

@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D659E99C22C1B1300081AE1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E99B22C1B1300081AE1A /* AppDelegate.m */; };
+		D659E99F22C1B1300081AE1A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E99E22C1B1300081AE1A /* ViewController.m */; };
+		D659E9A222C1B1300081AE1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D659E9A022C1B1300081AE1A /* Main.storyboard */; };
+		D659E9A422C1B1330081AE1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D659E9A322C1B1330081AE1A /* Assets.xcassets */; };
+		D659E9A722C1B1330081AE1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D659E9A522C1B1330081AE1A /* LaunchScreen.storyboard */; };
+		D659E9AA22C1B1330081AE1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9A922C1B1330081AE1A /* main.m */; };
+		D659E9B422C1B1330081AE1A /* KVODataBindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9B322C1B1330081AE1A /* KVODataBindingTests.m */; };
+		D659E9C022C1B3060081AE1A /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9BF22C1B3060081AE1A /* Observable.m */; };
+		D659E9C622C1B5310081AE1A /* KeyPathSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9C522C1B5310081AE1A /* KeyPathSubject.m */; };
+		D659E9C922C1BAB70081AE1A /* KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9C822C1BAB70081AE1A /* KVOObserver.m */; };
+		D659E9CC22C1BD1D0081AE1A /* Observable+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9CB22C1BD1D0081AE1A /* Observable+Map.m */; };
+		D659E9D022C1CF350081AE1A /* DisposeBag.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9CF22C1CF350081AE1A /* DisposeBag.m */; };
+		D659E9D522C2075C0081AE1A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D659E9D422C2075C0081AE1A /* README.md */; };
+		D659E9D822C219460081AE1A /* Observable+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9D722C219460081AE1A /* Observable+Binding.m */; };
+		D659E9DC22C21BCF0081AE1A /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9DB22C21BCF0081AE1A /* Subject.m */; };
+		D659E9DF22C23E560081AE1A /* Observable+Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9DE22C23E560081AE1A /* Observable+Filter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D659E9B022C1B1330081AE1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D659E98F22C1B1300081AE1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D659E99622C1B1300081AE1A;
+			remoteInfo = KVODataBinding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D659E99722C1B1300081AE1A /* KVODataBinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVODataBinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D659E99A22C1B1300081AE1A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D659E99B22C1B1300081AE1A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D659E99D22C1B1300081AE1A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D659E99E22C1B1300081AE1A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D659E9A122C1B1300081AE1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D659E9A322C1B1330081AE1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D659E9A622C1B1330081AE1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D659E9A822C1B1330081AE1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D659E9A922C1B1330081AE1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D659E9AF22C1B1330081AE1A /* KVODataBindingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVODataBindingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D659E9B322C1B1330081AE1A /* KVODataBindingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVODataBindingTests.m; sourceTree = "<group>"; };
+		D659E9B522C1B1330081AE1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D659E9BE22C1B3060081AE1A /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
+		D659E9BF22C1B3060081AE1A /* Observable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Observable.m; sourceTree = "<group>"; };
+		D659E9C422C1B5310081AE1A /* KeyPathSubject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPathSubject.h; sourceTree = "<group>"; };
+		D659E9C522C1B5310081AE1A /* KeyPathSubject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyPathSubject.m; sourceTree = "<group>"; };
+		D659E9C722C1BAB70081AE1A /* KVOObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObserver.h; sourceTree = "<group>"; };
+		D659E9C822C1BAB70081AE1A /* KVOObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOObserver.m; sourceTree = "<group>"; };
+		D659E9CA22C1BD1D0081AE1A /* Observable+Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Observable+Map.h"; sourceTree = "<group>"; };
+		D659E9CB22C1BD1D0081AE1A /* Observable+Map.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Observable+Map.m"; sourceTree = "<group>"; };
+		D659E9CD22C1BEBE0081AE1A /* Observable+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Observable+Private.h"; sourceTree = "<group>"; };
+		D659E9CE22C1CF350081AE1A /* DisposeBag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisposeBag.h; sourceTree = "<group>"; };
+		D659E9CF22C1CF350081AE1A /* DisposeBag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisposeBag.m; sourceTree = "<group>"; };
+		D659E9D422C2075C0081AE1A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		D659E9D622C219450081AE1A /* Observable+Binding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Observable+Binding.h"; sourceTree = "<group>"; };
+		D659E9D722C219460081AE1A /* Observable+Binding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Observable+Binding.m"; sourceTree = "<group>"; };
+		D659E9D922C2197B0081AE1A /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		D659E9DA22C21BCF0081AE1A /* Subject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
+		D659E9DB22C21BCF0081AE1A /* Subject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
+		D659E9DD22C23E560081AE1A /* Observable+Filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Observable+Filter.h"; sourceTree = "<group>"; };
+		D659E9DE22C23E560081AE1A /* Observable+Filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Observable+Filter.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D659E99422C1B1300081AE1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D659E9AC22C1B1330081AE1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D659E98E22C1B1300081AE1A = {
+			isa = PBXGroup;
+			children = (
+				D659E99922C1B1300081AE1A /* KVODataBinding */,
+				D659E9B222C1B1330081AE1A /* KVODataBindingTests */,
+				D659E99822C1B1300081AE1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D659E99822C1B1300081AE1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D659E99722C1B1300081AE1A /* KVODataBinding.app */,
+				D659E9AF22C1B1330081AE1A /* KVODataBindingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D659E99922C1B1300081AE1A /* KVODataBinding */ = {
+			isa = PBXGroup;
+			children = (
+				D659E9D422C2075C0081AE1A /* README.md */,
+				D659E9D322C201940081AE1A /* Classes */,
+				D659E99A22C1B1300081AE1A /* AppDelegate.h */,
+				D659E99B22C1B1300081AE1A /* AppDelegate.m */,
+				D659E99D22C1B1300081AE1A /* ViewController.h */,
+				D659E99E22C1B1300081AE1A /* ViewController.m */,
+				D659E9A022C1B1300081AE1A /* Main.storyboard */,
+				D659E9A322C1B1330081AE1A /* Assets.xcassets */,
+				D659E9A522C1B1330081AE1A /* LaunchScreen.storyboard */,
+				D659E9A822C1B1330081AE1A /* Info.plist */,
+				D659E9A922C1B1330081AE1A /* main.m */,
+			);
+			path = KVODataBinding;
+			sourceTree = "<group>";
+		};
+		D659E9B222C1B1330081AE1A /* KVODataBindingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D659E9B322C1B1330081AE1A /* KVODataBindingTests.m */,
+				D659E9B522C1B1330081AE1A /* Info.plist */,
+			);
+			path = KVODataBindingTests;
+			sourceTree = "<group>";
+		};
+		D659E9D322C201940081AE1A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D659E9CE22C1CF350081AE1A /* DisposeBag.h */,
+				D659E9CF22C1CF350081AE1A /* DisposeBag.m */,
+				D659E9BE22C1B3060081AE1A /* Observable.h */,
+				D659E9BF22C1B3060081AE1A /* Observable.m */,
+				D659E9D922C2197B0081AE1A /* Protocols.h */,
+				D659E9CD22C1BEBE0081AE1A /* Observable+Private.h */,
+				D659E9D622C219450081AE1A /* Observable+Binding.h */,
+				D659E9D722C219460081AE1A /* Observable+Binding.m */,
+				D659E9CA22C1BD1D0081AE1A /* Observable+Map.h */,
+				D659E9CB22C1BD1D0081AE1A /* Observable+Map.m */,
+				D659E9DD22C23E560081AE1A /* Observable+Filter.h */,
+				D659E9DE22C23E560081AE1A /* Observable+Filter.m */,
+				D659E9C722C1BAB70081AE1A /* KVOObserver.h */,
+				D659E9C822C1BAB70081AE1A /* KVOObserver.m */,
+				D659E9DA22C21BCF0081AE1A /* Subject.h */,
+				D659E9DB22C21BCF0081AE1A /* Subject.m */,
+				D659E9C422C1B5310081AE1A /* KeyPathSubject.h */,
+				D659E9C522C1B5310081AE1A /* KeyPathSubject.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D659E99622C1B1300081AE1A /* KVODataBinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D659E9B822C1B1330081AE1A /* Build configuration list for PBXNativeTarget "KVODataBinding" */;
+			buildPhases = (
+				D659E99322C1B1300081AE1A /* Sources */,
+				D659E99422C1B1300081AE1A /* Frameworks */,
+				D659E99522C1B1300081AE1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KVODataBinding;
+			productName = KVODataBinding;
+			productReference = D659E99722C1B1300081AE1A /* KVODataBinding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D659E9AE22C1B1330081AE1A /* KVODataBindingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D659E9BB22C1B1330081AE1A /* Build configuration list for PBXNativeTarget "KVODataBindingTests" */;
+			buildPhases = (
+				D659E9AB22C1B1330081AE1A /* Sources */,
+				D659E9AC22C1B1330081AE1A /* Frameworks */,
+				D659E9AD22C1B1330081AE1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D659E9B122C1B1330081AE1A /* PBXTargetDependency */,
+			);
+			name = KVODataBindingTests;
+			productName = KVODataBindingTests;
+			productReference = D659E9AF22C1B1330081AE1A /* KVODataBindingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D659E98F22C1B1300081AE1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = tripleCC;
+				TargetAttributes = {
+					D659E99622C1B1300081AE1A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D659E9AE22C1B1330081AE1A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D659E99622C1B1300081AE1A;
+					};
+				};
+			};
+			buildConfigurationList = D659E99222C1B1300081AE1A /* Build configuration list for PBXProject "KVODataBinding" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D659E98E22C1B1300081AE1A;
+			productRefGroup = D659E99822C1B1300081AE1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D659E99622C1B1300081AE1A /* KVODataBinding */,
+				D659E9AE22C1B1330081AE1A /* KVODataBindingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D659E99522C1B1300081AE1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D659E9A722C1B1330081AE1A /* LaunchScreen.storyboard in Resources */,
+				D659E9A422C1B1330081AE1A /* Assets.xcassets in Resources */,
+				D659E9D522C2075C0081AE1A /* README.md in Resources */,
+				D659E9A222C1B1300081AE1A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D659E9AD22C1B1330081AE1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D659E99322C1B1300081AE1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D659E9D022C1CF350081AE1A /* DisposeBag.m in Sources */,
+				D659E9C022C1B3060081AE1A /* Observable.m in Sources */,
+				D659E9D822C219460081AE1A /* Observable+Binding.m in Sources */,
+				D659E9CC22C1BD1D0081AE1A /* Observable+Map.m in Sources */,
+				D659E99F22C1B1300081AE1A /* ViewController.m in Sources */,
+				D659E9AA22C1B1330081AE1A /* main.m in Sources */,
+				D659E9DF22C23E560081AE1A /* Observable+Filter.m in Sources */,
+				D659E9C922C1BAB70081AE1A /* KVOObserver.m in Sources */,
+				D659E9C622C1B5310081AE1A /* KeyPathSubject.m in Sources */,
+				D659E9DC22C21BCF0081AE1A /* Subject.m in Sources */,
+				D659E99C22C1B1300081AE1A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D659E9AB22C1B1330081AE1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D659E9B422C1B1330081AE1A /* KVODataBindingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D659E9B122C1B1330081AE1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D659E99622C1B1300081AE1A /* KVODataBinding */;
+			targetProxy = D659E9B022C1B1330081AE1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D659E9A022C1B1300081AE1A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D659E9A122C1B1300081AE1A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D659E9A522C1B1330081AE1A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D659E9A622C1B1330081AE1A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D659E9B622C1B1330081AE1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D659E9B722C1B1330081AE1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D659E9B922C1B1330081AE1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
+				INFOPLIST_FILE = KVODataBinding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplecc.KVODataBinding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D659E9BA22C1B1330081AE1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
+				INFOPLIST_FILE = KVODataBinding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplecc.KVODataBinding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D659E9BC22C1B1330081AE1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
+				INFOPLIST_FILE = KVODataBindingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplecc.KVODataBindingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KVODataBinding.app/KVODataBinding";
+			};
+			name = Debug;
+		};
+		D659E9BD22C1B1330081AE1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
+				INFOPLIST_FILE = KVODataBindingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplecc.KVODataBindingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KVODataBinding.app/KVODataBinding";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D659E99222C1B1300081AE1A /* Build configuration list for PBXProject "KVODataBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D659E9B622C1B1330081AE1A /* Debug */,
+				D659E9B722C1B1330081AE1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D659E9B822C1B1330081AE1A /* Build configuration list for PBXNativeTarget "KVODataBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D659E9B922C1B1330081AE1A /* Debug */,
+				D659E9BA22C1B1330081AE1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D659E9BB22C1B1330081AE1A /* Build configuration list for PBXNativeTarget "KVODataBindingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D659E9BC22C1B1330081AE1A /* Debug */,
+				D659E9BD22C1B1330081AE1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D659E98F22C1B1300081AE1A /* Project object */;
+}
