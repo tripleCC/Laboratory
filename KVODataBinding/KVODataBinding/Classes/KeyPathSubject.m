@@ -66,7 +66,7 @@
 }
 
 - (void)doHandlers:(id)value {
-    for (void (^handler)(id) in self->_handlers) {
+    for (void (^handler)(id) in _handlers) {
         handler(value);
     }
 }

@@ -23,6 +23,7 @@
 		D659E9D822C219460081AE1A /* Observable+Binding.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9D722C219460081AE1A /* Observable+Binding.m */; };
 		D659E9DC22C21BCF0081AE1A /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9DB22C21BCF0081AE1A /* Subject.m */; };
 		D659E9DF22C23E560081AE1A /* Observable+Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9DE22C23E560081AE1A /* Observable+Filter.m */; };
+		D659E9E222C316910081AE1A /* Observable+Just.m in Sources */ = {isa = PBXBuildFile; fileRef = D659E9E122C316910081AE1A /* Observable+Just.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		D659E9DB22C21BCF0081AE1A /* Subject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Subject.m; sourceTree = "<group>"; };
 		D659E9DD22C23E560081AE1A /* Observable+Filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Observable+Filter.h"; sourceTree = "<group>"; };
 		D659E9DE22C23E560081AE1A /* Observable+Filter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Observable+Filter.m"; sourceTree = "<group>"; };
+		D659E9E022C316910081AE1A /* Observable+Just.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Observable+Just.h"; sourceTree = "<group>"; };
+		D659E9E122C316910081AE1A /* Observable+Just.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Observable+Just.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				D659E9CB22C1BD1D0081AE1A /* Observable+Map.m */,
 				D659E9DD22C23E560081AE1A /* Observable+Filter.h */,
 				D659E9DE22C23E560081AE1A /* Observable+Filter.m */,
+				D659E9E022C316910081AE1A /* Observable+Just.h */,
+				D659E9E122C316910081AE1A /* Observable+Just.m */,
 				D659E9C722C1BAB70081AE1A /* KVOObserver.h */,
 				D659E9C822C1BAB70081AE1A /* KVOObserver.m */,
 				D659E9DA22C21BCF0081AE1A /* Subject.h */,
@@ -261,6 +266,7 @@
 			files = (
 				D659E9D022C1CF350081AE1A /* DisposeBag.m in Sources */,
 				D659E9C022C1B3060081AE1A /* Observable.m in Sources */,
+				D659E9E222C316910081AE1A /* Observable+Just.m in Sources */,
 				D659E9D822C219460081AE1A /* Observable+Binding.m in Sources */,
 				D659E9CC22C1BD1D0081AE1A /* Observable+Map.m in Sources */,
 				D659E99F22C1B1300081AE1A /* ViewController.m in Sources */,
