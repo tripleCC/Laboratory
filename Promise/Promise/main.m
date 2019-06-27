@@ -1,8 +1,8 @@
 //
 //  main.m
-//  ImplementPromise
+//  Promise
 //
-//  Created by tripleCC on 6/26/19.
+//  Created by tripleCC on 6/27/19.
 //  Copyright © 2019 tripleCC. All rights reserved.
 //
 
