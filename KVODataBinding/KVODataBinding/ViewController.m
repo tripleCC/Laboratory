@@ -43,39 +43,33 @@
   
     self.d1 = [NSMutableDictionary dictionary];
     self.d2 = [NSMutableDictionary dictionary];
-    __unused KVOObserver *kvo = [[KVOObserver alloc] initWithTarget:self.d1 keyPath:@"name" handler:^(id  _Nonnull new, id  _Nonnull old) {
-        self.d2[@"simpleName"] = new;
-    }];
-    self.d1[@"name"] = @"foo";
     
-    NSLog(@"%@", self.d2);
-//
 //    self.bag = [DisposeBag new];
 //
-//    __weak typeof(self) wself = self;
-//    KeyPathSubject *s1 = [[KeyPathSubject alloc] initWithTarget:self.d1 keyPath:@"name"];
-//    KeyPathSubject *s2 = [[KeyPathSubject alloc] initWithTarget:self.d2 keyPath:@"simple"];
-//
-//    [s1 bind:s2];
-//
-//    [[s1 subscribe:^(id  _Nonnull value) {
-////        NSLog(@"1 %@ %@", wself.d2, wself.d1);
-//    }] disposedBy:self.bag];
-//
-//    [[s2 subscribe:^(id  _Nonnull value) {
-////        NSLog(@"2 %@ %@", wself.d2, wself.d1);
-//    }] disposedBy:self.bag];
-//
-//    [[[s1 filter:^BOOL(id  _Nonnull value) {
-//        return YES;//[value integerValue] % 2;
-//    }] subscribe:^(id value) {
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            NSLog(@"3 %@ %@", wself.d2, wself.d1);
-//        });
-//    }] disposedBy:self.bag];
-//
-//    [[Observable just:@1] subscribe:^(id value) {
-//        NSLog(@"%@", value);
-//    }];
+    __weak typeof(self) wself = self;
+    KeyPathSubject *s1 = [[KeyPathSubject alloc] initWithTarget:self.d1 keyPath:@"name"];
+    KeyPathSubject *s2 = [[KeyPathSubject alloc] initWithTarget:self.d2 keyPath:@"simple"];
+
+    [s1 bindTo:s2];
+
+    [[s1 subscribe:^(id  _Nonnull value) {
+//        NSLog(@"1 %@ %@", wself.d2, wself.d1);
+    }] disposedBy:self.bag];
+
+    [[s2 subscribe:^(id  _Nonnull value) {
+//        NSLog(@"2 %@ %@", wself.d2, wself.d1);
+    }] disposedBy:self.bag];
+
+    [[[s1 filter:^BOOL(id  _Nonnull value) {
+        return YES;//[value integerValue] % 2;
+    }] subscribe:^(id value) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"3 %@ %@", wself.d2, wself.d1);
+        });
+    }] disposedBy:self.bag];
+
+    [[Observable just:@1] subscribe:^(id value) {
+        NSLog(@"%@", value);
+    }];
 }
 @end
