@@ -108,6 +108,10 @@ task_queue_destroy(fui_task_queue_t *q) {
     q->head = NULL;
     q->tail = NULL;
     pthread_mutex_unlock(&q->rwlock);
+    
+    pthread_mutex_destroy(&q->rwlock);
+    pthread_mutex_destroy(&q->task_cond_lock);
+    pthread_cond_destroy(&q->task_cond);
 }
 
 static unsigned int
@@ -211,6 +215,8 @@ thread_pool_destroy(fui_thread_pool_ref p) {
     }
     
     task_queue_destroy(&p->task_queue);
+    pthread_mutex_destroy(&p->number_lock);
+    pthread_cond_destroy(&p->all_done_cond);
     free(p);
 }
 
