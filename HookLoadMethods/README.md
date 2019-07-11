@@ -55,7 +55,7 @@ static const struct mach_header **copyAllSelfDefinedImageHeader(unsigned int *ou
 
 上文说过 objc 会向 dyld 注册一个 init 回调，其实这个注册函数还会接收一个 mapped 回调 `_read_images`，dyld 会把当前已经载入或新添加的镜像信息通过回调函数传给 objc 设置程序，一般来说，除了手动 dlopen 的镜像外，在 objc 调用注册函数时，工程运行所需的镜像已经被 dyld 加载进内存了，所以 `_read_images` 回调会[立即被调用](https://github.com/tripleCC/Laboratory/blob/5c084263d79973805649b89d166b50751045e937/AppleSources/dyld-635.2/src/dyld.cpp#L4312-L4314)， 并读取这些镜像 DATA 段中保存的类、分类、协议等信息。对于 no lazy 的类和分类，`_read_images` 函数会提前对关联的类做 [realize 操作](https://github.com/tripleCC/Laboratory/blob/5c084263d79973805649b89d166b50751045e937/AppleSources/objc4-750/runtime/objc-runtime-new.mm#L1858-L1974)，这个操作包含了给类开辟可读写的信息存储空间、调整成员变量布局、插入分类方法属性等操作，简单来说就是让类可用 (realized)。值得注意的是，使用 `objc_getClass` 等查找接口，会触发对应类的 realize 操作，而正常情况下，只有我们使用某个类时，这个类才会执行上述操作，即类的懒加载。反观 +initialize ，只有首次向类发送消息时才会调用，不过两者目的不同，+initialize 更多的是提供一个入口，让开发者能在首次向类发送消息时，处理一些额外业务。
 
-回到上面的两种方法，第一种方法需要借助 `objc_copyClassNamesForImage` 和 `objc_getClass` 函数，而后者会触发类的 realize 操作，也就说需要把读取镜像中访问的所有类都变成 realized 状态，当类较多时，这样做会比较明显地影响到 pre-main 的整体时间，所以本文采用了第二种方法：
+回到上面的两种方法，第一种方法需要借助 objc_copyClassNamesForImage 和 objc_getClass 函数，而后者会触发类的 realize 操作，也就说需要把读取镜像中访问的所有类都变成 realized 状态，当类较多时，这样做会比较明显地影响到 pre-main 的整体时间，并且 objc_copyClassNamesForImage 无法获取自定义 image 中分类的信息，特别是系统分类，比如定义了 +load 方法的 NSObject+Custom 分类，对自定义 image 调用 objc_copyClassNamesForImage 函数，其返回值将不会包含 NSObject 类，这导致后续操作将不会包含 NSObject 类，也就无法测量它的 +load 耗时（可以使用 objc_copyClassList 获取所有类，并判断类方法列表是否有 +load 方法来规避这个问题，但是和 objc_copyClassNamesForImage 一样，此方法将更加耗时），所以本文采用了第二种方法：
 
 ```objc
 static NSArray <LMLoadInfo *> *getNoLazyArray(const struct mach_header *mhdr) {
