@@ -1,0 +1,39 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+#use_frameworks!
+
+#plugin 'cocoapods-bin'
+
+#use_binaries!
+
+#set_use_source_pods 'TDFScreenDebugger'
+#use_frameworks!
+# set_use_source_pods ['TDFCoreProtocol']
+
+target 'TDFLeaksMonitor_Example' do
+  pod 'TDFLeaksMonitor', :path => '../'
+#  pod 'TDFScreenDebugger'
+  target 'TDFLeaksMonitor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+
+# 三方库设置 inhibit_warnings = true
+pre_install do |installer|
+  installer.analysis_result.specs_by_target.each_key do |target_definition|
+    installer.analysis_result.specifications.each do |spec|
+      source = spec.attributes_hash['source']
+      source &&= source['git']
+      next unless source && source.include?('cocoapods-repos')
+
+      targets = (Array(target_definition) + target_definition.children)
+      targets.each do |target|
+        target.set_inhibit_warnings_for_pod(spec.root.name, true)
+      end
+    end
+  end
+end

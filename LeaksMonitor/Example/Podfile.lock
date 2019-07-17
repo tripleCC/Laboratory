@@ -1,0 +1,23 @@
+PODS:
+  - OCHooking (0.1.0)
+  - TDFLeaksMonitor (0.1.6):
+    - OCHooking
+
+DEPENDENCIES:
+  - TDFLeaksMonitor (from `../`)
+
+SPEC REPOS:
+  "git@git.2dfire.net:ios/cocoapods-spec-binary.git":
+    - OCHooking
+
+EXTERNAL SOURCES:
+  TDFLeaksMonitor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OCHooking: a29528a88cf350bb26e8a842105171c8c4af92fd
+  TDFLeaksMonitor: ec173c89e1dbc03d2f574635c0b65180255472b4
+
+PODFILE CHECKSUM: 1f43693068424d1c9784c1cbea95d11de839980a
+
+COCOAPODS: 1.7.4

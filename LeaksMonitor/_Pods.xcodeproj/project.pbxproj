@@ -1,0 +1,859 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D9B3991B7C2E8D76E375C7BFC93FA424 /* OCHooking */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FACE182FF9191A17330C340C5FEEB073 /* Build configuration list for PBXAggregateTarget "OCHooking" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = OCHooking;
+			productName = OCHooking;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0ED0A777E3964BE323A4E74F96DA6B89 /* TDFLeakObjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AED843215689C2FAD8A9AD724EE8053E /* TDFLeakObjectInfo.m */; };
+		11E87FE6E45A20B492DB2AAB4D88D9A0 /* TDFLeakObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0197BE519C2752729A9C27C3297001CB /* TDFLeakObjectProxy.m */; };
+		1CA914BEB2B3DEA2B05EDF8BE0B927A1 /* TDFLeakObjectInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = B33EB03791393D5C5BC5AEDE0E01B558 /* TDFLeakObjectInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1DE177F4E2025F06F15E5E0FF1FC1A34 /* NSDictionary+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5242AD4A467A5A104190BDCA3C420D /* NSDictionary+LeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3674C481FD421AC3EEF56CB49E0FD712 /* AttentionClasses+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = FE667927890A2617172BD9B1F8BF6F9D /* AttentionClasses+LeaksMonitor.m */; };
+		4A316CEE3A9D9EB26A3B01357BC4E234 /* TDFLeaksMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBED79BC97025E7D846200E5413CAE3 /* TDFLeaksMonitor-dummy.m */; };
+		4C72183231B3592A3B99CDCF297DBC65 /* NSDictionary+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D104E6D701F64B6B7C3701A97ADF4DE8 /* NSDictionary+LeaksMonitor.m */; };
+		702363623FF0F1276094872F320831EC /* NSSet+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = C7830CD7B9837D1890D56BDBC48F24A7 /* NSSet+LeaksMonitor.m */; };
+		795C8010ED608599C26A949D2956C912 /* NSSet+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A06E7A9CFD507A4353A21897692E26 /* NSSet+LeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		821482D9F28B184258D5D9529FB6E04A /* TDFLeakObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0B0E012F651822D31F1997EC12F3F8 /* TDFLeakObjectProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8612F4FC03A56905609A746B4209B5B3 /* NSObject+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D6CB7CB5EAF95CF2A372B77E010C92 /* NSObject+LeaksMonitor.m */; };
+		87F7FFB7547D48AE21EB06F83B3E600C /* UIView+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6DDBCE7D74A4033FF8486CD7A119CA /* UIView+LeaksMonitor.m */; };
+		9134068849DC964A6245A30C838D3716 /* UIViewController+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 71858447A686F1051016B85F675806C4 /* UIViewController+LeaksMonitor.m */; };
+		91CDC182A071238E49746732622C6D58 /* NSObject+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = EA98F7599EB2BA3D81ED3BC93A0FB434 /* NSObject+LeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A085F8E65C9DC7C13F932C76C8B82C62 /* UIViewController+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F70A79D051268625ABFEBB289BA654D /* UIViewController+LeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA5DBECBA224A4914A1E723371DE5324 /* TDFLeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF13162351D59A5AA3A9C0942C1F12F /* TDFLeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF4CE1C89A61252AB8CACEC023E67AFF /* NSArray+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B8A6CA6A7D8D6D4047E2C9A947EF6D /* NSArray+LeaksMonitor.m */; };
+		C02187C35424FE4A2B965081CA9C01ED /* TDFLeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F76AB5EC5338984079742FB4B24AE /* TDFLeaksMonitor.m */; };
+		D555376E1CDBE11ADE530AFD207FD2F0 /* UIView+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AFBFF275A18BD53A0679F2E4FAC94E /* UIView+LeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6553C6A22D6D264001EAD1C /* A4LoadMeasure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6553C6922D6D263001EAD1C /* A4LoadMeasure.framework */; };
+		D658D13F22D72FD60052D14D /* UIWindow+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = D658D13D22D72FD60052D14D /* UIWindow+LeaksMonitor.h */; };
+		D658D14022D72FD60052D14D /* UIWindow+LeaksMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D658D13E22D72FD60052D14D /* UIWindow+LeaksMonitor.m */; };
+		D658D14222D731F40052D14D /* TDFLeaksMonitor+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D658D14122D731F40052D14D /* TDFLeaksMonitor+Internal.h */; };
+		D658D14522D74A3A0052D14D /* TDFLeaksMonitorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D658D14322D74A3A0052D14D /* TDFLeaksMonitorUtils.h */; };
+		D658D14622D74A3A0052D14D /* TDFLeaksMonitorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D658D14422D74A3A0052D14D /* TDFLeaksMonitorUtils.m */; };
+		E326199C43B4762A95278E2B79D33E7C /* NSArray+LeaksMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ED2E7A09D01B3DD0EF776D5F03CEB3C /* NSArray+LeaksMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ECD1C9B36CB9E94D8A706AE64B53B431 /* Pods-TDFLeaksMonitor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865A7574FF1BB7C920E57B023E758B9 /* Pods-TDFLeaksMonitor_Example-dummy.m */; };
+		FBDC9C3193F9C0B5D333395C5533CA88 /* Pods-TDFLeaksMonitor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A716A73A673BEF3B92233C856352B91 /* Pods-TDFLeaksMonitor_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20E72887FA1859340BBED131A298D51D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90327C60F410957DBA404CE1456B2C49;
+			remoteInfo = "Pods-TDFLeaksMonitor_Example";
+		};
+		4283BD563DE8BECF5552B9924376DBBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39300017CA5EA676058B289A22EFE87;
+			remoteInfo = TDFLeaksMonitor;
+		};
+		485ECC4AB757F801968A3910393F61DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B3991B7C2E8D76E375C7BFC93FA424;
+			remoteInfo = OCHooking;
+		};
+		A7AB6F17D94639238C9CE24076CFADE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B3991B7C2E8D76E375C7BFC93FA424;
+			remoteInfo = OCHooking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005736ADB4DDCAA9A1A4ABB608CF917E /* Pods-TDFLeaksMonitor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TDFLeaksMonitor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0197BE519C2752729A9C27C3297001CB /* TDFLeakObjectProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDFLeakObjectProxy.m; path = TDFLeaksMonitor/Classes/TDFLeakObjectProxy.m; sourceTree = "<group>"; };
+		03AFBFF275A18BD53A0679F2E4FAC94E /* UIView+LeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/UIView+LeaksMonitor.h"; sourceTree = "<group>"; };
+		0A716A73A673BEF3B92233C856352B91 /* Pods-TDFLeaksMonitor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDFLeaksMonitor_Tests-dummy.m"; sourceTree = "<group>"; };
+		0B3A299079C7597E67C1478F731ECDB0 /* OCHooking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCHooking.h; path = OCHooking.framework/Versions/A/Headers/OCHooking.h; sourceTree = "<group>"; };
+		131EFE746D2BBAB819EA2A0D1FF10CE3 /* Pods-TDFLeaksMonitor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TDFLeaksMonitor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1865A7574FF1BB7C920E57B023E758B9 /* Pods-TDFLeaksMonitor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDFLeaksMonitor_Example-dummy.m"; sourceTree = "<group>"; };
+		221F524E0040CB590874A3FA85D862C9 /* OCHooking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHooking.framework; sourceTree = "<group>"; };
+		24DA8E2C966F4D36D389112A0D732A53 /* OCHBlockMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCHBlockMethod.h; path = OCHooking.framework/Versions/A/Headers/OCHBlockMethod.h; sourceTree = "<group>"; };
+		2F70A79D051268625ABFEBB289BA654D /* UIViewController+LeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/UIViewController+LeaksMonitor.h"; sourceTree = "<group>"; };
+		344E94C1D73A801CD547D29CFB937F70 /* TDFLeaksMonitor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TDFLeaksMonitor.xcconfig; sourceTree = "<group>"; };
+		3B6DDBCE7D74A4033FF8486CD7A119CA /* UIView+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/UIView+LeaksMonitor.m"; sourceTree = "<group>"; };
+		41E025D948873DB9290A872DA6CB2EBF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		438F76AB5EC5338984079742FB4B24AE /* TDFLeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDFLeaksMonitor.m; path = TDFLeaksMonitor/Classes/TDFLeaksMonitor.m; sourceTree = "<group>"; };
+		43F1DB15272CEB1AD49B18DB4ABC00A9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		47B8A6CA6A7D8D6D4047E2C9A947EF6D /* NSArray+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/NSArray+LeaksMonitor.m"; sourceTree = "<group>"; };
+		56D6CB7CB5EAF95CF2A372B77E010C92 /* NSObject+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/NSObject+LeaksMonitor.m"; sourceTree = "<group>"; };
+		5B5242AD4A467A5A104190BDCA3C420D /* NSDictionary+LeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/NSDictionary+LeaksMonitor.h"; sourceTree = "<group>"; };
+		5CBFF474DE3EE048F6C234F72D8B478B /* Pods-TDFLeaksMonitor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TDFLeaksMonitor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		69C7C0B859BA62427B61ACEFDE4A0FDF /* OCHooking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OCHooking.xcconfig; sourceTree = "<group>"; };
+		71858447A686F1051016B85F675806C4 /* UIViewController+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/UIViewController+LeaksMonitor.m"; sourceTree = "<group>"; };
+		7C3CD73066B701D71788897B63182ED9 /* TDFLeaksMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDFLeaksMonitor-prefix.pch"; sourceTree = "<group>"; };
+		83A06E7A9CFD507A4353A21897692E26 /* NSSet+LeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/NSSet+LeaksMonitor.h"; sourceTree = "<group>"; };
+		89F5683713F8869EFF7FEF4682649B5C /* Pods-TDFLeaksMonitor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TDFLeaksMonitor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8A0B0E012F651822D31F1997EC12F3F8 /* TDFLeakObjectProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFLeakObjectProxy.h; path = TDFLeaksMonitor/Classes/TDFLeakObjectProxy.h; sourceTree = "<group>"; };
+		8ED2E7A09D01B3DD0EF776D5F03CEB3C /* NSArray+LeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/NSArray+LeaksMonitor.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3A820F8BED581C4A647FB6F80320BDC /* libTDFLeaksMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTDFLeaksMonitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF13162351D59A5AA3A9C0942C1F12F /* TDFLeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFLeaksMonitor.h; path = TDFLeaksMonitor/Classes/TDFLeaksMonitor.h; sourceTree = "<group>"; };
+		AED843215689C2FAD8A9AD724EE8053E /* TDFLeakObjectInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TDFLeakObjectInfo.m; path = TDFLeaksMonitor/Classes/TDFLeakObjectInfo.m; sourceTree = "<group>"; };
+		B33EB03791393D5C5BC5AEDE0E01B558 /* TDFLeakObjectInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TDFLeakObjectInfo.h; path = TDFLeaksMonitor/Classes/TDFLeakObjectInfo.h; sourceTree = "<group>"; };
+		B39581B7F703899C24F9AB2CEFED2FA6 /* Pods-TDFLeaksMonitor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TDFLeaksMonitor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C7830CD7B9837D1890D56BDBC48F24A7 /* NSSet+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSSet+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/NSSet+LeaksMonitor.m"; sourceTree = "<group>"; };
+		CFBED79BC97025E7D846200E5413CAE3 /* TDFLeaksMonitor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDFLeaksMonitor-dummy.m"; sourceTree = "<group>"; };
+		D104E6D701F64B6B7C3701A97ADF4DE8 /* NSDictionary+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/NSDictionary+LeaksMonitor.m"; sourceTree = "<group>"; };
+		D6553C6922D6D263001EAD1C /* A4LoadMeasure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = A4LoadMeasure.framework; path = ../TDFLeaksMonitor/A4LoadMeasure.framework; sourceTree = "<group>"; };
+		D658D13D22D72FD60052D14D /* UIWindow+LeaksMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIWindow+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/UIWindow+LeaksMonitor.h"; sourceTree = "<group>"; };
+		D658D13E22D72FD60052D14D /* UIWindow+LeaksMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/UIWindow+LeaksMonitor.m"; sourceTree = "<group>"; };
+		D658D14122D731F40052D14D /* TDFLeaksMonitor+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TDFLeaksMonitor+Internal.h"; path = "TDFLeaksMonitor/Classes/TDFLeaksMonitor+Internal.h"; sourceTree = "<group>"; };
+		D658D14322D74A3A0052D14D /* TDFLeaksMonitorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TDFLeaksMonitorUtils.h; path = TDFLeaksMonitor/Classes/TDFLeaksMonitorUtils.h; sourceTree = "<group>"; };
+		D658D14422D74A3A0052D14D /* TDFLeaksMonitorUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TDFLeaksMonitorUtils.m; path = TDFLeaksMonitor/Classes/TDFLeaksMonitorUtils.m; sourceTree = "<group>"; };
+		DB3722CE351FD0C0EDD7FBD8B1DF6044 /* Pods-TDFLeaksMonitor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TDFLeaksMonitor_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E474BC459AFFE6C1471C90503B33CA80 /* libPods-TDFLeaksMonitor_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDFLeaksMonitor_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA98F7599EB2BA3D81ED3BC93A0FB434 /* NSObject+LeaksMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+LeaksMonitor.h"; path = "TDFLeaksMonitor/Classes/NSObject+LeaksMonitor.h"; sourceTree = "<group>"; };
+		EF2289959B3B5FFCB2ADE7A831FC20B5 /* libPods-TDFLeaksMonitor_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TDFLeaksMonitor_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB64F3BB4231F29657685BBDA150A34F /* Pods-TDFLeaksMonitor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TDFLeaksMonitor_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FD35B43BAFDEE341B596FADBD6EF742A /* TDFLeaksMonitor.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TDFLeaksMonitor.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FD58FAD2B8910D2513855AB36FE25B4F /* Pods-TDFLeaksMonitor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TDFLeaksMonitor_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FE667927890A2617172BD9B1F8BF6F9D /* AttentionClasses+LeaksMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AttentionClasses+LeaksMonitor.m"; path = "TDFLeaksMonitor/Classes/AttentionClasses+LeaksMonitor.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C72795B053E028916C46A73BE1ECE11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA947B474235359D46EDAF4FC4866C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCB9A806C5FEE2D6C77F621217D59BB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6553C6A22D6D264001EAD1C /* A4LoadMeasure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33D3E6604812382B1A3094929BF1218D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				344E94C1D73A801CD547D29CFB937F70 /* TDFLeaksMonitor.xcconfig */,
+				CFBED79BC97025E7D846200E5413CAE3 /* TDFLeaksMonitor-dummy.m */,
+				7C3CD73066B701D71788897B63182ED9 /* TDFLeaksMonitor-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TDFLeaksMonitor";
+			sourceTree = "<group>";
+		};
+		387E87202B9111AC06455AA17B945C4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				221F524E0040CB590874A3FA85D862C9 /* OCHooking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E71DB049AACEC9927D840383BBD29AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				69C7C0B859BA62427B61ACEFDE4A0FDF /* OCHooking.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OCHooking";
+			sourceTree = "<group>";
+		};
+		4E9878D8984C8A214F45A3EA910BA8BA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				41E025D948873DB9290A872DA6CB2EBF /* LICENSE */,
+				43F1DB15272CEB1AD49B18DB4ABC00A9 /* README.md */,
+				FD35B43BAFDEE341B596FADBD6EF742A /* TDFLeaksMonitor.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6D1110155AB1307299ADDB00CB8539D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E474BC459AFFE6C1471C90503B33CA80 /* libPods-TDFLeaksMonitor_Example.a */,
+				EF2289959B3B5FFCB2ADE7A831FC20B5 /* libPods-TDFLeaksMonitor_Tests.a */,
+				A3A820F8BED581C4A647FB6F80320BDC /* libTDFLeaksMonitor.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73AC8313B6C1FA08E4B51493FBE376A4 /* Pods-TDFLeaksMonitor_Example */ = {
+			isa = PBXGroup;
+			children = (
+				5CBFF474DE3EE048F6C234F72D8B478B /* Pods-TDFLeaksMonitor_Example-acknowledgements.markdown */,
+				B39581B7F703899C24F9AB2CEFED2FA6 /* Pods-TDFLeaksMonitor_Example-acknowledgements.plist */,
+				1865A7574FF1BB7C920E57B023E758B9 /* Pods-TDFLeaksMonitor_Example-dummy.m */,
+				FD58FAD2B8910D2513855AB36FE25B4F /* Pods-TDFLeaksMonitor_Example.debug.xcconfig */,
+				DB3722CE351FD0C0EDD7FBD8B1DF6044 /* Pods-TDFLeaksMonitor_Example.release.xcconfig */,
+			);
+			name = "Pods-TDFLeaksMonitor_Example";
+			path = "Target Support Files/Pods-TDFLeaksMonitor_Example";
+			sourceTree = "<group>";
+		};
+		8210A9926542241095082D63A7DAD8C4 /* OCHooking */ = {
+			isa = PBXGroup;
+			children = (
+				24DA8E2C966F4D36D389112A0D732A53 /* OCHBlockMethod.h */,
+				0B3A299079C7597E67C1478F731ECDB0 /* OCHooking.h */,
+				387E87202B9111AC06455AA17B945C4A /* Frameworks */,
+				4E71DB049AACEC9927D840383BBD29AD /* Support Files */,
+			);
+			path = OCHooking;
+			sourceTree = "<group>";
+		};
+		98945BB404E8B87D8B769F8083F0ABAA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73AC8313B6C1FA08E4B51493FBE376A4 /* Pods-TDFLeaksMonitor_Example */,
+				F7D0C7CEDC32074B64F2A0B333B2E15C /* Pods-TDFLeaksMonitor_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B6BAB62699C5DA9A6DE826EF6958C914 /* TDFLeaksMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				FE667927890A2617172BD9B1F8BF6F9D /* AttentionClasses+LeaksMonitor.m */,
+				8ED2E7A09D01B3DD0EF776D5F03CEB3C /* NSArray+LeaksMonitor.h */,
+				47B8A6CA6A7D8D6D4047E2C9A947EF6D /* NSArray+LeaksMonitor.m */,
+				D658D14322D74A3A0052D14D /* TDFLeaksMonitorUtils.h */,
+				D658D14422D74A3A0052D14D /* TDFLeaksMonitorUtils.m */,
+				5B5242AD4A467A5A104190BDCA3C420D /* NSDictionary+LeaksMonitor.h */,
+				D104E6D701F64B6B7C3701A97ADF4DE8 /* NSDictionary+LeaksMonitor.m */,
+				EA98F7599EB2BA3D81ED3BC93A0FB434 /* NSObject+LeaksMonitor.h */,
+				56D6CB7CB5EAF95CF2A372B77E010C92 /* NSObject+LeaksMonitor.m */,
+				83A06E7A9CFD507A4353A21897692E26 /* NSSet+LeaksMonitor.h */,
+				C7830CD7B9837D1890D56BDBC48F24A7 /* NSSet+LeaksMonitor.m */,
+				B33EB03791393D5C5BC5AEDE0E01B558 /* TDFLeakObjectInfo.h */,
+				AED843215689C2FAD8A9AD724EE8053E /* TDFLeakObjectInfo.m */,
+				8A0B0E012F651822D31F1997EC12F3F8 /* TDFLeakObjectProxy.h */,
+				0197BE519C2752729A9C27C3297001CB /* TDFLeakObjectProxy.m */,
+				D658D14122D731F40052D14D /* TDFLeaksMonitor+Internal.h */,
+				ABF13162351D59A5AA3A9C0942C1F12F /* TDFLeaksMonitor.h */,
+				438F76AB5EC5338984079742FB4B24AE /* TDFLeaksMonitor.m */,
+				03AFBFF275A18BD53A0679F2E4FAC94E /* UIView+LeaksMonitor.h */,
+				3B6DDBCE7D74A4033FF8486CD7A119CA /* UIView+LeaksMonitor.m */,
+				2F70A79D051268625ABFEBB289BA654D /* UIViewController+LeaksMonitor.h */,
+				71858447A686F1051016B85F675806C4 /* UIViewController+LeaksMonitor.m */,
+				D658D13D22D72FD60052D14D /* UIWindow+LeaksMonitor.h */,
+				D658D13E22D72FD60052D14D /* UIWindow+LeaksMonitor.m */,
+				4E9878D8984C8A214F45A3EA910BA8BA /* Pod */,
+				33D3E6604812382B1A3094929BF1218D /* Support Files */,
+			);
+			name = TDFLeaksMonitor;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B6CE4CFEBCEDAE0AF6C294C59FCCC68B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8210A9926542241095082D63A7DAD8C4 /* OCHooking */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D6553C6922D6D263001EAD1C /* A4LoadMeasure.framework */,
+				FF71654C48B75822E5FCFE39DFBA79B6 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				B6CE4CFEBCEDAE0AF6C294C59FCCC68B /* Pods */,
+				6D1110155AB1307299ADDB00CB8539D8 /* Products */,
+				98945BB404E8B87D8B769F8083F0ABAA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7D0C7CEDC32074B64F2A0B333B2E15C /* Pods-TDFLeaksMonitor_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				005736ADB4DDCAA9A1A4ABB608CF917E /* Pods-TDFLeaksMonitor_Tests-acknowledgements.markdown */,
+				89F5683713F8869EFF7FEF4682649B5C /* Pods-TDFLeaksMonitor_Tests-acknowledgements.plist */,
+				0A716A73A673BEF3B92233C856352B91 /* Pods-TDFLeaksMonitor_Tests-dummy.m */,
+				131EFE746D2BBAB819EA2A0D1FF10CE3 /* Pods-TDFLeaksMonitor_Tests.debug.xcconfig */,
+				FB64F3BB4231F29657685BBDA150A34F /* Pods-TDFLeaksMonitor_Tests.release.xcconfig */,
+			);
+			name = "Pods-TDFLeaksMonitor_Tests";
+			path = "Target Support Files/Pods-TDFLeaksMonitor_Tests";
+			sourceTree = "<group>";
+		};
+		FF71654C48B75822E5FCFE39DFBA79B6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6BAB62699C5DA9A6DE826EF6958C914 /* TDFLeaksMonitor */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		683D82EE93DB4DABA04360B42DD9A0AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C74494A4C12FD043CC0E430E6BC2BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D658D14522D74A3A0052D14D /* TDFLeaksMonitorUtils.h in Headers */,
+				E326199C43B4762A95278E2B79D33E7C /* NSArray+LeaksMonitor.h in Headers */,
+				D658D13F22D72FD60052D14D /* UIWindow+LeaksMonitor.h in Headers */,
+				1DE177F4E2025F06F15E5E0FF1FC1A34 /* NSDictionary+LeaksMonitor.h in Headers */,
+				91CDC182A071238E49746732622C6D58 /* NSObject+LeaksMonitor.h in Headers */,
+				795C8010ED608599C26A949D2956C912 /* NSSet+LeaksMonitor.h in Headers */,
+				1CA914BEB2B3DEA2B05EDF8BE0B927A1 /* TDFLeakObjectInfo.h in Headers */,
+				821482D9F28B184258D5D9529FB6E04A /* TDFLeakObjectProxy.h in Headers */,
+				AA5DBECBA224A4914A1E723371DE5324 /* TDFLeaksMonitor.h in Headers */,
+				D555376E1CDBE11ADE530AFD207FD2F0 /* UIView+LeaksMonitor.h in Headers */,
+				D658D14222D731F40052D14D /* TDFLeaksMonitor+Internal.h in Headers */,
+				A085F8E65C9DC7C13F932C76C8B82C62 /* UIViewController+LeaksMonitor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98375E3CD59A117DE461CC840B9B363 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3FF821F9A8CA03FBE5E5BA3041FF0A4F /* Pods-TDFLeaksMonitor_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 515EFEFA5C2BE29505F3622D8B31BD73 /* Build configuration list for PBXNativeTarget "Pods-TDFLeaksMonitor_Tests" */;
+			buildPhases = (
+				683D82EE93DB4DABA04360B42DD9A0AA /* Headers */,
+				72ED7AB687F943D4E3C4A4544960123D /* Sources */,
+				ADA947B474235359D46EDAF4FC4866C6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12D51DE206351659954F9C5EBF6729F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-TDFLeaksMonitor_Tests";
+			productName = "Pods-TDFLeaksMonitor_Tests";
+			productReference = EF2289959B3B5FFCB2ADE7A831FC20B5 /* libPods-TDFLeaksMonitor_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		90327C60F410957DBA404CE1456B2C49 /* Pods-TDFLeaksMonitor_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E717D566415A13012451F5477BC6F07 /* Build configuration list for PBXNativeTarget "Pods-TDFLeaksMonitor_Example" */;
+			buildPhases = (
+				A98375E3CD59A117DE461CC840B9B363 /* Headers */,
+				F679CB499F438E7584FC057EE4079A66 /* Sources */,
+				BCB9A806C5FEE2D6C77F621217D59BB3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E4C8A4A441F54278521D0E25C1CE64B /* PBXTargetDependency */,
+				26FC88E7EEC5CB3ED7EC85CA2CE543E1 /* PBXTargetDependency */,
+			);
+			name = "Pods-TDFLeaksMonitor_Example";
+			productName = "Pods-TDFLeaksMonitor_Example";
+			productReference = E474BC459AFFE6C1471C90503B33CA80 /* libPods-TDFLeaksMonitor_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D39300017CA5EA676058B289A22EFE87 /* TDFLeaksMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A67739922CC41AE7E66A008983E5B5 /* Build configuration list for PBXNativeTarget "TDFLeaksMonitor" */;
+			buildPhases = (
+				68C74494A4C12FD043CC0E430E6BC2BC /* Headers */,
+				6A360BC595C70B5061BA1A5EBD508A90 /* Sources */,
+				7C72795B053E028916C46A73BE1ECE11 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				110AC9FE382E4ECB0D95974CBE158618 /* PBXTargetDependency */,
+			);
+			name = TDFLeaksMonitor;
+			productName = TDFLeaksMonitor;
+			productReference = A3A820F8BED581C4A647FB6F80320BDC /* libTDFLeaksMonitor.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6D1110155AB1307299ADDB00CB8539D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9B3991B7C2E8D76E375C7BFC93FA424 /* OCHooking */,
+				90327C60F410957DBA404CE1456B2C49 /* Pods-TDFLeaksMonitor_Example */,
+				3FF821F9A8CA03FBE5E5BA3041FF0A4F /* Pods-TDFLeaksMonitor_Tests */,
+				D39300017CA5EA676058B289A22EFE87 /* TDFLeaksMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A360BC595C70B5061BA1A5EBD508A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3674C481FD421AC3EEF56CB49E0FD712 /* AttentionClasses+LeaksMonitor.m in Sources */,
+				D658D14022D72FD60052D14D /* UIWindow+LeaksMonitor.m in Sources */,
+				BF4CE1C89A61252AB8CACEC023E67AFF /* NSArray+LeaksMonitor.m in Sources */,
+				4C72183231B3592A3B99CDCF297DBC65 /* NSDictionary+LeaksMonitor.m in Sources */,
+				8612F4FC03A56905609A746B4209B5B3 /* NSObject+LeaksMonitor.m in Sources */,
+				702363623FF0F1276094872F320831EC /* NSSet+LeaksMonitor.m in Sources */,
+				0ED0A777E3964BE323A4E74F96DA6B89 /* TDFLeakObjectInfo.m in Sources */,
+				11E87FE6E45A20B492DB2AAB4D88D9A0 /* TDFLeakObjectProxy.m in Sources */,
+				4A316CEE3A9D9EB26A3B01357BC4E234 /* TDFLeaksMonitor-dummy.m in Sources */,
+				C02187C35424FE4A2B965081CA9C01ED /* TDFLeaksMonitor.m in Sources */,
+				D658D14622D74A3A0052D14D /* TDFLeaksMonitorUtils.m in Sources */,
+				87F7FFB7547D48AE21EB06F83B3E600C /* UIView+LeaksMonitor.m in Sources */,
+				9134068849DC964A6245A30C838D3716 /* UIViewController+LeaksMonitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72ED7AB687F943D4E3C4A4544960123D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBDC9C3193F9C0B5D333395C5533CA88 /* Pods-TDFLeaksMonitor_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F679CB499F438E7584FC057EE4079A66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD1C9B36CB9E94D8A706AE64B53B431 /* Pods-TDFLeaksMonitor_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E4C8A4A441F54278521D0E25C1CE64B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OCHooking;
+			target = D9B3991B7C2E8D76E375C7BFC93FA424 /* OCHooking */;
+			targetProxy = 485ECC4AB757F801968A3910393F61DE /* PBXContainerItemProxy */;
+		};
+		110AC9FE382E4ECB0D95974CBE158618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OCHooking;
+			target = D9B3991B7C2E8D76E375C7BFC93FA424 /* OCHooking */;
+			targetProxy = A7AB6F17D94639238C9CE24076CFADE5 /* PBXContainerItemProxy */;
+		};
+		12D51DE206351659954F9C5EBF6729F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TDFLeaksMonitor_Example";
+			target = 90327C60F410957DBA404CE1456B2C49 /* Pods-TDFLeaksMonitor_Example */;
+			targetProxy = 20E72887FA1859340BBED131A298D51D /* PBXContainerItemProxy */;
+		};
+		26FC88E7EEC5CB3ED7EC85CA2CE543E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TDFLeaksMonitor;
+			target = D39300017CA5EA676058B289A22EFE87 /* TDFLeaksMonitor */;
+			targetProxy = 4283BD563DE8BECF5552B9924376DBBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23EC8458C0334E014E335F345B8850EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344E94C1D73A801CD547D29CFB937F70 /* TDFLeaksMonitor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TDFLeaksMonitor/TDFLeaksMonitor-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TDFLeaksMonitor;
+				PRODUCT_NAME = TDFLeaksMonitor;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		69A175731370D1A50FEF6150ECFE7E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C7C0B859BA62427B61ACEFDE4A0FDF /* OCHooking.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		764A3FB4253C25D5B57D95153F645A7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB64F3BB4231F29657685BBDA150A34F /* Pods-TDFLeaksMonitor_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		86FF0A46645EC1132320CE7BFBCCD44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD58FAD2B8910D2513855AB36FE25B4F /* Pods-TDFLeaksMonitor_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9826F4E37B29C3226CD48A66FA690B44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344E94C1D73A801CD547D29CFB937F70 /* TDFLeaksMonitor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TDFLeaksMonitor/TDFLeaksMonitor-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TDFLeaksMonitor;
+				PRODUCT_NAME = TDFLeaksMonitor;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0E1C7EC4EC23EC9F1E3A5CFD2A7AF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131EFE746D2BBAB819EA2A0D1FF10CE3 /* Pods-TDFLeaksMonitor_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE817A610940CD067F8BFC74F593C786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB3722CE351FD0C0EDD7FBD8B1DF6044 /* Pods-TDFLeaksMonitor_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF954EA67D5CDE4858C9DCD5E66C88CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C7C0B859BA62427B61ACEFDE4A0FDF /* OCHooking.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E717D566415A13012451F5477BC6F07 /* Build configuration list for PBXNativeTarget "Pods-TDFLeaksMonitor_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FF0A46645EC1132320CE7BFBCCD44C /* Debug */,
+				FE817A610940CD067F8BFC74F593C786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		515EFEFA5C2BE29505F3622D8B31BD73 /* Build configuration list for PBXNativeTarget "Pods-TDFLeaksMonitor_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0E1C7EC4EC23EC9F1E3A5CFD2A7AF69 /* Debug */,
+				764A3FB4253C25D5B57D95153F645A7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A67739922CC41AE7E66A008983E5B5 /* Build configuration list for PBXNativeTarget "TDFLeaksMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9826F4E37B29C3226CD48A66FA690B44 /* Debug */,
+				23EC8458C0334E014E335F345B8850EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACE182FF9191A17330C340C5FEEB073 /* Build configuration list for PBXAggregateTarget "OCHooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A175731370D1A50FEF6150ECFE7E5D /* Debug */,
+				FF954EA67D5CDE4858C9DCD5E66C88CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
