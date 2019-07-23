@@ -13,7 +13,7 @@
 @implementation NSObject (LeaksMonitor)
 
 - (BOOL)LeaksMonitor_objectCanBeIgnored {
-    return LMIsSystemClass(self.class);
+    return object_isClass(self) || LMIsSystemClass(self.class);
 }
 
 - (BOOL)LeaksMonitor_objectCanBeCollected {

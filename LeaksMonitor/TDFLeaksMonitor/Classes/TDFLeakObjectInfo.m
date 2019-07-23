@@ -7,6 +7,10 @@
 
 #import "TDFLeakObjectInfo.h"
 
+@interface TDFLeakObjectInfo ()
+@property (copy, nonatomic) NSArray <NSString *> *traces;
+@end
+
 @implementation TDFLeakObjectInfo
 - (instancetype)initWithLeakObject:(id)leakObject leakName:(NSString *)leakName traces:(NSArray <NSString *> *)traces {
     if (self = [super init]) {
@@ -40,12 +44,17 @@
     NSString *leakName = NSStringFromClass([leakObject class]);
     
     // 知道 leakName, 并且能去修复泄漏即可, 不需要记录所有路径, 即使 traces 不一样
-    if (_infoMap[leakName]) {
+    TDFLeakObjectInfo *info = _infoMap[leakName];
+    if (info && info.traces.count <= traces.count) {
         return NO;
     }
     
-    TDFLeakObjectInfo *info = [[TDFLeakObjectInfo alloc] initWithLeakObject:leakObject leakName:leakName traces:traces];
-    _infoMap[leakName] = info;
+    if (info) {
+        info.traces = traces;
+    } else {
+        info = [[TDFLeakObjectInfo alloc] initWithLeakObject:leakObject leakName:leakName traces:traces];
+        _infoMap[leakName] = info;
+    }
     
     return YES;
 }
