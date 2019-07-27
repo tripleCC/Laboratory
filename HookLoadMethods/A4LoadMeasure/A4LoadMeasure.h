@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 
 @interface LMLoadInfo : NSObject
-@property (assign, nonatomic, readonly) SEL sel;
 @property (copy, nonatomic, readonly) NSString *clsname;
 @property (copy, nonatomic, readonly) NSString *catname;
 @property (assign, nonatomic, readonly) CFAbsoluteTime start;
@@ -25,6 +24,6 @@
 @property (copy, nonatomic, readonly) NSArray <LMLoadInfo *> *infos;
 @end
 
-extern const NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers;
+extern NSArray <LMLoadInfoWrapper *> *LMLoadInfoWappers;
 
 #endif /* A4LoadMeasure_h */

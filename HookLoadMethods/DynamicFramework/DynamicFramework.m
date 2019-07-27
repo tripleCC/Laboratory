@@ -10,7 +10,7 @@
 
 @implementation DynamicFramework
 + (void)load {
-    NSLog(@"DynamicFramework");
+//    NSLog(@"DynamicFramework");
 }
 @end
 

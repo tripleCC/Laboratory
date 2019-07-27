@@ -7,7 +7,7 @@
 //
 #import "ViewController.h"
 #import <objc/runtime.h>
-
+#import <DynamicFramework/DynamicFramework.h>
 
 @interface A : NSObject
 @end
@@ -60,5 +60,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [UIViewController performSelector:@selector(print)];
 }
 @end
+
+//@implementation UIViewController (s_1_)
+//+ (void)load {
+//    sleep(1);
+//    NSLog(@"s_1_");
+//}
+//@end
+//
+//@implementation DynamicFramework (s_2_)
+//+ (void)load {
+//    sleep(2);
+//    NSLog(@"Main UIViewController load");
+//}
+//@end
