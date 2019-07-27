@@ -108,7 +108,7 @@ static void hookAllLoadMethods(LMLoadInfoWrapper *infoWrapper) {
 }
 ```
 
-**更新**：处理多个动态库时，无法利用读取的 image 顺序对方法进行匹配，因为读取的 image 顺序并未考虑依赖关系，和 objc 初始化时遍历的 image 顺序并不一致，所以这里的处理方式是错误的，为了保证准确性，这里依旧需要使用 +load 方法的 imp 地址做对比，[具体更新](https://github.com/tripleCC/Laboratory/commit/c6c6212cb13f9957d01848a19c028a1de4fb3807)。
+**更新**：处理多个动态库时，无法利用读取的 image 顺序对方法进行匹配，因为读取的 image 顺序并未考虑依赖关系，和 objc 初始化时遍历的 image 顺序并不一致，所以这里的处理方式是错误的，为了保证准确性，这里依旧需要使用 +load 方法的 imp 地址做对比，[具体更新](https://github.com/tripleCC/Laboratory/commit/c28f1721fe7e38136df5a00faa2dce5635c599db)，多谢 [SuperSG](https://github.com/tripleCC/Laboratory/issues/2) 指出。
 
 为了让 `infos` 列表能和类方法列表中的 +load 方法顺序一致，在构造 `infoWrapper` 时，我按照后编译分类-先编译分类-类次序，将类信息追加入 `infos` 列表中，然后在遍历元类的方法列表时，将对应的 `LMLoadInfo` 对象取出以设置 +load 方法执行耗时变量：
 
