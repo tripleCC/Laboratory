@@ -1,0 +1,3 @@
+[submodule "AppleSources/clang"]
+	path = AppleSources/clang
+	url = https://github.com/llvm-mirror/clang.git
