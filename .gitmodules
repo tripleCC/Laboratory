@@ -1,3 +1,9 @@
 [submodule "AppleSources/clang"]
 	path = AppleSources/clang
 	url = https://github.com/llvm-mirror/clang.git
+[submodule "AppleSources/foundation"]
+	path = AppleSources/foundation
+	url = git@github.com:apple/swift-corelibs-foundation.git
+[submodule "AppleSources/libdispatch"]
+	path = AppleSources/libdispatch
+	url = https://github.com/apple/swift-corelibs-libdispatch.git
