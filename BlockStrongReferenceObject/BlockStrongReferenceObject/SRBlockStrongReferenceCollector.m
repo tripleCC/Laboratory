@@ -212,10 +212,6 @@ static const char *sr_block_extended_layout(struct sr_block_layout *block) {
     [_layoutItems addObject:item];
 }
 
-- (NSArray <SRLayoutItem *> *)layoutItems {
-    return [_layoutItems copy];
-}
-
 - (NSString *)description {
     NSMutableString *description = [NSMutableString stringWithString:@"\n"];
     for (SRLayoutItem *item in _layoutItems) {
@@ -232,13 +228,13 @@ static void SRAddObjectsFromHashTable(NSHashTable *dst, NSHashTable *ori) {
 };
 
 @implementation SRBlockStrongReferenceCollector {
-    id _block;
+    __weak id _block;
     NSEnumerator *_strongReferences;
     NSMutableArray *_blockByrefLayoutInfos;
     SRCapturedLayoutInfo *_blockLayoutInfo;
 }
 
-- (instancetype)initWithBlock:(id)block {
+- (instancetype)initWithBlock:(__weak id)block {
     if (self = [super init]) {
         _block = block;
         _blockByrefLayoutInfos = [NSMutableArray array];

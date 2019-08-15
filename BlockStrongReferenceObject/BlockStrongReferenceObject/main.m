@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
         NSObject *o9 = [Person personWithName:@"o9"];
         NSObject *o10 = [Person personWithName:@"o10"];
         NSObject *o11 = [Person personWithName:@"o11"];
-        NSObject *o12 = [Person personWithName:@"o12"];
+        __weak NSObject *o12 = [Person personWithName:@"o12"];
         long j = 4;
         int i = 3;
         char c = 'a';
@@ -76,6 +76,7 @@ int main(int argc, const char * argv[]) {
         blk();
         
         SRBlockStrongReferenceCollector *collector = [[SRBlockStrongReferenceCollector alloc] initWithBlock:blk];
+        NSLog(@"%@", collector.block);
         NSLog(@"%@", collector.blockLayoutInfo);
         NSLog(@"%@", collector.blockByrefLayoutInfos);
         NSLog(@"%@", collector.strongReferences.allObjects);

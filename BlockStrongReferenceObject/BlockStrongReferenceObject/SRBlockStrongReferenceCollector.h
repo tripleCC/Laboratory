@@ -20,9 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface SRBlockStrongReferenceCollector : NSObject
+@property (weak, nonatomic, readonly) id block;
 @property (strong, nonatomic, readonly) NSEnumerator *strongReferences;
 @property (strong, nonatomic, readonly) SRCapturedLayoutInfo *blockLayoutInfo;
 @property (copy, nonatomic, readonly) NSArray <SRCapturedLayoutInfo *> *blockByrefLayoutInfos;
-- (instancetype)initWithBlock:(id)block;
+- (instancetype)initWithBlock:(__weak id)block;
 @end
 NS_ASSUME_NONNULL_END
