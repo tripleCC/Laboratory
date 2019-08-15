@@ -34,7 +34,7 @@ int main(int argc, const char * argv[]) {
         NSObject *o4 = [Person personWithName:@"o4"];
         __weak NSObject *o5 = [Person personWithName:@"o5"];;
         NSObject *o6 = [Person personWithName:@"o6"];
-        NSObject *o7 = [Person personWithName:@"o7"];
+        __unsafe_unretained NSObject *o7 = [Person personWithName:@"o7"];
         __weak NSObject *o8 = [Person personWithName:@"o8"];
         NSObject *o9 = [Person personWithName:@"o9"];
         NSObject *o10 = [Person personWithName:@"o10"];
@@ -51,6 +51,7 @@ int main(int argc, const char * argv[]) {
              __weak NSObject *o2;
             long iS;
             __block NSObject *o3;
+             __unsafe_unretained NSObject *o4;
         } foo;
         foo.o1 = [Person personWithName:@"S.o1"];
         void (^blk0)() = ^{};

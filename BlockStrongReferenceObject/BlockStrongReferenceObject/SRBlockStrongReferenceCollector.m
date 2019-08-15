@@ -44,6 +44,7 @@ typedef enum SR_BLOCK_LAYOUT {
     SR_BLOCK_LAYOUT_STRONG           = 3,    // N words strong pointers
     SR_BLOCK_LAYOUT_BYREF            = 4,    // N words byref pointers
     SR_BLOCK_LAYOUT_WEAK             = 5,    // N words weak pointers
+    SR_BLOCK_LAYOUT_UNRETAINED       = 6,    // N words unretained pointers
 } SRBlockLayoutType;
 
 struct sr_block_byref {
