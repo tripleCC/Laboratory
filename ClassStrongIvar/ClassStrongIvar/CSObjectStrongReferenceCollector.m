@@ -9,10 +9,14 @@
 // Created by: tripleCC
 //
 
-
+#import <objc/runtime.h>
 #import "CSObjectStrongReferenceCollector.h"
 
-@interface CSIvarInfo ()
+@interface CSIvarInfo : NSObject
+@property (copy, nonatomic, readonly) NSString *name;
+@property (assign, nonatomic, readonly) ptrdiff_t offset;
+@property (assign, nonatomic, readonly) NSInteger index;
+@property (assign, nonatomic, readonly) Ivar ivar;
 @property (assign, nonatomic, readonly) BOOL isObject;
 
 - (instancetype)initWithIvar:(Ivar)ivar;
@@ -37,16 +41,12 @@
 }
 @end
 
-@implementation CSObjectStrongReferenceCollector {
-    NSMutableArray *_ivarInfos;
-}
-
+@implementation CSObjectStrongReferenceCollector
 @synthesize strongReferences = _strongReferences;
 
 - (instancetype)initWithObject:(id)object {
     if (self = [super init]) {
         _object = object;
-        _ivarInfos = [NSMutableArray array];
     }
     return self;
 }
