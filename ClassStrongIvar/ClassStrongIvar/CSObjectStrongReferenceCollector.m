@@ -104,7 +104,7 @@
 }
 
 - (NSArray <CSIvarInfo *> *)wrappedIvarList {
-    Class curLevelClass = object_getClass(_object);;
+    Class curLevelClass = [_object class];
     NSMutableArray *ivarInfos = [NSMutableArray array];
     
     while (curLevelClass) {
