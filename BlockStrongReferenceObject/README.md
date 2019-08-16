@@ -12,7 +12,7 @@ Objective-C 使用引用计数作为 iPhone 应用的内存管理方案，引用
 
 ## Block 捕获实体引用
 
-> 往期关于 Block 的文章 [对 Block 的一点补充](http://localhost:4000/2019/04/14/Objective-CBlock%E8%A1%A5%E5%85%85/)、[用 Block 实现委托方法](http://localhost:4000/2017/07/28/2017-07-28-blockhe-nsmethodsignature/)、[Block技巧与底层解析](http://localhost:4000/2015/07/19/2015-08-27-blockji-qiao-yu-di-ceng-jie-xi/)
+> 往期关于 Block 的文章 [对 Block 的一点补充](https://triplecc.github.io/2019/04/14/Objective-CBlock%E8%A1%A5%E5%85%85/)、[用 Block 实现委托方法](https://triplecc.github.io/2017/07/28/2017-07-28-blockhe-nsmethodsignature/)、[Block技巧与底层解析](https://triplecc.github.io/2015/07/19/2015-08-27-blockji-qiao-yu-di-ceng-jie-xi/)
 
 ### 捕获区域布局初探
 
