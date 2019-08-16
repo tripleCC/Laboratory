@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D6A4F84B230635AA00742ADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F84A230635AA00742ADA /* main.m */; };
-		D6A4F85323064A3600742ADA /* CSStrongReferenceCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F85223064A3600742ADA /* CSStrongReferenceCollector.m */; };
+		D6A4F85323064A3600742ADA /* CSObjectStrongReferenceCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F85223064A3600742ADA /* CSObjectStrongReferenceCollector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		D6A4F847230635AA00742ADA /* ClassStrongIvar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClassStrongIvar; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A4F84A230635AA00742ADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D6A4F85123064A3600742ADA /* CSStrongReferenceCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSStrongReferenceCollector.h; sourceTree = "<group>"; };
-		D6A4F85223064A3600742ADA /* CSStrongReferenceCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSStrongReferenceCollector.m; sourceTree = "<group>"; };
+		D6A4F85123064A3600742ADA /* CSObjectStrongReferenceCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSObjectStrongReferenceCollector.h; sourceTree = "<group>"; };
+		D6A4F85223064A3600742ADA /* CSObjectStrongReferenceCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSObjectStrongReferenceCollector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				D6A4F84A230635AA00742ADA /* main.m */,
-				D6A4F85123064A3600742ADA /* CSStrongReferenceCollector.h */,
-				D6A4F85223064A3600742ADA /* CSStrongReferenceCollector.m */,
+				D6A4F85123064A3600742ADA /* CSObjectStrongReferenceCollector.h */,
+				D6A4F85223064A3600742ADA /* CSObjectStrongReferenceCollector.m */,
 			);
 			path = ClassStrongIvar;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A4F85323064A3600742ADA /* CSStrongReferenceCollector.m in Sources */,
+				D6A4F85323064A3600742ADA /* CSObjectStrongReferenceCollector.m in Sources */,
 				D6A4F84B230635AA00742ADA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CSStrongReferenceCollector.h"
+#import "CSObjectStrongReferenceCollector.h"
 
 @interface Person : NSObject {
     @public
@@ -45,7 +45,11 @@ int main(int argc, const char * argv[]) {
         p.p4 = [[Person alloc] initWithName:@"p4"];
         p.p5 = [[Person alloc] initWithName:@"p5"];
         
-        CSStrongReferenceCollector *collector = [[CSStrongReferenceCollector alloc] initWithObject:p];
+        CSObjectStrongReferenceCollector *collector = [[CSObjectStrongReferenceCollector alloc] initWithObject:p];
+        collector.stopForClsBlock = ^BOOL(Class  _Nonnull __unsafe_unretained cls) {
+            // 系统类不扫描
+            return [Person class] != cls;
+        };
         NSLog(@"%@", collector.strongReferences);
     }
     return 0;

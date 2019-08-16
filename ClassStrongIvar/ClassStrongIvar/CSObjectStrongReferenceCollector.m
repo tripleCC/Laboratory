@@ -108,7 +108,7 @@
     NSMutableArray *ivarInfos = [NSMutableArray array];
     
     while (curLevelClass) {
-        if (_stopCollectBlock && _stopCollectBlock(curLevelClass)) {
+        if (_stopForClsBlock && _stopForClsBlock(curLevelClass)) {
             break;
         }
         

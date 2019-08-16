@@ -18,10 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic, readonly) Ivar ivar;
 @end
 
-@interface CSStrongReferenceCollector : NSObject
+@interface CSObjectStrongReferenceCollector : NSObject
 @property (weak, nonatomic, readonly) id object;
 @property (copy, nonatomic, readonly) NSArray *strongReferences;
 @property (copy, nonatomic, readonly) NSArray <CSIvarInfo *> *ivarInfos;
+@property (copy, nonatomic) BOOL (^stopForClsBlock)(Class cls);
 - (instancetype)initWithObject:(id)object;
 @end
 NS_ASSUME_NONNULL_END
