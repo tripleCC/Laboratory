@@ -1,4 +1,4 @@
-# 聊聊循环引用的检测
+
 
 
 
@@ -238,7 +238,7 @@ enum {
 /// BLOCK_LAYOUT_BYREF and no BLOCK_LAYOUT_WEAK objects are captured.
 ```
 
-首先要解释的是 inline 这个词，Objective-C 中有一种叫做 Tagged Pointer 的技术，它让指针保存实际值，而不是保存实际值的地址，这里的 inline 也是相同的效果，即让 layout 指针保存实际的编码信息。在 inline 状态下，使用十六进制中的一位表示捕获变量的数量，所以每种类型的变量最多只能有 15 个，此时的 layout 的值以 0xXYZ 形式呈现，其中 X、Y、Z 分别表示捕获 `__strong`、`__block`、`__weak` 修饰指针变量的个数，如果其中某个类型的数量超过 15 或者捕获变量的修饰类型不为这三种任何一个时，比如捕获的变量由 `__unsafe_unretained` 修饰，则采用另一种表示方式，这种方式下，layout 会指向一个字符串，这个字符串的每个字节以 0xPN 的形式呈现，并以 0x00 结束，P 表示变量类型，N 表示变量个数，需要注意的是，N 为 0 表示 P 类型有一个，而不是 0 个，也就是说实际的变量个数比 N 大 1。需要注意的是，捕获 int 等基础类型，不影响 layout 的呈现方式，layout 编码中也不会有关于基础类型的信息，除非需要基础类型的编码来辅助定位对象指针类型的位置，比如捕获含有对象指针字段的结构体。举几个例子 : 
+首先要解释的是 inline 这个词，Objective-C 中有一种叫做 Tagged Pointer 的技术，它让指针保存实际值，而不是保存实际值的地址，这里的 inline 也是相同的效果，即让 layout 指针保存实际的编码信息。在 inline 状态下，使用十六进制中的一位表示捕获变量的数量，所以每种类型的变量最多只能有 15 个，此时的 layout 的值以 0xXYZ 形式呈现，其中 X、Y、Z 分别表示捕获 `__strong`、`__block`、`__weak` 修饰指针变量的个数，如果其中某个类型的数量超过 15 或者捕获变量的修饰类型不为这三种任何一个时，比如捕获的变量由 `__unsafe_unretained` 修饰，则采用另一种编码方式，这种方式下，layout 会指向一个字符串，这个字符串的每个字节以 0xPN 的形式呈现，并以 0x00 结束，P 表示变量类型，N 表示变量个数，需要注意的是，N 为 0 表示 P 类型有一个，而不是 0 个，也就是说实际的变量个数比 N 大 1。需要注意的是，捕获 int 等基础类型，不影响 layout 的呈现方式，layout 编码中也不会有关于基础类型的信息，除非需要基础类型的编码来辅助定位对象指针类型的位置，比如捕获含有对象指针字段的结构体。举几个例子 : 
 
 ```objc
 unsigned long long j = 4;
@@ -278,7 +278,7 @@ void (^blk)(void) = ^{
 (lldb) p/x (long)layout->descriptor->layout
 (long) $0 = 0x0000000000000111
 ```
-再尝试第二种 layout 方式 :
+再尝试第二种 layout 编码方式 :
 
 ```objc
 NSObject *o1 = [NSObject new];
@@ -352,7 +352,7 @@ layout 编码为`0x20 0x30 0x20 0x50 0x00`，其中 P 为 2 表示 word 字类�
 
 ### Byref 结构的布局
 
-由 `__block` 修饰地捕获变量，会先转换成 byref 结构，再由这个结构去持有实际的捕获变量，block 只负责管理 byref 结构。 
+由 `__block` 修饰的捕获变量，会先转换成 byref 结构，再由这个结构去持有实际的捕获变量，block 只负责管理 byref 结构。 
 
 ```objc
 // 标志位不一样，这个结构的实际布局也会有差别，这里简单地放在一起好阅读
@@ -368,7 +368,7 @@ struct sr_block_byref {
     const char *layout;
 };
 ```
-以上代码块就是 byref 对应的结构体。第一眼看上去，我比较困惑为什么还要有 layout 字段，虽然上文的 block 源码注释说明了 byref 和 block 结构一样，都具备两种不同的布局方式，但是 byref 不是只针对一个变量么，难道和 block 捕获区域一样也可以携带多个捕获变量？带着这个困惑，我们先看下以下表达式 :
+以上代码块就是 byref 对应的结构体。第一眼看上去，我比较困惑为什么还要有 layout 字段，虽然上文的 block 源码注释说明了 byref 和 block 结构一样，都具备两种不同的布局编码方式，但是 byref 不是只针对一个变量么，难道和 block 捕获区域一样也可以携带多个捕获变量？带着这个困惑，我们先看下以下表达式 :
 
 ```objc
 __block  NSObject *o1 = [NSObject new];
@@ -436,7 +436,7 @@ error: Multiple internal symbols found for 'S'
 ```
 看来事情并没有看上去的那么简单，首先重写代码中 foo 字段所在内存保存的并不是结构体，而是 0x0000000000000100，这个 100 是不是看着有点眼熟，没错，这就是 byref 的 layout 信息，根据 0xXYZ 编码规则，这个值表示有 1 个 `__strong` 修饰的对象指针。接着针对第二个问题，携带的对象指针变量存在哪，我们把视线往下移动 8 个字节，这不就是 foo.o1 对象指针的值么。总结下，在存在 layout 的情况下，byref 使用 8 个字节保存 layout 编码信息，并紧跟着在 layout 字段后存储捕获的变量。
 
-以上是 byref 的第一种 layout 布局方式，我们再尝试第二种 :
+以上是 byref 的第一种 layout 编码方式，我们再尝试第二种 :
 
 ```objc
 __block struct S {
