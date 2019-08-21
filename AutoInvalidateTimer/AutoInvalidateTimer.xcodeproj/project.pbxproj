@@ -14,6 +14,7 @@
 		D6557F6422BA102E0068D264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6557F6222BA102E0068D264 /* LaunchScreen.storyboard */; };
 		D6557F6722BA102E0068D264 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6557F6622BA102E0068D264 /* main.m */; };
 		D6557F7122BA102E0068D264 /* AutoInvalidateTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6557F7022BA102E0068D264 /* AutoInvalidateTimerTests.m */; };
+		D6A4F878230CFE0900742ADA /* AITimerTargetWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F877230CFE0900742ADA /* AITimerTargetWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D6557F6C22BA102E0068D264 /* AutoInvalidateTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoInvalidateTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6557F7022BA102E0068D264 /* AutoInvalidateTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoInvalidateTimerTests.m; sourceTree = "<group>"; };
 		D6557F7222BA102F0068D264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A4F876230CFE0900742ADA /* AITimerTargetWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AITimerTargetWrapper.h; sourceTree = "<group>"; };
+		D6A4F877230CFE0900742ADA /* AITimerTargetWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AITimerTargetWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		D6557F5622BA102B0068D264 /* AutoInvalidateTimer */ = {
 			isa = PBXGroup;
 			children = (
+				D6A4F876230CFE0900742ADA /* AITimerTargetWrapper.h */,
+				D6A4F877230CFE0900742ADA /* AITimerTargetWrapper.m */,
 				D6557F5722BA102B0068D264 /* AppDelegate.h */,
 				D6557F5822BA102B0068D264 /* AppDelegate.m */,
 				D6557F5A22BA102B0068D264 /* ViewController.h */,
@@ -203,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A4F878230CFE0900742ADA /* AITimerTargetWrapper.m in Sources */,
 				D6557F5C22BA102B0068D264 /* ViewController.m in Sources */,
 				D6557F6722BA102E0068D264 /* main.m in Sources */,
 				D6557F5922BA102B0068D264 /* AppDelegate.m in Sources */,
