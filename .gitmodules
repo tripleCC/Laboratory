@@ -12,4 +12,4 @@
 	url = https://github.com/apple/darwin-xnu.git
 [submodule "AppleSources/JavaScriptCore"]
 	path = AppleSources/JavaScriptCore
-	url = https://github.com/WebKit/webkit.git
+	url = https://github.com/phoboslab/JavaScriptCore-iOS.git
