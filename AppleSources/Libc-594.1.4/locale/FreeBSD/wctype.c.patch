@@ -1,0 +1,97 @@
+--- wctype.c.orig	2005-10-17 23:42:33.000000000 -0700
++++ wctype.c	2005-10-17 23:44:47.000000000 -0700
+@@ -27,48 +27,63 @@
+ #include <sys/cdefs.h>
+ __FBSDID("$FreeBSD: src/lib/libc/locale/wctype.c,v 1.3 2004/03/27 08:59:21 tjr Exp $");
+ 
++#include "xlocale_private.h"
++
+ #include <ctype.h>
+ #include <string.h>
+ #include <wctype.h>
++#include <limits.h>
+ 
+-#undef iswctype
+-int
+-iswctype(wint_t wc, wctype_t charclass)
+-{
+-
+-	return (__istype(wc, charclass));
+-}
++static struct {
++	const char	*name;
++	wctype_t	 mask;
++} props[] = {
++	{ "alnum",	_CTYPE_A|_CTYPE_D },
++	{ "alpha",	_CTYPE_A },
++	{ "blank",	_CTYPE_B },
++	{ "cntrl",	_CTYPE_C },
++	{ "digit",	_CTYPE_D },
++	{ "graph",	_CTYPE_G },
++	{ "lower",	_CTYPE_L },
++	{ "print",	_CTYPE_R },
++	{ "punct",	_CTYPE_P },
++	{ "space",	_CTYPE_S },
++	{ "upper",	_CTYPE_U },
++	{ "xdigit",	_CTYPE_X },
++	{ "ideogram",	_CTYPE_I },	/* BSD extension */
++	{ "special",	_CTYPE_T },	/* BSD extension */
++	{ "phonogram",	_CTYPE_Q },	/* BSD extension */
++	{ "rune",	0xFFFFFFF0L },	/* BSD extension */
++	{ NULL,		0UL },		/* Default */
++};
+ 
+ wctype_t
+-wctype(const char *property)
++wctype_l(const char *property, locale_t loc)
+ {
+-	struct {
+-		const char	*name;
+-		wctype_t	 mask;
+-	} props[] = {
+-		{ "alnum",	_CTYPE_A|_CTYPE_D },
+-		{ "alpha",	_CTYPE_A },
+-		{ "blank",	_CTYPE_B },
+-		{ "cntrl",	_CTYPE_C },
+-		{ "digit",	_CTYPE_D },
+-		{ "graph",	_CTYPE_G },
+-		{ "lower",	_CTYPE_L },
+-		{ "print",	_CTYPE_R },
+-		{ "punct",	_CTYPE_P },
+-		{ "space",	_CTYPE_S },
+-		{ "upper",	_CTYPE_U },
+-		{ "xdigit",	_CTYPE_X },
+-		{ "ideogram",	_CTYPE_I },	/* BSD extension */
+-		{ "special",	_CTYPE_T },	/* BSD extension */
+-		{ "phonogram",	_CTYPE_Q },	/* BSD extension */
+-		{ "rune",	0xFFFFFF00L },	/* BSD extension */
+-		{ NULL,		0UL },		/* Default */
+-	};
+ 	int i;
++	_RuneLocale *rl;
+ 
+ 	i = 0;
+ 	while (props[i].name != NULL && strcmp(props[i].name, property) != 0)
+ 		i++;
+ 
+-	return (props[i].mask);
++	if (props[i].mask)
++		return (props[i].mask);
++
++	NORMALIZE_LOCALE(loc);
++	rl = &loc->__lc_ctype->_CurrentRuneLocale;
++	if ((i = rl->__ncharclasses) > 0) {
++		_RuneCharClass *rp;
++		for (rp = rl->__charclasses; i-- > 0; rp++) {
++			if (strncmp(rp->__name, property, CHARCLASS_NAME_MAX) == 0)
++				return (rp->__mask);
++		}
++	}
++	return 0;
++}
++
++wctype_t
++wctype(const char *property)
++{
++	return wctype_l(property, __current_locale());
+ }

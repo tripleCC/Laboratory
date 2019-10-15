@@ -1,0 +1,84 @@
+--- _SB/Libc/stdtime/FreeBSD/strftime.3	2004-11-25 11:38:45.000000000 -0800
++++ _SB/Libc/stdtime/FreeBSD/strftime.3.edit	2006-06-28 16:55:53.000000000 -0700
+@@ -40,7 +40,8 @@
+ .Dt STRFTIME 3
+ .Os
+ .Sh NAME
+-.Nm strftime
++.Nm strftime ,
++.Nm strftime_l
+ .Nd format date and time
+ .Sh LIBRARY
+ .Lb libc
+@@ -48,10 +49,20 @@
+ .In time.h
+ .Ft size_t
+ .Fo strftime
+-.Fa "char * restrict buf"
++.Fa "char *restrict s"
+ .Fa "size_t maxsize"
+-.Fa "const char * restrict format"
+-.Fa "const struct tm * restrict timeptr"
++.Fa "const char *restrict format"
++.Fa "const struct tm *restrict timeptr"
++.Fc
++.In time.h
++.In xlocale.h
++.Ft size_t
++.Fo strftime_l
++.Fa "char *restrict s"
++.Fa "size_t maxsize"
++.Fa "const char *restrict format"
++.Fa "const struct tm *restrict timeptr"
++.Fa "locale_t loc"
+ .Fc
+ .Sh DESCRIPTION
+ The
+@@ -59,7 +70,7 @@
+ function formats the information from
+ .Fa timeptr
+ into the buffer
+-.Fa buf
++.Fa s ,
+ according to the string pointed to by
+ .Fa format .
+ .Pp
+@@ -83,6 +94,14 @@
+ terminating NUL.
+ Otherwise, zero is returned and the buffer contents are indeterminate.
+ .Pp
++Although the
++.Fn strftime
++function uses the current locale, the
++.Fn strftime_l
++function may be passed a locale directly. See
++.Xr xlocale 3
++for more information.
++.Pp
+ The conversion specifications are copied to the buffer after expansion
+ as follows:-
+ .Bl -tag -width "xxxx"
+@@ -226,7 +245,8 @@
+ .Xr ctime 3 ,
+ .Xr printf 3 ,
+ .Xr strptime 3 ,
+-.Xr wcsftime 3
++.Xr wcsftime 3 ,
++.Xr xlocale 3
+ .Sh STANDARDS
+ The
+ .Fn strftime
+@@ -253,11 +273,12 @@
+ .Ql %u ,
+ .Ql \&%V ,
+ .Ql %z ,
++and
+ .Ql %+ .
+ .Pp
+ The peculiar week number and year in the replacements of
+ .Ql %G ,
+-.Ql %g
++.Ql %g ,
+ and
+ .Ql \&%V
+ are defined in ISO 8601: 1988.

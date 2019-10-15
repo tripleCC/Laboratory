@@ -1,0 +1,36 @@
+--- gethostname.c.orig	2008-04-05 00:47:41.000000000 -0700
++++ gethostname.c	2008-04-05 01:04:59.000000000 -0700
+@@ -37,8 +37,10 @@ static char sccsid[] = "@(#)gethostname.
+ #include <sys/cdefs.h>
+ __FBSDID("$FreeBSD: src/lib/libc/gen/gethostname.c,v 1.5 2003/08/19 23:01:46 wollman Exp $");
+ 
++#include <string.h>
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
++#include <limits.h>
+ 
+ #include <errno.h>
+ 
+@@ -54,10 +56,22 @@ gethostname(name, namelen)
+ 
+ 	mib[0] = CTL_KERN;
+ 	mib[1] = KERN_HOSTNAME;
++	if (namelen < MAXHOSTNAMELEN + 1) {
++		char local_buf[MAXHOSTNAMELEN + 1];
++		size_t local_len = sizeof(local_buf);
++		if (sysctl(mib, 2, local_buf, &local_len, NULL, 0) == -1) {
++			if (errno == ENOMEM)
++				errno = ENAMETOOLONG;
++			return (-1);
++		}
++		strncpy(name, local_buf, namelen);
++		name[namelen - 1] = 0;
++	} else {
+ 	if (sysctl(mib, 2, name, &namelen, NULL, 0) == -1) {
+ 		if (errno == ENOMEM)
+ 			errno = ENAMETOOLONG;
+ 		return (-1);
++		}
+ 	}
+ 	return (0);
+ }

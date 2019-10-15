@@ -1,0 +1,76 @@
+--- regex2.h.orig	2005-04-19 14:43:24.000000000 -0700
++++ regex2.h	2005-04-19 14:41:08.000000000 -0700
+@@ -124,16 +124,26 @@
+ 	int		nranges;
+ 	int		invert;
+ 	int		icase;
++	int		*equiv_classes;
++	int		nequiv_classes;
+ } cset;
+ 
++#include "collate.h"
++
+ static int
+-CHIN1(cs, ch)
++CHIN1(cs, ch, loc)
+ cset *cs;
+ wint_t ch;
++locale_t loc;
+ {
+ 	int i;
+ 
+ 	assert(ch >= 0);
++	for (i = 0; i < cs->nequiv_classes; i++)
++		/* sadly, we can only deal with single characters from an
++		 * equivalence class */
++		if (__collate_equiv_match(cs->equiv_classes[i], NULL, 0, ch, NULL, 0, NULL, NULL, loc) > 0)
++			return (!cs->invert);
+ 	if (ch < NC)
+ 		return (((cs->bmp[ch >> 3] & (1 << (ch & 7))) != 0) ^
+ 		    cs->invert);
+@@ -144,26 +154,27 @@
+ 		if (cs->ranges[i].min <= ch && ch <= cs->ranges[i].max)
+ 			return (!cs->invert);
+ 	for (i = 0; i < cs->ntypes; i++)
+-		if (iswctype(ch, cs->types[i]))
++		if (iswctype_l(ch, cs->types[i], loc))
+ 			return (!cs->invert);
+ 	return (cs->invert);
+ }
+ 
+ static __inline int
+-CHIN(cs, ch)
++CHIN(cs, ch, loc)
+ cset *cs;
+ wint_t ch;
++locale_t loc;
+ {
+ 
+ 	assert(ch >= 0);
+-	if (ch < NC)
++	if (ch < NC && cs->nequiv_classes == 0)
+ 		return (((cs->bmp[ch >> 3] & (1 << (ch & 7))) != 0) ^
+ 		    cs->invert);
+ 	else if (cs->icase)
+-		return (CHIN1(cs, ch) || CHIN1(cs, towlower(ch)) ||
+-		    CHIN1(cs, towupper(ch)));
++		return (CHIN1(cs, ch, loc) || CHIN1(cs, towlower_l(ch, loc), loc) ||
++		    CHIN1(cs, towupper_l(ch, loc), loc));
+ 	else
+-		return (CHIN1(cs, ch));
++		return (CHIN1(cs, ch, loc));
+ }
+ 
+ /*
+@@ -193,8 +204,9 @@
+ 	size_t nsub;		/* copy of re_nsub */
+ 	int backrefs;		/* does it use back references? */
+ 	sopno nplus;		/* how deep does it nest +s? */
++	locale_t loc;		/* current locale */
+ };
+ 
+ /* misc utilities */
+-#define	OUT	(-2)	/* a non-character value */
+-#define ISWORD(c)       (iswalnum((uch)(c)) || (c) == '_')
++#define	OUT	(-130)	/* a non-character value */
++#define ISWORD(c,l)     (iswalnum_l((uch)(c), l) || (c) == '_')

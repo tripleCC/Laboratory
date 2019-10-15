@@ -1,0 +1,23 @@
+--- exec.c.orig	2004-11-24 00:12:00.000000000 -0800
++++ exec.c	2004-11-24 15:46:54.000000000 -0800
+@@ -51,7 +51,8 @@
+ #include <stdarg.h>
+ #include "un-namespace.h"
+ 
+-extern char **environ;
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
+ 
+ int
+ execl(const char *name, const char *arg, ...)
+@@ -268,8 +269,9 @@
+ 	}
+ 	if (eacces)
+ 		errno = EACCES;
+-	else
++	else if (cur)
+ 		errno = ENOENT;
++	/* else use existing errno from _execve */
+ done:
+ 	return (-1);
+ }

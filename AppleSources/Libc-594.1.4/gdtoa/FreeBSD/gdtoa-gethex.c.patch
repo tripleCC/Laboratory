@@ -1,0 +1,42 @@
+--- gdtoa-gethex.c.orig	2008-10-28 11:14:40.000000000 -0700
++++ gdtoa-gethex.c	2008-10-28 11:20:32.000000000 -0700
+@@ -29,6 +29,8 @@ THIS SOFTWARE.
+ /* Please send bug reports to David M. Gay (dmg at acm dot org,
+  * with " at " changed at "@" and " dot " changed to ".").	*/
+ 
++#include "xlocale_private.h"
++
+ #include "gdtoaimp.h"
+ 
+ #ifdef USE_LOCALE
+@@ -37,10 +39,10 @@ THIS SOFTWARE.
+ 
+  int
+ #ifdef KR_headers
+-gethex(sp, fpi, exp, bp, sign)
+-	CONST char **sp; FPI *fpi; Long *exp; Bigint **bp; int sign;
++gethex(sp, fpi, exp, bp, sign, loc)
++	CONST char **sp; FPI *fpi; Long *exp; Bigint **bp; int sign; locale_t loc;
+ #else
+-gethex( CONST char **sp, FPI *fpi, Long *exp, Bigint **bp, int sign)
++gethex( CONST char **sp, FPI *fpi, Long *exp, Bigint **bp, int sign, locale_t loc)
+ #endif
+ {
+ 	Bigint *b;
+@@ -50,13 +52,14 @@ gethex( CONST char **sp, FPI *fpi, Long 
+ 	Long e, e1;
+ #ifdef USE_LOCALE
+ 	int i;
++	NORMALIZE_LOCALE(loc);
+ #ifdef NO_LOCALE_CACHE
+-	const unsigned char *decimalpoint = (unsigned char*)localeconv()->decimal_point;
++	const unsigned char *decimalpoint = (unsigned char*)localeconv_l(loc)->decimal_point;
+ #else
+ 	const unsigned char *decimalpoint;
+ 	static unsigned char *decimalpoint_cache;
+ 	if (!(s0 = decimalpoint_cache)) {
+-		s0 = (unsigned char*)localeconv()->decimal_point;
++		s0 = (unsigned char*)localeconv_l(loc)->decimal_point;
+ 		if ((decimalpoint_cache = (char*)malloc(strlen(s0) + 1))) {
+ 			strcpy(decimalpoint_cache, s0);
+ 			s0 = decimalpoint_cache;

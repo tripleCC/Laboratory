@@ -1,0 +1,120 @@
+--- tmpnam.3.orig	2008-11-13 16:39:10.000000000 -0800
++++ tmpnam.3	2008-11-13 16:45:15.000000000 -0800
+@@ -36,7 +36,7 @@
+ .\"     @(#)tmpnam.3	8.2 (Berkeley) 11/17/93
+ .\" $FreeBSD: src/lib/libc/stdio/tmpnam.3,v 1.16 2004/06/21 19:38:25 mpp Exp $
+ .\"
+-.Dd November 17, 1993
++.Dd November 12, 2008
+ .Dt TMPFILE 3
+ .Os
+ .Sh NAME
+@@ -49,11 +49,18 @@
+ .Sh SYNOPSIS
+ .In stdio.h
+ .Ft FILE *
+-.Fn tmpfile void
++.Fo tmpfile
++.Fa void
++.Fc
+ .Ft char *
+-.Fn tmpnam "char *str"
++.Fo tmpnam
++.Fa "char *s"
++.Fc
+ .Ft char *
+-.Fn tempnam "const char *tmpdir" "const char *prefix"
++.Fo tempnam
++.Fa "const char *dir"
++.Fa "const char *pfx"
++.Fc
+ .Sh DESCRIPTION
+ The
+ .Fn tmpfile
+@@ -67,12 +74,13 @@
+ reference to it is closed.
+ The file is opened with the access value
+ .Ql w+ .
+-The file is created in the directory determined by the environment variable
++If the environment variable
+ .Ev TMPDIR
+-if set.
+-The default location if
++is defined,
++the file is created in the specified directory.
++The default location, if
+ .Ev TMPDIR
+-is not set is
++is not set, is
+ .Pa /tmp .
+ .Pp
+ The
+@@ -87,7 +95,7 @@
+ is defined in the include file
+ .In stdio.h .
+ If the argument
+-.Fa str
++.Fa s
+ is
+ .Pf non- Dv NULL ,
+ the file name is copied to the buffer it references.
+@@ -97,7 +105,7 @@
+ returns a pointer to the file name.
+ .Pp
+ The buffer referenced by
+-.Fa str
++.Fa s
+ is expected to be at least
+ .Dv L_tmpnam
+ bytes in length.
+@@ -113,21 +121,23 @@
+ but provides the ability to specify the directory which will
+ contain the temporary file and the file name prefix.
+ .Pp
+-The environment variable
+-.Ev TMPDIR
+-(if set), the argument
+-.Fa tmpdir
++The argument
++.Fa dir
+ (if
+ .Pf non- Dv NULL ) ,
+ the directory
+ .Dv P_tmpdir ,
+-and the directory
++the environment variable
++.Ev TMPDIR
++(if set),
++the directory
+ .Pa /tmp
++and finally, the current directory,
+ are tried, in the listed order, as directories in which to store the
+ temporary file.
+ .Pp
+ The argument
+-.Fa prefix ,
++.Fa pfx ,
+ if
+ .Pf non- Dv NULL ,
+ is used to specify a file name prefix, which will be the
+@@ -226,14 +236,15 @@
+ interface should not be used in software expected to be used on other systems
+ if there is any possibility that the user does not wish the temporary file to
+ be publicly readable and writable.
++.Sh LEGACY DESCRIPTION
++In legacy mode, the order directories are tried by the
++.Fn tempnam
++function is different; the environment variable
++.Ev TMPDIR
++(if defined) is used first.
+ .Sh SEE ALSO
+ .Xr mkstemp 3 ,
+ .Xr mktemp 3
+-.Rs
+-.%T "The FreeBSD Security Architecture"
+-.Re
+-(See
+-.Pa "/usr/share/doc/{to be determined}" . )
+ .Sh STANDARDS
+ The
+ .Fn tmpfile

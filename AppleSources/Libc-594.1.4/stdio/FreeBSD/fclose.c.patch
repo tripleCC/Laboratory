@@ -1,0 +1,25 @@
+--- fclose.c.orig	2009-02-15 03:11:22.000000000 -0800
++++ fclose.c	2009-02-15 19:01:59.000000000 -0800
+@@ -53,6 +53,13 @@ fclose(FILE *fp)
+ {
+ 	int r;
+ 
++	if (!__sdidinit)
++		__sinit();
++
++	if (fp == NULL) {
++		errno = EFAULT;
++		return (EOF);
++	}
+ 	if (fp->_flags == 0) {	/* not open! */
+ 		errno = EBADF;
+ 		return (EOF);
+@@ -69,7 +76,7 @@ fclose(FILE *fp)
+ 		FREELB(fp);
+ 	fp->_file = -1;
+ 	fp->_r = fp->_w = 0;	/* Mess up if reaccessed. */
+-	fp->_flags = 0;		/* Release this FILE for reuse. */
++	__sfprelease(fp);	/* Release this FILE for reuse. */
+ 	FUNLOCKFILE(fp);
+ 	return (r);
+ }

@@ -1,0 +1,27 @@
+--- isatty.c.orig	2008-04-05 00:47:41.000000000 -0700
++++ isatty.c	2008-04-05 01:05:40.000000000 -0700
+@@ -39,14 +39,22 @@ __FBSDID("$FreeBSD: src/lib/libc/gen/isa
+ 
+ #include <termios.h>
+ #include <unistd.h>
++#include <sys/filio.h>
++#include <sys/conf.h>
++#include <sys/ioctl.h>
++#include <errno.h>
+ 
+ int
+ isatty(fd)
+ 	int fd;
+ {
+-	int retval;
++	int retval, type;
+ 	struct termios t;
+ 
+-	retval = (tcgetattr(fd, &t) != -1);
++	if(ioctl(fd, FIODTYPE, &type) != -1) {
++	    if((retval = (type == D_TTY)) == 0)
++		errno = ENOTTY;
++	} else
++	    retval = (tcgetattr(fd, &t) != -1);
+ 	return(retval);
+ }

@@ -1,0 +1,30 @@
+--- hash.c.orig	2008-09-07 11:37:54.000000000 -0700
++++ hash.c	2008-09-07 12:42:15.000000000 -0700
+@@ -58,7 +58,7 @@ __FBSDID("$FreeBSD: src/lib/libc/db/hash
+ #include <db.h>
+ #include "hash.h"
+ #include "page.h"
+-#include "extern.h"
++#include "hash_extern.h"
+ 
+ static int   alloc_segs(HTAB *, int);
+ static int   flush_meta(HTAB *);
+@@ -108,8 +108,7 @@ __hash_open(file, flags, mode, info, dfl
+ 	int bpages, hdrsize, new_table, nsegs, save_errno;
+ 
+ 	if ((flags & O_ACCMODE) == O_WRONLY) {
+-		errno = EINVAL;
+-		return (NULL);
++		flags += O_RDWR - O_WRONLY; /* POSIX */
+ 	}
+ 
+ 	if (!(hashp = (HTAB *)calloc(1, sizeof(HTAB))))
+@@ -722,7 +721,7 @@ found:
+ 			return (ERROR);
+ 		break;
+ 	default:
+-		abort();
++		LIBC_ABORT("illegal action (%d)", action);
+ 	}
+ 	save_bufp->flags &= ~BUF_PIN;
+ 	return (SUCCESS);

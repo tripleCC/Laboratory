@@ -1,0 +1,12 @@
+--- /Volumes/XDisk/tmp/Libc/stdlib/FreeBSD/alloca.3.orig	2003-06-28 15:12:30.000000000 -0700
++++ /Volumes/XDisk/tmp/Libc/stdlib/FreeBSD/alloca.3	2004-10-24 17:08:31.000000000 -0700
+@@ -41,6 +41,9 @@
+ .Sh LIBRARY
+ .Lb libc
+ .Sh SYNOPSIS
++.In alloca.h
++or
++.br
+ .In stdlib.h
+ .Ft void *
+ .Fn alloca "size_t size"

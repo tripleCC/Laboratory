@@ -1,0 +1,88 @@
+--- gdtoa-strtod.c.orig	2008-10-28 12:07:31.000000000 -0700
++++ gdtoa-strtod.c	2008-10-28 12:22:37.000000000 -0700
+@@ -29,6 +29,8 @@ THIS SOFTWARE.
+ /* Please send bug reports to David M. Gay (dmg at acm dot org,
+  * with " at " changed at "@" and " dot " changed to ".").	*/
+ 
++#include "xlocale_private.h"
++
+ #include "gdtoaimp.h"
+ #ifndef NO_FENV_H
+ #include <fenv.h>
+@@ -58,11 +60,11 @@ static CONST double tinytens[] = { 1e-16
+ #endif
+ 
+  double
+-strtod
++strtod_l
+ #ifdef KR_headers
+-	(s00, se) CONST char *s00; char **se;
++	(s00, se, loc) CONST char *s00; char **se; locale_t loc;
+ #else
+-	(CONST char *s00, char **se)
++	(CONST char *s00, char **se, locale_t loc)
+ #endif
+ {
+ #ifdef Avoid_Underflow
+@@ -79,13 +81,14 @@ strtod
+ 	int inexact, oldinexact;
+ #endif
+ #ifdef USE_LOCALE
++	NORMALIZE_LOCALE(loc);
+ #ifdef NO_LOCALE_CACHE
+-	char *decimalpoint = localeconv()->decimal_point;
++	char *decimalpoint = localeconv_l(loc)->decimal_point;
+ #else
+ 	char *decimalpoint;
+ 	static char *decimalpoint_cache;
+ 	if (!(s0 = decimalpoint_cache)) {
+-		s0 = localeconv()->decimal_point;
++		s0 = localeconv_l(loc)->decimal_point;
+ 		if ((decimalpoint_cache = (char*)malloc(strlen(s0) + 1))) {
+ 			strcpy(decimalpoint_cache, s0);
+ 			s0 = decimalpoint_cache;
+@@ -155,7 +158,7 @@ strtod
+ #else /*}{*/
+ #define fpi1 fpi
+ #endif /*}}*/
+-			switch((i = gethex(&s, &fpi1, &exp, &bb, sign)) & STRTOG_Retmask) {
++			switch((i = gethex(&s, &fpi1, &exp, &bb, sign, loc)) & STRTOG_Retmask) {
+ 			  case STRTOG_NoNumber:
+ 				s = s00;
+ 				sign = 0;
+@@ -545,7 +548,11 @@ strtod
+ 
+ 	/* Put digits into bd: true value = bd * 10^e */
+ 
+-	bd0 = s2b(s0, nd0, nd, y);
++#ifdef USE_LOCALE
++	bd0 = s2b(s0, nd0, nd, y, strlen(decimalpoint));
++#else
++	bd0 = s2b(s0, nd0, nd, y, 1);
++#endif
+ 
+ 	for(;;) {
+ 		bd = Balloc(bd0->k);
+@@ -992,7 +999,7 @@ strtod
+ 		dval(rv) *= dval(rv0);
+ #ifndef NO_ERRNO
+ 		/* try to avoid the bug of testing an 8087 register value */
+-#ifdef IEEE_Arith
++#if defined(IEEE_Arith) && __DARWIN_UNIX03
+ 		if (!(word0(rv) & Exp_mask))
+ #else
+ 		if (word0(rv) == 0 && word1(rv) == 0)
+@@ -1020,3 +1027,13 @@ strtod
+ 	return sign ? -dval(rv) : dval(rv);
+ 	}
+ 
++ double
++strtod
++#ifdef KR_headers
++	(s00, se) CONST char *s00; char **se;
++#else
++	(CONST char *s00, char **se)
++#endif
++{
++	return strtod_l(s00, se, __current_locale());
++}
