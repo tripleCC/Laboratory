@@ -133,6 +133,10 @@ static const char *sr_block_extended_layout(struct sr_block_layout *block) {
 - (NSHashTable *)objectsForBeginAddress:(void *)address;
 @end
 
+struct sr_objc_object {
+    Class _Nonnull isa;
+};
+
 @implementation SRLayoutItem{
     unsigned int _type;
     NSInteger _count;

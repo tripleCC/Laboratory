@@ -26,6 +26,11 @@
 }
 @end
 
+class T {
+//    int i;
+//    NSObject *o1;
+};
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         __block  NSObject *o1 = [Person personWithName:@"o1"];
@@ -43,36 +48,39 @@ int main(int argc, const char * argv[]) {
         long j = 4;
         int i = 3;
         char c = 'a';
-         __block struct S {
-            char c;
-            int i;
-            long j;
-            NSObject *o1;
+        __block struct S {
+//            NSObject *o1;
+             T t;
              __weak NSObject *o2;
             long iS;
             __block NSObject *o3;
              __unsafe_unretained NSObject *o4;
         } foo;
-        foo.o1 = [Person personWithName:@"S.o1"];
-        void (^blk0)() = ^{};
+        foo.t = T();
+//        foo.o1 = o1;
         void (^blk)(void) = ^{
-            blk0;
-            j;
-            i;
-            c;
+//            foo;
+//            t;
+//            blk0;
+            
+//            i;
+//            c;
+//            t;
             foo;
-            o1;
-            o2;
-            o3;
-            o4;
-            o5;
-            o6;
-            o7;
-            o8;
-            o9;
-            o10;
-            o11;
-            o12;
+//            o1;
+//            j;
+//            t;
+//            o2;
+//            o3;
+//            o4;
+//            o5;
+//            o6;
+//            o7;
+//            o8;
+//            o9;
+//            o10;
+//            o11;
+//            o12;
         };
         blk();
         

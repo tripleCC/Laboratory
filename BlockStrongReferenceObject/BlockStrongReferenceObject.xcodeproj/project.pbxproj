@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D60C1AF322EC887A004C9AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D60C1AF222EC887A004C9AAC /* main.m */; };
+		D60C1AF322EC887A004C9AAC /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D60C1AF222EC887A004C9AAC /* main.mm */; };
 		D6A4F83D230506E500742ADA /* SRBlockStrongReferenceCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A4F83C230506E500742ADA /* SRBlockStrongReferenceCollector.m */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		D60C1AEF22EC887A004C9AAC /* BlockStrongReferenceObject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BlockStrongReferenceObject; sourceTree = BUILT_PRODUCTS_DIR; };
-		D60C1AF222EC887A004C9AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D60C1AF222EC887A004C9AAC /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		D6A4F83B230506E500742ADA /* SRBlockStrongReferenceCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRBlockStrongReferenceCollector.h; sourceTree = "<group>"; };
 		D6A4F83C230506E500742ADA /* SRBlockStrongReferenceCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRBlockStrongReferenceCollector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +60,7 @@
 		D60C1AF122EC887A004C9AAC /* BlockStrongReferenceObject */ = {
 			isa = PBXGroup;
 			children = (
-				D60C1AF222EC887A004C9AAC /* main.m */,
+				D60C1AF222EC887A004C9AAC /* main.mm */,
 				D6A4F83B230506E500742ADA /* SRBlockStrongReferenceCollector.h */,
 				D6A4F83C230506E500742ADA /* SRBlockStrongReferenceCollector.m */,
 			);
@@ -123,7 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D60C1AF322EC887A004C9AAC /* main.m in Sources */,
+				D60C1AF322EC887A004C9AAC /* main.mm in Sources */,
 				D6A4F83D230506E500742ADA /* SRBlockStrongReferenceCollector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
