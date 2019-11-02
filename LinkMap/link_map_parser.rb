@@ -7,11 +7,31 @@ module LinkMap
 		attr_reader :sections
 		attr_reader :object_files
 		attr_reader :symbols
+		attr_reader :segments
 
 		def initialize
 			@sections = []
-			@symbols = []
-			@object_files = []
+			@object_file_index_hash = {}
+		end
+
+		def segments
+			@segments ||= sections.group_by(&:segment).map do |key, value|
+				Segment.new(key, value)
+			end.sort_by(&:size).reverse
+		end
+
+		def symbols
+			@symbols ||= object_files.map(&:symbols).flatten.uniq.sort_by(&:size).reverse
+		end
+
+		def object_files
+			@object_files ||= @object_file_index_hash.values.uniq.sort_by(&:size).reverse
+		end
+
+		def libraries
+			@libraries ||= object_files.group_by(&:extra_name).map do |key, value|
+				Library.new(key, value)
+			end.sort_by(&:size).reverse
 		end
 
 		def add_section(section)
@@ -19,13 +39,12 @@ module LinkMap
 		end
 
 		def add_symbol(symbol)
-			object_file = @object_files.find { |o| o.index == symbol.index }
+			object_file = @object_file_index_hash[symbol.index]
 			object_file.add_symbol(symbol)
-			@symbols << symbol
 		end
 
 		def add_object_file(object_file)
-			@object_files << object_file
+			@object_file_index_hash[object_file.index] = object_file
 		end
 
 		class Base
@@ -40,28 +59,83 @@ module LinkMap
 			end
 		end
 
+		class Library
+			attr_reader :object_files
+			attr_reader :size
+			attr_reader :name
+
+			def initialize(name, object_files)
+				@name = name
+				@object_files = object_files || []
+			end
+
+			def add_object_file(object_files)
+				@object_files << object_file
+			end
+
+			def size
+				@size ||= @object_files.map(&:size).reduce(&:+)
+			end
+
+			def to_s
+				"#{name} #{size}"
+			end
+		end
+
+		class Segment
+			attr_reader :name
+			attr_reader :sections
+
+			def initialize(name, sections)
+				@name = name
+				@sections = sections
+			end
+
+			def size
+				@size ||= sections.map(&:size).reduce(&:+)
+			end
+
+			def to_s
+				"#{name} #{size}"
+			end
+		end
+
 		class ObjectFile < Base
 			DECLARE = 'Object files:'
 
 			attr_reader :index
 			attr_reader :name
+			attr_reader :extra_name
 			attr_reader :symbols
+			attr_reader :size
 
 			def initialize(line) 
 				@index = line.match(/\[\s*(\d+)\]/)[1]
-				@name = File.basename(line.split(' ').last)
+				basename = File.basename(line.split(' ').last)
+				match_result = basename.match(/(.*)\((.*)\)/)
+				if match_result
+					@extra_name, @name = match_result[1, 2] 
+				else
+					@extra_name = @name = basename
+				end
+
 				@symbols = []
 
 				super line
 			end 
 
+			def size
+				@size ||= @symbols.map(&:size).reduce(&:+)
+			end
+
 			def add_symbol(symbol) 
 				@symbols << symbol
-				@symbols.uniq
 			end
 
 			def to_s
-				"#{index} #{name}"
+				s = "#{index} #{size} #{extra_name}"
+				s << "  #{name}" unless name == extra_name
+				s
 			end
 		end
 
@@ -78,6 +152,7 @@ module LinkMap
 				@size, 
 				@segment, 
 				@name = line.split(' ')
+				@size = @size.hex
 
 				super line
 			end
@@ -103,6 +178,10 @@ module LinkMap
 
 				super line
 			end 
+
+			def size
+				@size.hex
+			end
 
 			def is_dead?
 				@address == '<<dead>>' 
@@ -165,5 +244,7 @@ parser.parse
 # puts parser.result.symbols.reject(&:is_dead?)
 # puts parser.result.sections
 
-puts parser.result.object_files.first
-puts parser.result.object_files.first.symbols
+puts parser.result.symbols.reject(&:is_dead?)[0, 50]
+puts parser.result.segments
+
+# puts parser.result.object_files.first.symbols
