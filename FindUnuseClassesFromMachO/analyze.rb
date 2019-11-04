@@ -95,9 +95,6 @@ may_unused_class_names = may_unused_class_names - may_reflect_class_names
 
 # 控制器和视图无用的几率更大
 view_or_controllers = may_unused_class_names.select { |c| c.end_with?('Controller') || c.end_with?('View') }
-ks_view_or_controllers = view_or_controllers.select { |c| c.start_with?('KS') || c.start_with?('KW') }
-
-puts ks_view_or_controllers
 
 puts <<-EOF 
 类总数：#{parser.class_list.count}
@@ -106,5 +103,4 @@ puts <<-EOF
 可疑反射类总数：#{may_reflect_class_names.count}
 可疑无用类总数：#{may_unused_class_names.count}
 可疑无用控制器或视图总数：#{view_or_controllers.count}
-可疑无用快手控制器或视图总数：#{ks_view_or_controllers.count}
 EOF
