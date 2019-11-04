@@ -2,7 +2,7 @@
 
 require 'set'
 
-bin = ARGV[0]
+bin = ARGV[0] || '/Users/songruiwang/Work/TestException_Example'
 
 # Contents of (__DATA,__objc_classlist) section
 # 00000001091cbad0  09dc7648 00000001 09dc7698 00000001 
@@ -81,7 +81,7 @@ parser.parse
 all_superclass = parser.class_list.map(&:superclass).uniq
 may_unused_classes = parser.class_list - all_superclass - parser.class_refs
 may_unused_classes = may_unused_classes.reject(&:is_pod_special?)
-may_unused_class_names = may_unused_classes.map(&:real_name)
+may_unused_class_names = may_unused_classes.map(&:real_name).uniq
 
 # 过滤可能通过字符串反射的类
 may_unused_class_name_set = Set.new(may_unused_class_names)
@@ -96,6 +96,8 @@ may_unused_class_names = may_unused_class_names - may_reflect_class_names
 # 控制器和视图无用的几率更大
 view_or_controllers = may_unused_class_names.select { |c| c.end_with?('Controller') || c.end_with?('View') }
 
+puts view_or_controllers
+
 puts <<-EOF 
 类总数：#{parser.class_list.count}
 超类总数：#{all_superclass.count}
@@ -104,3 +106,18 @@ puts <<-EOF
 可疑无用类总数：#{may_unused_class_names.count}
 可疑无用控制器或视图总数：#{view_or_controllers.count}
 EOF
+
+require_relative '../LinkMap/link_map_parser'
+
+link_map = Pathname.new('../LinkMap/TestException_Example-LinkMap-normal-x86_64.txt')
+# p link_map
+link_map_parser = LinkMap::Parser.new(link_map)
+link_map_parser.parse
+target_object_files = link_map_parser.result.object_files.select do |of|
+  may_unused_class_names.find { |n| of.name.start_with?(n) }
+end
+
+puts target_object_files
+puts target_object_files.map(&:size).reduce(&:+) / 1024.0
+# puts parser.result.symbols.reject(&:is_dead?)
+# puts parser.result.sections

@@ -237,14 +237,14 @@ module LinkMap
 end
 
 
-link_map = Pathname.glob('./*.txt').first
-# p link_map
-parser = LinkMap::Parser.new(link_map)
-parser.parse
-# puts parser.result.symbols.reject(&:is_dead?)
-# puts parser.result.sections
+# link_map = Pathname.new('TestException_Example-LinkMap-normal-x86_64.txt')
+# # p link_map
+# parser = LinkMap::Parser.new(link_map)
+# parser.parse
+# # puts parser.result.symbols.reject(&:is_dead?)
+# # puts parser.result.sections
 
-puts parser.result.symbols.reject(&:is_dead?)[0, 50]
-puts parser.result.segments
+# puts parser.result.symbols.reject(&:is_dead?)[0, 50]
+# puts parser.result.segments
 
 # puts parser.result.object_files.first.symbols
