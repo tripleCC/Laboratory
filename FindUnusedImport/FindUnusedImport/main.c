@@ -27,6 +27,7 @@ static const char *const g_header_file_extname = ".h";
 static const char *const g_file_extname[] = {
     g_header_file_extname,
     ".m",
+    ".mm",
     ".pch",
 //    "modulemap" 有伞头文件
 };
@@ -189,7 +190,7 @@ void print_unused_import(void *value, void *ctx) {
 }
 
 int main(int argc, const char * argv[]) {
-    char *root = "/Users/songruiwang/Work/TDF/restapp/RestApp";
+    char *root = "/Users/songruiwang/Develop/gif-source";
     
     struct stat path_stat;
     stat(root, &path_stat);
@@ -274,6 +275,7 @@ bool is_header_required(const char *content, unsigned long length, const char *n
                 char left = *(content - 1);
                 char right = *(content + name_length);
                 if ((left == '/' && right == '>') ||
+                    (left == '/' && right == '"') ||
                     (left == '<' && right == '>') ||
                     (left == '"' && right == '"'))
                     return true;
