@@ -74,7 +74,7 @@ module LinkMap
 			end
 
 			def size
-				@size ||= @object_files.map(&:size).reduce(&:+)
+				@size ||= @object_files.map(&:size).reduce(&:+) || 0
 			end
 
 			def to_s
@@ -92,7 +92,7 @@ module LinkMap
 			end
 
 			def size
-				@size ||= sections.map(&:size).reduce(&:+)
+				@size ||= sections.map(&:size).reduce(&:+) || 0
 			end
 
 			def to_s
@@ -125,7 +125,7 @@ module LinkMap
 			end 
 
 			def size
-				@size ||= @symbols.map(&:size).reduce(&:+)
+				@size ||= @symbols.map(&:size).reduce(&:+) || 0
 			end
 
 			def add_symbol(symbol) 
@@ -201,7 +201,7 @@ module LinkMap
       end
 
 			def size
-				@size.hex
+				@size.hex || 0
 			end
 
 			def dead?
@@ -268,3 +268,7 @@ module LinkMap
 	end
 end
 
+
+parser = LinkMap::Parser.new(Pathname.new('/Users/songruiwang/Develop/gif-thin-app/LinkMapFiles/gifBaseFramework-LinkMap-normal-arm64.txt'))
+parser.parse
+p parser.result.object_files#.select { |s| s.name.include?('CGEVideoPlayer') }
