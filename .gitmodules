@@ -13,3 +13,6 @@
 [submodule "AppleSources/JavaScriptCore"]
 	path = AppleSources/JavaScriptCore
 	url = https://github.com/phoboslab/JavaScriptCore-iOS.git
+[submodule "ThinAppTools/ioscmpr"]
+	path = ThinAppTools/ioscmpr
+	url = https://github.com/tripleCC/ioscmpr.git
