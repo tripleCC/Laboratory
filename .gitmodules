@@ -16,3 +16,9 @@
 [submodule "ThinAppTools/ioscmpr"]
 	path = ThinAppTools/ioscmpr
 	url = https://github.com/tripleCC/ioscmpr.git
+[submodule "AppleSources/llvm"]
+	path = AppleSources/llvm
+	url = https://github.com/llvm-mirror/llvm.git
+[submodule "SourceCodes/lua"]
+	path = SourceCodes/lua
+	url = https://github.com/lua/lua.git
