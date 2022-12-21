@@ -22,3 +22,6 @@
 [submodule "SourceCodes/lua"]
 	path = SourceCodes/lua
 	url = https://github.com/lua/lua.git
+[submodule "AppleSources/darwin-libpthread"]
+	path = AppleSources/darwin-libpthread
+	url = https://github.com/apple/darwin-libpthread.git
