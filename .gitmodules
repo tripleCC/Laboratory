@@ -25,3 +25,6 @@
 [submodule "AppleSources/darwin-libpthread"]
 	path = AppleSources/darwin-libpthread
 	url = https://github.com/apple/darwin-libpthread.git
+[submodule "AppleSources/ld64"]
+	path = AppleSources/ld64
+	url = git@github.com:apple-opensource/ld64.git
