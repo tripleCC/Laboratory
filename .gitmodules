@@ -28,3 +28,6 @@
 [submodule "AppleSources/ld64"]
 	path = AppleSources/ld64
 	url = git@github.com:apple-opensource/ld64.git
+[submodule "Tai-e-assignments"]
+	path = Tai-e-assignments
+	url = git@github.com:tripleCC/Tai-e-assignments.git
