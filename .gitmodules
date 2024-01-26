@@ -31,3 +31,6 @@
 [submodule "Tai-e-assignments"]
 	path = Tai-e-assignments
 	url = git@github.com:tripleCC/Tai-e-assignments.git
+[submodule "AppleSources/xnu"]
+	path = AppleSources/xnu
+	url = git@github.com:apple-oss-distributions/xnu.git
