@@ -37,3 +37,6 @@
 [submodule "AppleSources/objc4"]
 	path = AppleSources/objc4
 	url = git@github.com:apple-oss-distributions/objc4.git
+[submodule "AppleSources/dyld"]
+	path = AppleSources/dyld
+	url = git@github.com:apple-oss-distributions/dyld.git
