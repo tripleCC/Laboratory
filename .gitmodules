@@ -27,7 +27,7 @@
 	url = https://github.com/apple/darwin-libpthread.git
 [submodule "AppleSources/ld64"]
 	path = AppleSources/ld64
-	url = git@github.com:apple-opensource/ld64.git
+	url = git@github.com:apple-oss-distributions/ld64.git
 [submodule "Tai-e-assignments"]
 	path = Tai-e-assignments
 	url = git@github.com:tripleCC/Tai-e-assignments.git
