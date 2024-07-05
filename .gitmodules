@@ -46,3 +46,6 @@
 [submodule "AppleSources/libmalloc"]
 	path = AppleSources/libmalloc
 	url = git@github.com:apple-oss-distributions/libmalloc.git
+[submodule "AppleSources/--force"]
+	path = AppleSources/--force
+	url = git@github.com:tripleCC/ld64.git
