@@ -46,3 +46,6 @@
 [submodule "AppleSources/ld64"]
 	path = AppleSources/ld64
 	url = git@github.com:tripleCC/ld64.git
+[submodule "AppleSources/tapi"]
+	path = AppleSources/tapi
+	url = git@github.com:apple-oss-distributions/tapi.git
