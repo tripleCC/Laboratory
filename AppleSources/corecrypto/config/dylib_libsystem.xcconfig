@@ -1,0 +1,55 @@
+// Copyright (c) (2021-2022) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+#include "dylib_base.xcconfig"
+
+BUILD_VARIANTS = normal trace noasm
+BUILD_VARIANTS[sdk=driverkit*] = normal
+
+EXPORTED_SYMBOLS_FILE = $(BUILT_PRODUCTS_DIR)/corecrypto_dylib.$(CURRENT_ARCH).$(CURRENT_VARIANT).exp
+
+// SDK_INSTALL_ROOT is related to DriverKit
+INSTALL_PATH = $(SDK_INSTALL_ROOT)/usr/lib/system
+
+LINK_WITH_STANDARD_LIBRARIES = NO
+
+PRODUCT_NAME = corecrypto
+
+SUPPORTS_TEXT_BASED_API = YES
+
+TAPI_HEADER_PATH = $(TAPI_HEADER_PATH_$(DEPLOYMENT_LOCATION))
+TAPI_HEADER_PATH_NO = $(SYMROOT)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/usr/local/include
+TAPI_HEADER_PATH_YES = $(DSTROOT)/$(SDK_INSTALL_HEADERS_ROOT)/usr/local/include
+TAPI_HEADER_SEARCH_PATHS = $(TAPI_HEADER_PATH)
+TAPI_VERIFY_MODE = Pedantic
+
+_OTHER_TAPI_FLAGS_noasm = -DCC_USE_ASM=0
+
+OTHER_TAPI_FLAGS = -umbrella System
+OTHER_TAPI_FLAGS = $(inherited) -extra-public-header $(TAPI_HEADER_PATH)
+OTHER_TAPI_FLAGS = $(inherited) $(_OTHER_TAPI_FLAGS_$(CURRENT_VARIANT))
+
+OTHER_LDFLAGS = -Wl,-umbrella,System
+OTHER_LDFLAGS = $(inherited) -ldyld
+OTHER_LDFLAGS = $(inherited) -lcompiler_rt
+OTHER_LDFLAGS = $(inherited) -lsystem$(SIM_SUFFIX)_kernel
+OTHER_LDFLAGS = $(inherited) -lsystem$(SIM_SUFFIX)_platform
+OTHER_LDFLAGS = $(inherited) -lsystem_malloc
+OTHER_LDFLAGS = $(inherited) -lsystem_c
+OTHER_LDFLAGS = $(inherited) -lsystem_blocks
+OTHER_LDFLAGS = $(inherited) -lsystem$(SIM_SUFFIX)_pthread
+OTHER_LDFLAGS = $(inherited) -lmacho
+OTHER_LDFLAGS = $(inherited) -lsystem_trace
+OTHER_LDFLAGS = $(inherited) -ldispatch
+
+_OTHER_CFLAGS_noasm = -DCC_USE_ASM=0
+_OTHER_CFLAGS_trace = -DCORECRYPTO_POST_TRACE
+
+OTHER_CFLAGS = $(_OTHER_CFLAGS_$(CURRENT_VARIANT))

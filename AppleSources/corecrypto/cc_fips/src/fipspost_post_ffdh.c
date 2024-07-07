@@ -1,0 +1,267 @@
+/* Copyright (c) (2017,2019-2022) Apple Inc. All rights reserved.
+ *
+ * corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+ * is contained in the License.txt file distributed with corecrypto) and only to
+ * people who accept that license. IMPORTANT:  Any license rights granted to you by
+ * Apple Inc. (if any) are limited to internal use within your organization only on
+ * devices and computers you own or control, for the sole purpose of verifying the
+ * security characteristics and correct functioning of the Apple Software.  You may
+ * not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+ */
+
+#include "cc_debug.h"
+#include "ccdh_internal.h"
+#include "ccrng_zero.h"
+
+#include "fipspost.h"
+#include "fipspost_priv.h"
+#include "fipspost_post_ffdh.h"
+
+ /*
+  P = 92ac82b2885b174d243d1e7d5bed4b6bac61bd7132301be5f1e669436d409295ee9c7005e5a16f8478fb6fd214a196c98ef9e591e45cd93317703a2aec5b106ed7cc4a987ba1aef7f621348f002ba98755e010f0327cb538ec9b1aec01dfaf26f1ac33b917a989bc7398f1234c2552dcdac65e4cabc37b5b24917dc166464b7aff2689138879cffa2a9e7c11abfff11917779bad99fd3169447ef5087fb61e1a9295552db761e06787fa44ce83dfd5229f0bd12a8673d0fc9055be0594898b5b0310fdc50ba13f7900d5fff1e81fbc9042bf204d5f0aaa6966f725a4b6c4848a8d8168e3389d7dfeca6acd89de55f42d911b749bb5b82d61ef463216d669ac73
+  Q = b1a173f76ce1555ec2ba7640e82e506d0f6d7ba24c9d148621fa3f23
+  G = 2ef437fb4f8ded561db4fe588153a3be42587270a0ecf64205018759eb0bc060f62777297b3a99f48953fdce34a0e966dc9f79bc3bee43bead12d593729130eff22ad7e83514798fbffc9cccb34a8793aa95afd2686247b5c17802c1d6e646337bad88118b740744713ad84bf482a650364cf0c44be2e64242f29898af722fecf39a49aba0befc3db68cc789f6076fe900856c01b1fd1e70ce0eceaee1717fff948ad9d66d76280a5f3e64aa4a373951e89dd17853e081b6a890dd79b147817534f46fc38e7da729c6d45f5e254fa1e190b385fbe9f160654a14e5b3c283667f5f2e0ad144bf10bfd3f912370e81243549acd4483daa43f14abc08fcafa0be29
+*/
+static ccdh_gp_decl_static(2048) ccdh_gp_fipspost_2048 =
+{
+    .hp = {
+        .n = ccn_nof(2048),
+        .bitlen = 2048,
+        .funcs = CCZP_FUNCS_DEFAULT
+    },
+    .p = {
+        /* prime */
+        CCN64_C(ef,46,32,16,d6,69,ac,73),CCN64_C(91,1b,74,9b,b5,b8,2d,61),
+        CCN64_C(ca,6a,cd,89,de,55,f4,2d),CCN64_C(8d,81,68,e3,38,9d,7d,fe),
+        CCN64_C(66,f7,25,a4,b6,c4,84,8a),CCN64_C(42,bf,20,4d,5f,0a,aa,69),
+        CCN64_C(00,d5,ff,f1,e8,1f,bc,90),CCN64_C(03,10,fd,c5,0b,a1,3f,79),
+        CCN64_C(90,55,be,05,94,89,8b,5b),CCN64_C(9f,0b,d1,2a,86,73,d0,fc),
+        CCN64_C(87,fa,44,ce,83,df,d5,22),CCN64_C(92,95,55,2d,b7,61,e0,67),
+        CCN64_C(44,7e,f5,08,7f,b6,1e,1a),CCN64_C(17,77,9b,ad,99,fd,31,69),
+        CCN64_C(2a,9e,7c,11,ab,ff,f1,19),CCN64_C(ff,26,89,13,88,79,cf,fa),
+        CCN64_C(24,91,7d,c1,66,46,4b,7a),CCN64_C(da,c6,5e,4c,ab,c3,7b,5b),
+        CCN64_C(73,98,f1,23,4c,25,52,dc),CCN64_C(f1,ac,33,b9,17,a9,89,bc),
+        CCN64_C(ec,9b,1a,ec,01,df,af,26),CCN64_C(55,e0,10,f0,32,7c,b5,38),
+        CCN64_C(f6,21,34,8f,00,2b,a9,87),CCN64_C(d7,cc,4a,98,7b,a1,ae,f7),
+        CCN64_C(17,70,3a,2a,ec,5b,10,6e),CCN64_C(8e,f9,e5,91,e4,5c,d9,33),
+        CCN64_C(78,fb,6f,d2,14,a1,96,c9),CCN64_C(ee,9c,70,05,e5,a1,6f,84),
+        CCN64_C(f1,e6,69,43,6d,40,92,95),CCN64_C(ac,61,bd,71,32,30,1b,e5),
+        CCN64_C(24,3d,1e,7d,5b,ed,4b,6b),CCN64_C(92,ac,82,b2,88,5b,17,4d)
+    },
+    .p0inv = (cc_unit)16271031606222071621U,
+    .r2 = {
+        /* r2 */
+        CCN64_C(da,fd,bc,ec,81,ac,39,08),CCN64_C(52,43,cd,95,b0,90,f6,fd),
+        CCN64_C(36,4b,cd,9e,0f,3d,95,bd),CCN64_C(81,c1,93,79,70,5e,a8,22),
+        CCN64_C(cb,31,b9,a0,eb,1b,4f,63),CCN64_C(5c,56,5e,ee,ab,13,f5,d1),
+        CCN64_C(cc,9f,84,e4,31,37,ac,4f),CCN64_C(2b,cd,a0,1f,e6,5b,79,bb),
+        CCN64_C(7d,d4,c0,d1,f1,9b,8e,3e),CCN64_C(ae,da,4e,01,ee,2e,c9,8c),
+        CCN64_C(18,5a,21,2b,45,a9,9d,89),CCN64_C(ea,42,2a,1d,af,44,b0,e3),
+        CCN64_C(c8,56,ee,da,62,37,9e,27),CCN64_C(b4,32,0d,ba,b4,b3,9a,d1),
+        CCN64_C(8d,0d,0e,43,cb,2f,9a,62),CCN64_C(2f,b0,e6,5c,50,6a,9c,c0),
+        CCN64_C(ae,03,f6,0b,c2,43,48,f9),CCN64_C(69,5f,94,79,31,05,31,77),
+        CCN64_C(56,2a,0f,7f,5f,9c,5e,ea),CCN64_C(8d,f1,49,06,43,8b,84,60),
+        CCN64_C(dd,09,b6,db,78,67,9f,8d),CCN64_C(4b,5d,d5,47,5b,59,44,4c),
+        CCN64_C(a4,d7,50,fe,a3,40,da,70),CCN64_C(0a,f3,7f,f4,1e,42,d4,09),
+        CCN64_C(69,6c,04,fe,71,dc,08,40),CCN64_C(09,ac,49,b0,af,8e,ac,55),
+        CCN64_C(e6,da,f6,5b,06,80,36,da),CCN64_C(38,b8,60,ba,80,29,e6,29),
+        CCN64_C(7e,67,cf,fd,00,84,d7,58),CCN64_C(bc,11,22,4b,a1,2b,29,e4),
+        CCN64_C(cf,f3,23,38,40,bb,5f,de),CCN64_C(4b,22,8e,60,12,3d,7e,d2)
+    },
+    .g = {
+        /* g */
+        CCN64_C(4a,bc,08,fc,af,a0,be,29),CCN64_C(49,ac,d4,48,3d,aa,43,f1),
+        CCN64_C(d3,f9,12,37,0e,81,24,35),CCN64_C(5f,2e,0a,d1,44,bf,10,bf),
+        CCN64_C(4a,14,e5,b3,c2,83,66,7f),CCN64_C(90,b3,85,fb,e9,f1,60,65),
+        CCN64_C(c6,d4,5f,5e,25,4f,a1,e1),CCN64_C(34,f4,6f,c3,8e,7d,a7,29),
+        CCN64_C(a8,90,dd,79,b1,47,81,75),CCN64_C(e8,9d,d1,78,53,e0,81,b6),
+        CCN64_C(5f,3e,64,aa,4a,37,39,51),CCN64_C(94,8a,d9,d6,6d,76,28,0a),
+        CCN64_C(ce,0e,ce,ae,e1,71,7f,ff),CCN64_C(00,85,6c,01,b1,fd,1e,70),
+        CCN64_C(b6,8c,c7,89,f6,07,6f,e9),CCN64_C(f3,9a,49,ab,a0,be,fc,3d),
+        CCN64_C(42,f2,98,98,af,72,2f,ec),CCN64_C(36,4c,f0,c4,4b,e2,e6,42),
+        CCN64_C(71,3a,d8,4b,f4,82,a6,50),CCN64_C(7b,ad,88,11,8b,74,07,44),
+        CCN64_C(c1,78,02,c1,d6,e6,46,33),CCN64_C(aa,95,af,d2,68,62,47,b5),
+        CCN64_C(bf,fc,9c,cc,b3,4a,87,93),CCN64_C(f2,2a,d7,e8,35,14,79,8f),
+        CCN64_C(ad,12,d5,93,72,91,30,ef),CCN64_C(dc,9f,79,bc,3b,ee,43,be),
+        CCN64_C(89,53,fd,ce,34,a0,e9,66),CCN64_C(f6,27,77,29,7b,3a,99,f4),
+        CCN64_C(05,01,87,59,eb,0b,c0,60),CCN64_C(42,58,72,70,a0,ec,f6,42),
+        CCN64_C(1d,b4,fe,58,81,53,a3,be),CCN64_C(2e,f4,37,fb,4f,8d,ed,56)
+    },
+    .q = {
+        /* q */
+        CCN64_C(4c,9d,14,86,21,fa,3f,23),CCN64_C(e8,2e,50,6d,0f,6d,7b,a2),
+        CCN64_C(6c,e1,55,5e,c2,ba,76,40),CCN64_C(00,00,00,00,b1,a1,73,f7),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN64_C(00,00,00,00,00,00,00,00),
+        CCN64_C(00,00,00,00,00,00,00,00),CCN8_C(00)
+    },
+    .l = 0,
+};
+
+// Test FFDH
+static int fipspost_post_ffdh_ws(cc_ws_t ws, uint32_t fips_mode)
+{
+    ccdh_const_gp_t gp = (ccdh_const_gp_t)&ccdh_gp_fipspost_2048;
+
+/*
+  XephemCAVS = 1ea26e8b4b0061e1dccefb2f56b0dadd9d0fc297e215578823a07e97
+ */
+    const uint8_t XephemCAVS[]={
+        0x1e, 0xa2, 0x6e, 0x8b, 0x4b, 0x00, 0x61, 0xe1, 0xdc, 0xce, 0xfb, 0x2f,
+        0x56, 0xb0, 0xda, 0xdd, 0x9d, 0x0f, 0xc2, 0x97, 0xe2, 0x15, 0x57, 0x88,
+        0x23, 0xa0, 0x7e, 0x97};
+/*
+  YephemCAVS = 4d7cea099b64db3ddc8d3f8bd8b1cbead7e071e41c58cf08da3da18c0b7cac6f76a4d8a991ec9e743452024355a9a1f6d5c867ad4d98eb8ef4729520d47b384aa38b219b854d05f19489a3349d9eaa2397ac7eb2e87f9e1e595ee0eacfff86568022c9036c058c196daa82dd47abbf24e6eab8c9c19e64d17bee9bed99d2903a4b90c3bbf5a449b5fca86e079a27fb0f67a1140e30804e60df0162258fb71814565e7614e91535db52ef346022013c75012713e90aa76705b5ec7a60dcb5dddcc99dbb107b3dd98f31ff26ce7c7824a8e7a56db4c29866acac064ea38563d6f7a45391e5167414fe9161951f30dbbc8ef1f3088b0e8ac86fe05e48196be67010
+ */
+    const uint8_t YephemCAVS[]={
+        0x4d, 0x7c, 0xea, 0x09, 0x9b, 0x64, 0xdb, 0x3d, 0xdc, 0x8d, 0x3f, 0x8b,
+        0xd8, 0xb1, 0xcb, 0xea, 0xd7, 0xe0, 0x71, 0xe4, 0x1c, 0x58, 0xcf, 0x08,
+        0xda, 0x3d, 0xa1, 0x8c, 0x0b, 0x7c, 0xac, 0x6f, 0x76, 0xa4, 0xd8, 0xa9,
+        0x91, 0xec, 0x9e, 0x74, 0x34, 0x52, 0x02, 0x43, 0x55, 0xa9, 0xa1, 0xf6,
+        0xd5, 0xc8, 0x67, 0xad, 0x4d, 0x98, 0xeb, 0x8e, 0xf4, 0x72, 0x95, 0x20,
+        0xd4, 0x7b, 0x38, 0x4a, 0xa3, 0x8b, 0x21, 0x9b, 0x85, 0x4d, 0x05, 0xf1,
+        0x94, 0x89, 0xa3, 0x34, 0x9d, 0x9e, 0xaa, 0x23, 0x97, 0xac, 0x7e, 0xb2,
+        0xe8, 0x7f, 0x9e, 0x1e, 0x59, 0x5e, 0xe0, 0xea, 0xcf, 0xff, 0x86, 0x56,
+        0x80, 0x22, 0xc9, 0x03, 0x6c, 0x05, 0x8c, 0x19, 0x6d, 0xaa, 0x82, 0xdd,
+        0x47, 0xab, 0xbf, 0x24, 0xe6, 0xea, 0xb8, 0xc9, 0xc1, 0x9e, 0x64, 0xd1,
+        0x7b, 0xee, 0x9b, 0xed, 0x99, 0xd2, 0x90, 0x3a, 0x4b, 0x90, 0xc3, 0xbb,
+        0xf5, 0xa4, 0x49, 0xb5, 0xfc, 0xa8, 0x6e, 0x07, 0x9a, 0x27, 0xfb, 0x0f,
+        0x67, 0xa1, 0x14, 0x0e, 0x30, 0x80, 0x4e, 0x60, 0xdf, 0x01, 0x62, 0x25,
+        0x8f, 0xb7, 0x18, 0x14, 0x56, 0x5e, 0x76, 0x14, 0xe9, 0x15, 0x35, 0xdb,
+        0x52, 0xef, 0x34, 0x60, 0x22, 0x01, 0x3c, 0x75, 0x01, 0x27, 0x13, 0xe9,
+        0x0a, 0xa7, 0x67, 0x05, 0xb5, 0xec, 0x7a, 0x60, 0xdc, 0xb5, 0xdd, 0xdc,
+        0xc9, 0x9d, 0xbb, 0x10, 0x7b, 0x3d, 0xd9, 0x8f, 0x31, 0xff, 0x26, 0xce,
+        0x7c, 0x78, 0x24, 0xa8, 0xe7, 0xa5, 0x6d, 0xb4, 0xc2, 0x98, 0x66, 0xac,
+        0xac, 0x06, 0x4e, 0xa3, 0x85, 0x63, 0xd6, 0xf7, 0xa4, 0x53, 0x91, 0xe5,
+        0x16, 0x74, 0x14, 0xfe, 0x91, 0x61, 0x95, 0x1f, 0x30, 0xdb, 0xbc, 0x8e,
+        0xf1, 0xf3, 0x08, 0x8b, 0x0e, 0x8a, 0xc8, 0x6f, 0xe0, 0x5e, 0x48, 0x19,
+        0x6b, 0xe6, 0x70, 0x10};
+    /*
+  XephemIUT = 6822bde050fcddf90ba8c398d6c973552be0f8f4b48c86dfdda2c187
+     0x68, 0x22, 0xbd, 0xe0, 0x50, 0xfc, 0xdd, 0xf9, 0x0b, 0xa8, 0xc3, 0x98,
+     0xd6, 0xc9, 0x73, 0x55, 0x2b, 0xe0, 0xf8, 0xf4, 0xb4, 0x8c, 0x86, 0xdf,
+     0xdd, 0xa2, 0xc1, 0x87
+     */
+    /*
+  YephemIUT = 1eab79b783e87490a8ab902402aad79d2c90352af35426691cace0738fc9a418ee4ffd9fd30d048ba438a487f6975d5c202253cbf2a854ff3628def81d923a882000a3d4dd4d8b167adccd71e42e61adae024fa1f669099cd80ab313b2d844eadfdf786dfd5b6b5d94e54779dec01ff863394cddd3e85a91e72dd6a40b7744bcad37625eb9887e9a125f7b616ca7459bae96d5297253df398ed3fd0d1af9f3bf663a2cdf3603b05d72e727658a4083fb4981eab381cc997a8219d45ed6efa55f643d0c8ebe3a7c32d05e901ee224402dbffc1ea1a26bbcbaddc801cf9f5119b83d6ee91774712e5676f16748e282a844395b47e1c1eeef41331ddbcde65e475e
+     */
+    const uint8_t YephemIUT[]={
+        0x1e, 0xab, 0x79, 0xb7, 0x83, 0xe8, 0x74, 0x90, 0xa8, 0xab, 0x90, 0x24,
+        0x02, 0xaa, 0xd7, 0x9d, 0x2c, 0x90, 0x35, 0x2a, 0xf3, 0x54, 0x26, 0x69,
+        0x1c, 0xac, 0xe0, 0x73, 0x8f, 0xc9, 0xa4, 0x18, 0xee, 0x4f, 0xfd, 0x9f,
+        0xd3, 0x0d, 0x04, 0x8b, 0xa4, 0x38, 0xa4, 0x87, 0xf6, 0x97, 0x5d, 0x5c,
+        0x20, 0x22, 0x53, 0xcb, 0xf2, 0xa8, 0x54, 0xff, 0x36, 0x28, 0xde, 0xf8,
+        0x1d, 0x92, 0x3a, 0x88, 0x20, 0x00, 0xa3, 0xd4, 0xdd, 0x4d, 0x8b, 0x16,
+        0x7a, 0xdc, 0xcd, 0x71, 0xe4, 0x2e, 0x61, 0xad, 0xae, 0x02, 0x4f, 0xa1,
+        0xf6, 0x69, 0x09, 0x9c, 0xd8, 0x0a, 0xb3, 0x13, 0xb2, 0xd8, 0x44, 0xea,
+        0xdf, 0xdf, 0x78, 0x6d, 0xfd, 0x5b, 0x6b, 0x5d, 0x94, 0xe5, 0x47, 0x79,
+        0xde, 0xc0, 0x1f, 0xf8, 0x63, 0x39, 0x4c, 0xdd, 0xd3, 0xe8, 0x5a, 0x91,
+        0xe7, 0x2d, 0xd6, 0xa4, 0x0b, 0x77, 0x44, 0xbc, 0xad, 0x37, 0x62, 0x5e,
+        0xb9, 0x88, 0x7e, 0x9a, 0x12, 0x5f, 0x7b, 0x61, 0x6c, 0xa7, 0x45, 0x9b,
+        0xae, 0x96, 0xd5, 0x29, 0x72, 0x53, 0xdf, 0x39, 0x8e, 0xd3, 0xfd, 0x0d,
+        0x1a, 0xf9, 0xf3, 0xbf, 0x66, 0x3a, 0x2c, 0xdf, 0x36, 0x03, 0xb0, 0x5d,
+        0x72, 0xe7, 0x27, 0x65, 0x8a, 0x40, 0x83, 0xfb, 0x49, 0x81, 0xea, 0xb3,
+        0x81, 0xcc, 0x99, 0x7a, 0x82, 0x19, 0xd4, 0x5e, 0xd6, 0xef, 0xa5, 0x5f,
+        0x64, 0x3d, 0x0c, 0x8e, 0xbe, 0x3a, 0x7c, 0x32, 0xd0, 0x5e, 0x90, 0x1e,
+        0xe2, 0x24, 0x40, 0x2d, 0xbf, 0xfc, 0x1e, 0xa1, 0xa2, 0x6b, 0xbc, 0xba,
+        0xdd, 0xc8, 0x01, 0xcf, 0x9f, 0x51, 0x19, 0xb8, 0x3d, 0x6e, 0xe9, 0x17,
+        0x74, 0x71, 0x2e, 0x56, 0x76, 0xf1, 0x67, 0x48, 0xe2, 0x82, 0xa8, 0x44,
+        0x39, 0x5b, 0x47, 0xe1, 0xc1, 0xee, 0xef, 0x41, 0x33, 0x1d, 0xdb, 0xcd,
+        0xe6, 0x5e, 0x47, 0x5e
+    };
+    /*
+  Z = 35d7bee84591a8afe92938af8318e2b350ea550380a78f8170b86d470a2b69154b6f96c97e466d6875f58f410fa294a6a8cb552d79f1a4aa01f3019c565ecef3e92bbda18ee3f4760e9195ff75723be30b8627e7d446174c138f6c491d1aeb1236e468d0beed0895ad1a8dd63fe9c5e5ed5eedbd34b1671903319e3dbd1d6fac862dff0aa5828d4ab5c8284bf74135f418d39a9201d2483fbb33b2833ff03e7cd1fb1fda7813af8487420295a8ced4c58cd482f38df044cc3f88fa023246d10d226c77337368bb410c9e6680756d22473706d2fda1d127cc470c24a7e7b6ce5b4e9ca61596c3d10ab098380ad613c9f81a18cfdf0c7578c11c75b88600b4ca38
+     */
+    
+    const uint8_t Z1[] = {  0x36, 0xd7, 0xbe, 0xe8, 0x45, 0x91, 0xa8, 0xaf, 0xe9, 0x29, 0x38, 0xaf};
+    const uint8_t Z2[] = {  0x35, 0xd7, 0xbe, 0xe8, 0x45, 0x91, 0xa8, 0xaf, 0xe9, 0x29, 0x38, 0xaf};
+    const uint8_t Z3[] = {  0x83, 0x18, 0xe2, 0xb3, 0x50, 0xea, 0x55, 0x03, 0x80, 0xa7, 0x8f, 0x81,
+                            0x70, 0xb8, 0x6d, 0x47, 0x0a, 0x2b, 0x69, 0x15, 0x4b, 0x6f, 0x96, 0xc9,
+                            0x7e, 0x46, 0x6d, 0x68, 0x75, 0xf5, 0x8f, 0x41, 0x0f, 0xa2, 0x94, 0xa6,
+                            0xa8, 0xcb, 0x55, 0x2d, 0x79, 0xf1, 0xa4, 0xaa, 0x01, 0xf3, 0x01, 0x9c,
+                            0x56, 0x5e, 0xce, 0xf3, 0xe9, 0x2b, 0xbd, 0xa1, 0x8e, 0xe3, 0xf4, 0x76,
+                            0x0e, 0x91, 0x95, 0xff, 0x75, 0x72, 0x3b, 0xe3, 0x0b, 0x86, 0x27, 0xe7,
+                            0xd4, 0x46, 0x17, 0x4c, 0x13, 0x8f, 0x6c, 0x49, 0x1d, 0x1a, 0xeb, 0x12,
+                            0x36, 0xe4, 0x68, 0xd0, 0xbe, 0xed, 0x08, 0x95, 0xad, 0x1a, 0x8d, 0xd6,
+                            0x3f, 0xe9, 0xc5, 0xe5, 0xed, 0x5e, 0xed, 0xbd, 0x34, 0xb1, 0x67, 0x19,
+                            0x03, 0x31, 0x9e, 0x3d, 0xbd, 0x1d, 0x6f, 0xac, 0x86, 0x2d, 0xff, 0x0a,
+                            0xa5, 0x82, 0x8d, 0x4a, 0xb5, 0xc8, 0x28, 0x4b, 0xf7, 0x41, 0x35, 0xf4,
+                            0x18, 0xd3, 0x9a, 0x92, 0x01, 0xd2, 0x48, 0x3f, 0xbb, 0x33, 0xb2, 0x83,
+                            0x3f, 0xf0, 0x3e, 0x7c, 0xd1, 0xfb, 0x1f, 0xda, 0x78, 0x13, 0xaf, 0x84,
+                            0x87, 0x42, 0x02, 0x95, 0xa8, 0xce, 0xd4, 0xc5, 0x8c, 0xd4, 0x82, 0xf3,
+                            0x8d, 0xf0, 0x44, 0xcc, 0x3f, 0x88, 0xfa, 0x02, 0x32, 0x46, 0xd1, 0x0d,
+                            0x22, 0x6c, 0x77, 0x33, 0x73, 0x68, 0xbb, 0x41, 0x0c, 0x9e, 0x66, 0x80,
+                            0x75, 0x6d, 0x22, 0x47, 0x37, 0x06, 0xd2, 0xfd, 0xa1, 0xd1, 0x27, 0xcc,
+                            0x47, 0x0c, 0x24, 0xa7, 0xe7, 0xb6, 0xce, 0x5b, 0x4e, 0x9c, 0xa6, 0x15,
+                            0x96, 0xc3, 0xd1, 0x0a, 0xb0, 0x98, 0x38, 0x0a, 0xd6, 0x13, 0xc9, 0xf8,
+                            0x1a, 0x18, 0xcf, 0xdf, 0x0c, 0x75, 0x78, 0xc1, 0x1c, 0x75, 0xb8, 0x86,
+                            0x00, 0xb4, 0xca, 0x38 };
+
+    uint8_t Z[sizeof(Z1)+sizeof(Z3)];
+    if (FIPS_MODE_IS_FORCEFAIL(fips_mode))
+    {
+        cc_memcpy(Z, Z1, sizeof(Z1));
+        cc_memcpy(Z + sizeof(Z1), Z3, sizeof(Z3));
+    }
+    else
+    {
+        cc_memcpy(Z, Z2, sizeof(Z2));
+        cc_memcpy(Z + sizeof(Z2), Z3, sizeof(Z3));
+    }
+
+    int rv = CCPOST_GENERIC_FAILURE;
+    uint8_t out[sizeof(Z)];
+    size_t outlen=sizeof(Z);
+
+    cc_size n = ccdh_ccn_size(gp);
+    CC_DECL_BP_WS(ws, bp);
+    ccdh_pub_ctx_t pub = CCDH_ALLOC_PUB_WS(ws, n);
+    ccdh_full_ctx_t full = CCDH_ALLOC_FULL_WS(ws, n);
+
+    if (ccdh_import_pub(gp, sizeof(YephemIUT), YephemIUT, pub)) {
+        failf("ccdh_import_pub");
+        goto errOut;
+    }
+
+    if (ccdh_import_full(gp, sizeof(XephemCAVS), XephemCAVS, sizeof(YephemCAVS), YephemCAVS, full)) {
+        failf("ccdh_import_full");
+        goto errOut;
+    }
+
+    if (ccdh_compute_shared_secret_ws(ws, full, pub, &outlen, out, &ccrng_zero)) {
+        failf("ccdh_compute_shared_secret");
+        goto errOut;
+    }
+
+    if (!((memcmp(out, Z, sizeof(Z)) == 0) && (outlen == sizeof(Z)))) {
+        failf("memcmp");
+        rv = CCPOST_KAT_FAILURE;
+        goto errOut;
+    }
+
+    rv = CCERR_OK;
+
+errOut:
+    CC_FREE_BP_WS(ws, bp);
+    return rv;
+}
+
+int fipspost_post_ffdh(uint32_t fips_mode)
+{
+    ccdh_const_gp_t gp = (ccdh_const_gp_t)&ccdh_gp_fipspost_2048;
+    CC_DECL_WORKSPACE_OR_FAIL(ws, FIPSPOST_POST_FFDH_WORKSPACE_N(ccdh_ccn_size(gp)));
+    int rv = fipspost_post_ffdh_ws(ws, fips_mode);
+    CC_FREE_WORKSPACE(ws);
+    return rv;
+}

@@ -1,0 +1,48 @@
+// Copyright (c) (2021,2022) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+ARCHS[sdk=macosx*] = $(ARCHS_STANDARD_64_BIT)
+DEBUG_INFORMATION_FORMAT[config=Release] = dwarf-with-dsym
+ONLY_ACTIVE_ARCH = NO
+BUILD_VARIANTS = normal development
+BUILD_VARIANTS[sdk=macosx*] = normal development kasan
+BUILD_VARIANTS[sdk=iphoneos*] = normal development kasan noasm
+MODULE_NAME = com.apple.kec.corecrypto
+MODULE_START = corecrypto_kext_start
+MODULE_STOP = corecrypto_kext_stop
+MODULE_VERSION = 1.0.0d1
+OTHER_LDFLAGS =
+OTHER_LDFLAGS[sdk=macosx*] = -Wl,-kexts_use_stubs
+INFOPLIST_FILE = corecrypto_kext/corecrypto_kext-Info.plist
+PRIVATE_HEADERS_FOLDER_PATH = $(KEXT_FRAMEWORK)/Versions/A/PrivateHeaders/corecrypto
+PRODUCT_BUNDLE_IDENTIFIER = com.apple.kec.corecrypto
+PRODUCT_NAME = corecrypto
+WRAPPER_EXTENSION = kext
+HEADER_SEARCH_PATHS = $(SRCROOT)/cc $(SRCROOT)/ccmode $(SRCROOT)/cccmac $(SRCROOT)/cc_fips $(TOOLCHAIN_DIR)/usr/include $(inherited) $(SRCROOT)/acceleratecrypto/Header
+SYSTEM_HEADER_SEARCH_PATHS = $(inherited) $(SDKROOT)$(KEXT_FRAMEWORK)/PrivateHeaders
+SYSTEM_HEADER_SEARCH_PATHS = $(inherited) $(SDKROOT)$(KEXT_FRAMEWORK)/Headers
+CODE_SIGN_IDENTITY = -
+MARKETING_VERSION = 11.0
+GCC_DYNAMIC_NO_PIC = NO
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+GCC_LINK_WITH_DYNAMIC_LIBRARIES = YES
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+GCC_ENABLE_OBJC_EXCEPTIONS = YES
+CLANG_ENABLE_OBJC_WEAK = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) BUILDKERNEL
+
+OTHER_CFLAGS = $(inherited) -fstack-protector-strong -Wcast-qual
+OTHER_CFLAGS = $(inherited) -Wno-error=#warnings -Wno-error=deprecated-declarations
+OTHER_CFLAGS = $(inherited) -isystem "$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders" -ibuiltininc
+OTHER_CFLAGS = $(inherited) -DCC_DISABLE_RSAKEYGEN=1
+
+OTHER_CFLAGS_development = -DCORECRYPTO_POST_TRACE
+OTHER_CFLAGS_kasan = $(KASAN_DEFAULT_CFLAGS)
+OTHER_CFLAGS_noasm = -DCC_USE_ASM=0

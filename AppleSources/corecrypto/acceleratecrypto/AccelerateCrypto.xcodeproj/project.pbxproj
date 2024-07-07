@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2CD5E9C120D85B370097F130 /* AccelerateCrypto */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2CD5E9C420D85B370097F130 /* Build configuration list for PBXAggregateTarget "AccelerateCrypto" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2C88439021B74BE100C49BD9 /* PBXTargetDependency */,
+				2C6CED2E20E195E90045D491 /* PBXTargetDependency */,
+			);
+			name = AccelerateCrypto;
+			productName = AccelerateCrypto;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2C6CED1120E1956A0045D491 /* sha512_compress_armv7neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDA20DD5D2C00840ABB /* sha512_compress_armv7neon.s */; };
+		2C6CED1220E195710045D491 /* sha512_compress_arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED820DD5D2C00840ABB /* sha512_compress_arm64.s */; };
+		2C6CED1320E1957F0045D491 /* sha512_compress_avx1.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED420DD5D2C00840ABB /* sha512_compress_avx1.s */; };
+		2C6CED1420E1957F0045D491 /* sha512_compress_avx2.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED320DD5D2C00840ABB /* sha512_compress_avx2.s */; };
+		2C6CED1520E1957F0045D491 /* sha512_compress_ssse3.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED220DD5D2C00840ABB /* sha512_compress_ssse3.s */; };
+		2C6CED1620E1957F0045D491 /* sha512_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED620DD5D2C00840ABB /* sha512_compress.c */; };
+		2C6CED1720E1957F0045D491 /* sha512_K.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED120DD5D2C00840ABB /* sha512_K.c */; };
+		2C6CED1820E195850045D491 /* sha256_compress_armv7neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC720DD5D1900840ABB /* sha256_compress_armv7neon.s */; };
+		2C6CED1920E195890045D491 /* sha256_compress_arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC520DD5D1800840ABB /* sha256_compress_arm64.s */; };
+		2C6CED1A20E1958D0045D491 /* sha256_compress_avx1.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB920DD5D1800840ABB /* sha256_compress_avx1.s */; };
+		2C6CED1B20E1958D0045D491 /* sha256_compress_avx2.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC820DD5D1900840ABB /* sha256_compress_avx2.s */; };
+		2C6CED1C20E1958D0045D491 /* sha256_compress_ssse3_32.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC920DD5D1900840ABB /* sha256_compress_ssse3_32.s */; };
+		2C6CED1D20E1958D0045D491 /* sha256_compress_ssse3_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EBA20DD5D1800840ABB /* sha256_compress_ssse3_64.s */; };
+		2C6CED1E20E1958D0045D491 /* sha256_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EBB20DD5D1800840ABB /* sha256_compress.c */; };
+		2C6CED1F20E1958D0045D491 /* sha256_K.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ECA20DD5D1900840ABB /* sha256_K.c */; };
+		2C6CED2020E195930045D491 /* sha1_compress_armv7neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB420DD5D0100840ABB /* sha1_compress_armv7neon.s */; };
+		2C6CED2120E195970045D491 /* sha1_compress_arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB020DD5D0100840ABB /* sha1_compress_arm64.s */; };
+		2C6CED2220E1959B0045D491 /* sha1_compress_avx1.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EA720DD5D0100840ABB /* sha1_compress_avx1.s */; };
+		2C6CED2320E1959B0045D491 /* sha1_compress_avx2.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB220DD5D0100840ABB /* sha1_compress_avx2.s */; };
+		2C6CED2420E1959B0045D491 /* sha1_compress_sse.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB120DD5D0100840ABB /* sha1_compress_sse.s */; };
+		2C6CED2520E1959B0045D491 /* sha1_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EA820DD5D0100840ABB /* sha1_compress.c */; };
+		2C6CED2620E195A80045D491 /* decrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EE120DD5D4600840ABB /* decrypt.s */; };
+		2C6CED2720E195A80045D491 /* encrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EE220DD5D4600840ABB /* encrypt.s */; };
+		2C6CED2820E195A80045D491 /* vpaes-armv7.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EE020DD5D4600840ABB /* vpaes-armv7.s */; };
+		2C6CED2920E195B60045D491 /* decrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDC20DD5D4600840ABB /* decrypt.s */; };
+		2C6CED2A20E195B60045D491 /* decrypt_ecb.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDD20DD5D4600840ABB /* decrypt_ecb.s */; };
+		2C6CED2B20E195B60045D491 /* encrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDE20DD5D4600840ABB /* encrypt.s */; };
+		2C6CED2C20E195B60045D491 /* encrypt_ecb.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDF20DD5D4600840ABB /* encrypt_ecb.s */; };
+		2C6CED2F20E302B40045D491 /* AccelerateCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C447E9E20DD5BD600840ABB /* AccelerateCrypto.h */; };
+		2C88436C21B74AD500C49BD9 /* sha1_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EA820DD5D0100840ABB /* sha1_compress.c */; };
+		2C88436D21B74AD500C49BD9 /* sha256_compress_avx2.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC820DD5D1900840ABB /* sha256_compress_avx2.s */; };
+		2C88436E21B74AD500C49BD9 /* sha256_compress_ssse3_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EBA20DD5D1800840ABB /* sha256_compress_ssse3_64.s */; };
+		2C88436F21B74AD500C49BD9 /* sha1_compress_sse.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB120DD5D0100840ABB /* sha1_compress_sse.s */; };
+		2C88437021B74AD500C49BD9 /* encrypt_ecb.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDF20DD5D4600840ABB /* encrypt_ecb.s */; };
+		2C88437121B74AD500C49BD9 /* encrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EE220DD5D4600840ABB /* encrypt.s */; };
+		2C88437221B74AD500C49BD9 /* encrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDE20DD5D4600840ABB /* encrypt.s */; };
+		2C88437321B74AD500C49BD9 /* sha1_compress_avx1.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EA720DD5D0100840ABB /* sha1_compress_avx1.s */; };
+		2C88437421B74AD500C49BD9 /* sha256_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EBB20DD5D1800840ABB /* sha256_compress.c */; };
+		2C88437521B74AD500C49BD9 /* sha512_compress_ssse3.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED220DD5D2C00840ABB /* sha512_compress_ssse3.s */; };
+		2C88437621B74AD500C49BD9 /* sha512_compress_arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED820DD5D2C00840ABB /* sha512_compress_arm64.s */; };
+		2C88437721B74AD500C49BD9 /* sha512_compress_avx1.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED420DD5D2C00840ABB /* sha512_compress_avx1.s */; };
+		2C88437821B74AD500C49BD9 /* sha256_K.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ECA20DD5D1900840ABB /* sha256_K.c */; };
+		2C88437921B74AD500C49BD9 /* sha1_compress_avx2.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB220DD5D0100840ABB /* sha1_compress_avx2.s */; };
+		2C88437A21B74AD500C49BD9 /* sha512_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED620DD5D2C00840ABB /* sha512_compress.c */; };
+		2C88437B21B74AD500C49BD9 /* sha256_compress_arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC520DD5D1800840ABB /* sha256_compress_arm64.s */; };
+		2C88437C21B74AD500C49BD9 /* sha256_compress_armv7neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC720DD5D1900840ABB /* sha256_compress_armv7neon.s */; };
+		2C88437D21B74AD500C49BD9 /* vpaes-armv7.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EE020DD5D4600840ABB /* vpaes-armv7.s */; };
+		2C88437E21B74AD500C49BD9 /* sha256_compress_ssse3_32.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EC920DD5D1900840ABB /* sha256_compress_ssse3_32.s */; };
+		2C88437F21B74AD500C49BD9 /* decrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EE120DD5D4600840ABB /* decrypt.s */; };
+		2C88438021B74AD500C49BD9 /* sha1_compress_arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB020DD5D0100840ABB /* sha1_compress_arm64.s */; };
+		2C88438121B74AD500C49BD9 /* decrypt.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDC20DD5D4600840ABB /* decrypt.s */; };
+		2C88438221B74AD500C49BD9 /* sha512_K.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED120DD5D2C00840ABB /* sha512_K.c */; };
+		2C88438321B74AD500C49BD9 /* sha512_compress_avx2.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447ED320DD5D2C00840ABB /* sha512_compress_avx2.s */; };
+		2C88438421B74AD500C49BD9 /* sha256_compress_avx1.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB920DD5D1800840ABB /* sha256_compress_avx1.s */; };
+		2C88438521B74AD500C49BD9 /* sha1_compress_armv7neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EB420DD5D0100840ABB /* sha1_compress_armv7neon.s */; };
+		2C88438621B74AD500C49BD9 /* decrypt_ecb.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDD20DD5D4600840ABB /* decrypt_ecb.s */; };
+		2C88438721B74AD500C49BD9 /* sha512_compress_armv7neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C447EDA20DD5D2C00840ABB /* sha512_compress_armv7neon.s */; };
+		2C8843A921B8AA8200C49BD9 /* crypt_nonaesni.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C8843A421B8AA8200C49BD9 /* crypt_nonaesni.s */; };
+		2C8843AA21B8AA8200C49BD9 /* crypt_nonaesni.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C8843A421B8AA8200C49BD9 /* crypt_nonaesni.s */; };
+		2C8843AB21B8AA8200C49BD9 /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8843A521B8AA8200C49BD9 /* Context.h */; };
+		2C8843AC21B8AA8200C49BD9 /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8843A521B8AA8200C49BD9 /* Context.h */; };
+		2C8843AD21B8AA8200C49BD9 /* crypt_aesni.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C8843A621B8AA8200C49BD9 /* crypt_aesni.s */; };
+		2C8843AE21B8AA8200C49BD9 /* crypt_aesni.s in Sources */ = {isa = PBXBuildFile; fileRef = 2C8843A621B8AA8200C49BD9 /* crypt_aesni.s */; };
+		2C8843AF21B8AA8200C49BD9 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C8843A721B8AA8200C49BD9 /* aes.c */; };
+		2C8843B021B8AA8200C49BD9 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C8843A721B8AA8200C49BD9 /* aes.c */; };
+		2C93F58321BAF750009239B3 /* AccelerateCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C447E9E20DD5BD600840ABB /* AccelerateCrypto.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C6CED2D20E195E90045D491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CC8863B20D859F200D17D95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C6CED0720E195360045D491;
+			remoteInfo = libAccelerateCrypto;
+		};
+		2C88438F21B74BE100C49BD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CC8863B20D859F200D17D95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C88436A21B74AD500C49BD9;
+			remoteInfo = libAccelerateCrypto_kernel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C447E9E20DD5BD600840ABB /* AccelerateCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerateCrypto.h; path = Header/AccelerateCrypto.h; sourceTree = SOURCE_ROOT; };
+		2C447EA020DD5C1300840ABB /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Include/config.h; sourceTree = SOURCE_ROOT; };
+		2C447EA120DD5C1300840ABB /* arm64_isa_compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arm64_isa_compatibility.h; path = Include/arm64_isa_compatibility.h; sourceTree = SOURCE_ROOT; };
+		2C447EA720DD5D0100840ABB /* sha1_compress_avx1.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha1_compress_avx1.s; path = Source/sha1/intel/sha1_compress_avx1.s; sourceTree = SOURCE_ROOT; };
+		2C447EA820DD5D0100840ABB /* sha1_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1_compress.c; path = Source/sha1/intel/sha1_compress.c; sourceTree = SOURCE_ROOT; };
+		2C447EAB20DD5D0100840ABB /* sha1_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1_compress.c; sourceTree = "<group>"; };
+		2C447EAC20DD5D0100840ABB /* sha1_compress_avx1.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha1_compress_avx1.s; sourceTree = "<group>"; };
+		2C447EAD20DD5D0100840ABB /* sha1_compress_avx2.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha1_compress_avx2.s; sourceTree = "<group>"; };
+		2C447EAE20DD5D0100840ABB /* sha1_compress_sse.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha1_compress_sse.s; sourceTree = "<group>"; };
+		2C447EB020DD5D0100840ABB /* sha1_compress_arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha1_compress_arm64.s; sourceTree = "<group>"; };
+		2C447EB120DD5D0100840ABB /* sha1_compress_sse.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha1_compress_sse.s; path = Source/sha1/intel/sha1_compress_sse.s; sourceTree = SOURCE_ROOT; };
+		2C447EB220DD5D0100840ABB /* sha1_compress_avx2.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha1_compress_avx2.s; path = Source/sha1/intel/sha1_compress_avx2.s; sourceTree = SOURCE_ROOT; };
+		2C447EB420DD5D0100840ABB /* sha1_compress_armv7neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha1_compress_armv7neon.s; sourceTree = "<group>"; };
+		2C447EB920DD5D1800840ABB /* sha256_compress_avx1.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha256_compress_avx1.s; path = Source/sha256/intel/sha256_compress_avx1.s; sourceTree = SOURCE_ROOT; };
+		2C447EBA20DD5D1800840ABB /* sha256_compress_ssse3_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha256_compress_ssse3_64.s; path = Source/sha256/intel/sha256_compress_ssse3_64.s; sourceTree = SOURCE_ROOT; };
+		2C447EBB20DD5D1800840ABB /* sha256_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha256_compress.c; path = Source/sha256/intel/sha256_compress.c; sourceTree = SOURCE_ROOT; };
+		2C447EBD20DD5D1800840ABB /* sha256_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256_compress.c; sourceTree = "<group>"; };
+		2C447EBE20DD5D1800840ABB /* sha256_compress_avx1.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha256_compress_avx1.s; sourceTree = "<group>"; };
+		2C447EBF20DD5D1800840ABB /* sha256_compress_avx2.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha256_compress_avx2.s; sourceTree = "<group>"; };
+		2C447EC020DD5D1800840ABB /* sha256_compress_ssse3_32.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha256_compress_ssse3_32.s; sourceTree = "<group>"; };
+		2C447EC120DD5D1800840ABB /* sha256_compress_ssse3_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha256_compress_ssse3_64.s; sourceTree = "<group>"; };
+		2C447EC220DD5D1800840ABB /* sha256_K.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256_K.c; sourceTree = "<group>"; };
+		2C447EC520DD5D1800840ABB /* sha256_compress_arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha256_compress_arm64.s; sourceTree = "<group>"; };
+		2C447EC720DD5D1900840ABB /* sha256_compress_armv7neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha256_compress_armv7neon.s; sourceTree = "<group>"; };
+		2C447EC820DD5D1900840ABB /* sha256_compress_avx2.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha256_compress_avx2.s; path = Source/sha256/intel/sha256_compress_avx2.s; sourceTree = SOURCE_ROOT; };
+		2C447EC920DD5D1900840ABB /* sha256_compress_ssse3_32.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha256_compress_ssse3_32.s; path = Source/sha256/intel/sha256_compress_ssse3_32.s; sourceTree = SOURCE_ROOT; };
+		2C447ECA20DD5D1900840ABB /* sha256_K.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha256_K.c; path = Source/sha256/intel/sha256_K.c; sourceTree = SOURCE_ROOT; };
+		2C447ECC20DD5D2C00840ABB /* sha512_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha512_compress.c; sourceTree = "<group>"; };
+		2C447ECD20DD5D2C00840ABB /* sha512_compress_avx1.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha512_compress_avx1.s; sourceTree = "<group>"; };
+		2C447ECE20DD5D2C00840ABB /* sha512_compress_avx2.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha512_compress_avx2.s; sourceTree = "<group>"; };
+		2C447ECF20DD5D2C00840ABB /* sha512_compress_ssse3.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha512_compress_ssse3.s; sourceTree = "<group>"; };
+		2C447ED120DD5D2C00840ABB /* sha512_K.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha512_K.c; path = Source/sha512/sha512_K.c; sourceTree = SOURCE_ROOT; };
+		2C447ED220DD5D2C00840ABB /* sha512_compress_ssse3.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha512_compress_ssse3.s; path = Source/sha512/intel/sha512_compress_ssse3.s; sourceTree = SOURCE_ROOT; };
+		2C447ED320DD5D2C00840ABB /* sha512_compress_avx2.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha512_compress_avx2.s; path = Source/sha512/intel/sha512_compress_avx2.s; sourceTree = SOURCE_ROOT; };
+		2C447ED420DD5D2C00840ABB /* sha512_compress_avx1.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = sha512_compress_avx1.s; path = Source/sha512/intel/sha512_compress_avx1.s; sourceTree = SOURCE_ROOT; };
+		2C447ED620DD5D2C00840ABB /* sha512_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha512_compress.c; path = Source/sha512/intel/sha512_compress.c; sourceTree = SOURCE_ROOT; };
+		2C447ED820DD5D2C00840ABB /* sha512_compress_arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha512_compress_arm64.s; sourceTree = "<group>"; };
+		2C447EDA20DD5D2C00840ABB /* sha512_compress_armv7neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = sha512_compress_armv7neon.s; sourceTree = "<group>"; };
+		2C447EDC20DD5D4600840ABB /* decrypt.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = decrypt.s; sourceTree = "<group>"; };
+		2C447EDD20DD5D4600840ABB /* decrypt_ecb.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = decrypt_ecb.s; sourceTree = "<group>"; };
+		2C447EDE20DD5D4600840ABB /* encrypt.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = encrypt.s; sourceTree = "<group>"; };
+		2C447EDF20DD5D4600840ABB /* encrypt_ecb.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = encrypt_ecb.s; sourceTree = "<group>"; };
+		2C447EE020DD5D4600840ABB /* vpaes-armv7.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "vpaes-armv7.s"; path = "Source/aes/arm/vpaes-armv7.s"; sourceTree = SOURCE_ROOT; };
+		2C447EE120DD5D4600840ABB /* decrypt.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = decrypt.s; path = Source/aes/arm/decrypt.s; sourceTree = SOURCE_ROOT; };
+		2C447EE220DD5D4600840ABB /* encrypt.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = encrypt.s; path = Source/aes/arm/encrypt.s; sourceTree = SOURCE_ROOT; };
+		2C447EE420DD5D4700840ABB /* EncryptDecrypt.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = EncryptDecrypt.s; path = Source/aes/arm/EncryptDecrypt.s; sourceTree = SOURCE_ROOT; };
+		2C6CED0820E195360045D491 /* libAccelerateCrypto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAccelerateCrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C88438E21B74AD500C49BD9 /* libAccelerateCrypto_kernel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAccelerateCrypto_kernel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8843A421B8AA8200C49BD9 /* crypt_nonaesni.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = crypt_nonaesni.s; path = Source/aes/intel/crypt_nonaesni.s; sourceTree = SOURCE_ROOT; };
+		2C8843A521B8AA8200C49BD9 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/aes/intel/Context.h; sourceTree = SOURCE_ROOT; };
+		2C8843A621B8AA8200C49BD9 /* crypt_aesni.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = crypt_aesni.s; path = Source/aes/intel/crypt_aesni.s; sourceTree = SOURCE_ROOT; };
+		2C8843A721B8AA8200C49BD9 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aes.c; path = Source/aes/intel/aes.c; sourceTree = SOURCE_ROOT; };
+		2C8843A821B8AA8200C49BD9 /* Data.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = Data.s; path = Source/aes/intel/Data.s; sourceTree = SOURCE_ROOT; };
+		2C8843B321B8AA9700C49BD9 /* EncryptDecrypt.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; name = EncryptDecrypt.s; path = Source/aes/intel/EncryptDecrypt.s; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C6CED0520E195360045D491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C88438821B74AD500C49BD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C447E9D20DD5B2600840ABB /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				2C447E9E20DD5BD600840ABB /* AccelerateCrypto.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2C447E9F20DD5BF300840ABB /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EA120DD5C1300840ABB /* arm64_isa_compatibility.h */,
+				2C447EA020DD5C1300840ABB /* config.h */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		2C447EA220DD5C2400840ABB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EA620DD5C5F00840ABB /* sha512 */,
+				2C447EA520DD5C5600840ABB /* sha256 */,
+				2C447EA420DD5C4F00840ABB /* sha1 */,
+				2C447EA320DD5C4400840ABB /* aes */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2C447EA320DD5C4400840ABB /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				2C8843A321B8AA4900C49BD9 /* intel */,
+				2C447EE320DD5D4600840ABB /* arm */,
+				2C447EDB20DD5D4600840ABB /* arm64 */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		2C447EA420DD5C4F00840ABB /* sha1 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EB320DD5D0100840ABB /* arm */,
+				2C447EAF20DD5D0100840ABB /* arm64 */,
+				2C447EAA20DD5D0100840ABB /* intel */,
+				2C447EA720DD5D0100840ABB /* sha1_compress_avx1.s */,
+				2C447EB220DD5D0100840ABB /* sha1_compress_avx2.s */,
+				2C447EB120DD5D0100840ABB /* sha1_compress_sse.s */,
+				2C447EA820DD5D0100840ABB /* sha1_compress.c */,
+			);
+			path = sha1;
+			sourceTree = "<group>";
+		};
+		2C447EA520DD5C5600840ABB /* sha256 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EC620DD5D1900840ABB /* arm */,
+				2C447EC320DD5D1800840ABB /* arm64 */,
+				2C447EBC20DD5D1800840ABB /* intel */,
+				2C447EB920DD5D1800840ABB /* sha256_compress_avx1.s */,
+				2C447EC820DD5D1900840ABB /* sha256_compress_avx2.s */,
+				2C447EC920DD5D1900840ABB /* sha256_compress_ssse3_32.s */,
+				2C447EBA20DD5D1800840ABB /* sha256_compress_ssse3_64.s */,
+				2C447EBB20DD5D1800840ABB /* sha256_compress.c */,
+				2C447ECA20DD5D1900840ABB /* sha256_K.c */,
+			);
+			path = sha256;
+			sourceTree = "<group>";
+		};
+		2C447EA620DD5C5F00840ABB /* sha512 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447ED920DD5D2C00840ABB /* arm */,
+				2C447ED720DD5D2C00840ABB /* arm64 */,
+				2C447ECB20DD5D2C00840ABB /* intel */,
+				2C447ED420DD5D2C00840ABB /* sha512_compress_avx1.s */,
+				2C447ED320DD5D2C00840ABB /* sha512_compress_avx2.s */,
+				2C447ED220DD5D2C00840ABB /* sha512_compress_ssse3.s */,
+				2C447ED620DD5D2C00840ABB /* sha512_compress.c */,
+				2C447ED120DD5D2C00840ABB /* sha512_K.c */,
+			);
+			path = sha512;
+			sourceTree = "<group>";
+		};
+		2C447EAA20DD5D0100840ABB /* intel */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EAB20DD5D0100840ABB /* sha1_compress.c */,
+				2C447EAC20DD5D0100840ABB /* sha1_compress_avx1.s */,
+				2C447EAD20DD5D0100840ABB /* sha1_compress_avx2.s */,
+				2C447EAE20DD5D0100840ABB /* sha1_compress_sse.s */,
+			);
+			name = intel;
+			path = Source/sha1/intel;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EAF20DD5D0100840ABB /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EB020DD5D0100840ABB /* sha1_compress_arm64.s */,
+			);
+			name = arm64;
+			path = Source/sha1/arm64;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EB320DD5D0100840ABB /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EB420DD5D0100840ABB /* sha1_compress_armv7neon.s */,
+			);
+			name = arm;
+			path = Source/sha1/arm;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EBC20DD5D1800840ABB /* intel */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EBD20DD5D1800840ABB /* sha256_compress.c */,
+				2C447EBE20DD5D1800840ABB /* sha256_compress_avx1.s */,
+				2C447EBF20DD5D1800840ABB /* sha256_compress_avx2.s */,
+				2C447EC020DD5D1800840ABB /* sha256_compress_ssse3_32.s */,
+				2C447EC120DD5D1800840ABB /* sha256_compress_ssse3_64.s */,
+				2C447EC220DD5D1800840ABB /* sha256_K.c */,
+			);
+			name = intel;
+			path = Source/sha256/intel;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EC320DD5D1800840ABB /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EC520DD5D1800840ABB /* sha256_compress_arm64.s */,
+			);
+			name = arm64;
+			path = Source/sha256/arm64;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EC620DD5D1900840ABB /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EC720DD5D1900840ABB /* sha256_compress_armv7neon.s */,
+			);
+			name = arm;
+			path = Source/sha256/arm;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447ECB20DD5D2C00840ABB /* intel */ = {
+			isa = PBXGroup;
+			children = (
+				2C447ECC20DD5D2C00840ABB /* sha512_compress.c */,
+				2C447ECD20DD5D2C00840ABB /* sha512_compress_avx1.s */,
+				2C447ECE20DD5D2C00840ABB /* sha512_compress_avx2.s */,
+				2C447ECF20DD5D2C00840ABB /* sha512_compress_ssse3.s */,
+			);
+			name = intel;
+			path = Source/sha512/intel;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447ED720DD5D2C00840ABB /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447ED820DD5D2C00840ABB /* sha512_compress_arm64.s */,
+			);
+			name = arm64;
+			path = Source/sha512/arm64;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447ED920DD5D2C00840ABB /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EDA20DD5D2C00840ABB /* sha512_compress_armv7neon.s */,
+			);
+			name = arm;
+			path = Source/sha512/arm;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EDB20DD5D4600840ABB /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EDC20DD5D4600840ABB /* decrypt.s */,
+				2C447EDD20DD5D4600840ABB /* decrypt_ecb.s */,
+				2C447EDE20DD5D4600840ABB /* encrypt.s */,
+				2C447EDF20DD5D4600840ABB /* encrypt_ecb.s */,
+			);
+			name = arm64;
+			path = Source/aes/arm64;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EE320DD5D4600840ABB /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				2C447EE120DD5D4600840ABB /* decrypt.s */,
+				2C447EE220DD5D4600840ABB /* encrypt.s */,
+				2C447EE420DD5D4700840ABB /* EncryptDecrypt.s */,
+				2C447EE020DD5D4600840ABB /* vpaes-armv7.s */,
+			);
+			name = arm;
+			path = Source/aes/arm;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C447EEA20DD5FA700840ABB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CED0820E195360045D491 /* libAccelerateCrypto.a */,
+				2C88438E21B74AD500C49BD9 /* libAccelerateCrypto_kernel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8843A321B8AA4900C49BD9 /* intel */ = {
+			isa = PBXGroup;
+			children = (
+				2C8843B321B8AA9700C49BD9 /* EncryptDecrypt.s */,
+				2C8843A721B8AA8200C49BD9 /* aes.c */,
+				2C8843A521B8AA8200C49BD9 /* Context.h */,
+				2C8843A621B8AA8200C49BD9 /* crypt_aesni.s */,
+				2C8843A421B8AA8200C49BD9 /* crypt_nonaesni.s */,
+				2C8843A821B8AA8200C49BD9 /* Data.s */,
+			);
+			name = intel;
+			sourceTree = "<group>";
+		};
+		2CC8863A20D859F200D17D95 = {
+			isa = PBXGroup;
+			children = (
+				2C447EA220DD5C2400840ABB /* Source */,
+				2C447E9F20DD5BF300840ABB /* Include */,
+				2C447E9D20DD5B2600840ABB /* Header */,
+				2C447EEA20DD5FA700840ABB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C6CED0620E195360045D491 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8843AB21B8AA8200C49BD9 /* Context.h in Headers */,
+				2C6CED2F20E302B40045D491 /* AccelerateCrypto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C88438921B74AD500C49BD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C93F58321BAF750009239B3 /* AccelerateCrypto.h in Headers */,
+				2C8843AC21B8AA8200C49BD9 /* Context.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C6CED0720E195360045D491 /* libAccelerateCrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C6CED1020E195360045D491 /* Build configuration list for PBXNativeTarget "libAccelerateCrypto" */;
+			buildPhases = (
+				2C6CED0420E195360045D491 /* Sources */,
+				2C6CED0520E195360045D491 /* Frameworks */,
+				2C6CED0620E195360045D491 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libAccelerateCrypto;
+			productName = libAccelerateCrypto;
+			productReference = 2C6CED0820E195360045D491 /* libAccelerateCrypto.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2C88436A21B74AD500C49BD9 /* libAccelerateCrypto_kernel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C88438B21B74AD500C49BD9 /* Build configuration list for PBXNativeTarget "libAccelerateCrypto_kernel" */;
+			buildPhases = (
+				2C88436B21B74AD500C49BD9 /* Sources */,
+				2C88438821B74AD500C49BD9 /* Frameworks */,
+				2C88438921B74AD500C49BD9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libAccelerateCrypto_kernel;
+			productName = libAccelerateCrypto;
+			productReference = 2C88438E21B74AD500C49BD9 /* libAccelerateCrypto_kernel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CC8863B20D859F200D17D95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					2C6CED0720E195360045D491 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					2CD5E9C120D85B370097F130 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 2CC8863E20D859F200D17D95 /* Build configuration list for PBXProject "AccelerateCrypto" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2CC8863A20D859F200D17D95;
+			productRefGroup = 2C447EEA20DD5FA700840ABB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CD5E9C120D85B370097F130 /* AccelerateCrypto */,
+				2C6CED0720E195360045D491 /* libAccelerateCrypto */,
+				2C88436A21B74AD500C49BD9 /* libAccelerateCrypto_kernel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C6CED0420E195360045D491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C6CED2520E1959B0045D491 /* sha1_compress.c in Sources */,
+				2C6CED1B20E1958D0045D491 /* sha256_compress_avx2.s in Sources */,
+				2C6CED1D20E1958D0045D491 /* sha256_compress_ssse3_64.s in Sources */,
+				2C6CED2420E1959B0045D491 /* sha1_compress_sse.s in Sources */,
+				2C6CED2C20E195B60045D491 /* encrypt_ecb.s in Sources */,
+				2C6CED2720E195A80045D491 /* encrypt.s in Sources */,
+				2C6CED2B20E195B60045D491 /* encrypt.s in Sources */,
+				2C6CED2220E1959B0045D491 /* sha1_compress_avx1.s in Sources */,
+				2C6CED1E20E1958D0045D491 /* sha256_compress.c in Sources */,
+				2C6CED1520E1957F0045D491 /* sha512_compress_ssse3.s in Sources */,
+				2C6CED1220E195710045D491 /* sha512_compress_arm64.s in Sources */,
+				2C8843AD21B8AA8200C49BD9 /* crypt_aesni.s in Sources */,
+				2C6CED1320E1957F0045D491 /* sha512_compress_avx1.s in Sources */,
+				2C6CED1F20E1958D0045D491 /* sha256_K.c in Sources */,
+				2C6CED2320E1959B0045D491 /* sha1_compress_avx2.s in Sources */,
+				2C6CED1620E1957F0045D491 /* sha512_compress.c in Sources */,
+				2C6CED1920E195890045D491 /* sha256_compress_arm64.s in Sources */,
+				2C6CED1820E195850045D491 /* sha256_compress_armv7neon.s in Sources */,
+				2C6CED2820E195A80045D491 /* vpaes-armv7.s in Sources */,
+				2C6CED1C20E1958D0045D491 /* sha256_compress_ssse3_32.s in Sources */,
+				2C6CED2620E195A80045D491 /* decrypt.s in Sources */,
+				2C6CED2120E195970045D491 /* sha1_compress_arm64.s in Sources */,
+				2C6CED2920E195B60045D491 /* decrypt.s in Sources */,
+				2C6CED1720E1957F0045D491 /* sha512_K.c in Sources */,
+				2C6CED1420E1957F0045D491 /* sha512_compress_avx2.s in Sources */,
+				2C6CED1A20E1958D0045D491 /* sha256_compress_avx1.s in Sources */,
+				2C8843A921B8AA8200C49BD9 /* crypt_nonaesni.s in Sources */,
+				2C6CED2020E195930045D491 /* sha1_compress_armv7neon.s in Sources */,
+				2C6CED2A20E195B60045D491 /* decrypt_ecb.s in Sources */,
+				2C8843AF21B8AA8200C49BD9 /* aes.c in Sources */,
+				2C6CED1120E1956A0045D491 /* sha512_compress_armv7neon.s in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C88436B21B74AD500C49BD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C88436C21B74AD500C49BD9 /* sha1_compress.c in Sources */,
+				2C88436D21B74AD500C49BD9 /* sha256_compress_avx2.s in Sources */,
+				2C88436E21B74AD500C49BD9 /* sha256_compress_ssse3_64.s in Sources */,
+				2C88436F21B74AD500C49BD9 /* sha1_compress_sse.s in Sources */,
+				2C88437021B74AD500C49BD9 /* encrypt_ecb.s in Sources */,
+				2C88437121B74AD500C49BD9 /* encrypt.s in Sources */,
+				2C88437221B74AD500C49BD9 /* encrypt.s in Sources */,
+				2C88437321B74AD500C49BD9 /* sha1_compress_avx1.s in Sources */,
+				2C88437421B74AD500C49BD9 /* sha256_compress.c in Sources */,
+				2C88437521B74AD500C49BD9 /* sha512_compress_ssse3.s in Sources */,
+				2C88437621B74AD500C49BD9 /* sha512_compress_arm64.s in Sources */,
+				2C8843AE21B8AA8200C49BD9 /* crypt_aesni.s in Sources */,
+				2C88437721B74AD500C49BD9 /* sha512_compress_avx1.s in Sources */,
+				2C88437821B74AD500C49BD9 /* sha256_K.c in Sources */,
+				2C88437921B74AD500C49BD9 /* sha1_compress_avx2.s in Sources */,
+				2C88437A21B74AD500C49BD9 /* sha512_compress.c in Sources */,
+				2C88437B21B74AD500C49BD9 /* sha256_compress_arm64.s in Sources */,
+				2C88437C21B74AD500C49BD9 /* sha256_compress_armv7neon.s in Sources */,
+				2C88437D21B74AD500C49BD9 /* vpaes-armv7.s in Sources */,
+				2C88437E21B74AD500C49BD9 /* sha256_compress_ssse3_32.s in Sources */,
+				2C88437F21B74AD500C49BD9 /* decrypt.s in Sources */,
+				2C88438021B74AD500C49BD9 /* sha1_compress_arm64.s in Sources */,
+				2C88438121B74AD500C49BD9 /* decrypt.s in Sources */,
+				2C88438221B74AD500C49BD9 /* sha512_K.c in Sources */,
+				2C88438321B74AD500C49BD9 /* sha512_compress_avx2.s in Sources */,
+				2C88438421B74AD500C49BD9 /* sha256_compress_avx1.s in Sources */,
+				2C8843AA21B8AA8200C49BD9 /* crypt_nonaesni.s in Sources */,
+				2C88438521B74AD500C49BD9 /* sha1_compress_armv7neon.s in Sources */,
+				2C88438621B74AD500C49BD9 /* decrypt_ecb.s in Sources */,
+				2C8843B021B8AA8200C49BD9 /* aes.c in Sources */,
+				2C88438721B74AD500C49BD9 /* sha512_compress_armv7neon.s in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C6CED2E20E195E90045D491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C6CED0720E195360045D491 /* libAccelerateCrypto */;
+			targetProxy = 2C6CED2D20E195E90045D491 /* PBXContainerItemProxy */;
+		};
+		2C88439021B74BE100C49BD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C88436A21B74AD500C49BD9 /* libAccelerateCrypto_kernel */;
+			targetProxy = 2C88438F21B74BE100C49BD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2C6CED0E20E195360045D491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include;
+				SDKROOT = macosx.internal;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2C6CED0F20E195360045D491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include;
+				SDKROOT = macosx.internal;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2C88438C21B74AD500C49BD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DBUILDKERNEL=1";
+				"OTHER_CFLAGS[arch=*]" = "-DBUILDKERNEL=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/standalone/firmware/include;
+				SDKROOT = macosx.internal;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/Kernel.framework/Headers";
+			};
+			name = Debug;
+		};
+		2C88438D21B74AD500C49BD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "-DBUILDKERNEL=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/standalone/firmware/include;
+				SDKROOT = macosx.internal;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/Kernel.framework/Headers";
+			};
+			name = Release;
+		};
+		2CC8863F20D859F200D17D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTED_PLATFORMS = "macosx iphoneos tvos watchos";
+			};
+			name = Debug;
+		};
+		2CC8864020D859F200D17D95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTED_PLATFORMS = "macosx iphoneos tvos watchos";
+			};
+			name = Release;
+		};
+		2CD5E9C220D85B370097F130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CD5E9C320D85B370097F130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C6CED1020E195360045D491 /* Build configuration list for PBXNativeTarget "libAccelerateCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C6CED0E20E195360045D491 /* Debug */,
+				2C6CED0F20E195360045D491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C88438B21B74AD500C49BD9 /* Build configuration list for PBXNativeTarget "libAccelerateCrypto_kernel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C88438C21B74AD500C49BD9 /* Debug */,
+				2C88438D21B74AD500C49BD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CC8863E20D859F200D17D95 /* Build configuration list for PBXProject "AccelerateCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC8863F20D859F200D17D95 /* Debug */,
+				2CC8864020D859F200D17D95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CD5E9C420D85B370097F130 /* Build configuration list for PBXAggregateTarget "AccelerateCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CD5E9C220D85B370097F130 /* Debug */,
+				2CD5E9C320D85B370097F130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CC8863B20D859F200D17D95 /* Project object */;
+}

@@ -1,0 +1,2714 @@
+/* Copyright (c) (2019) Apple Inc. All rights reserved.
+ *
+ * corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+ * is contained in the License.txt file distributed with corecrypto) and only to 
+ * people who accept that license. IMPORTANT:  Any license rights granted to you by 
+ * Apple Inc. (if any) are limited to internal use within your organization only on 
+ * devices and computers you own or control, for the sole purpose of verifying the 
+ * security characteristics and correct functioning of the Apple Software.  You may 
+ * not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+*/
+
+
+{
+.nbits = 192,
+.signature = "3034021878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840218508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 1,
+.r = "78d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684",
+.s = "508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f"
+},
+{
+.nbits = 192,
+.signature = "3134021878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840218508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "308134021878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840218508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30820034021878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840218508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3083000034021878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840218508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3034011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3035011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3034011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3035011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3036011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3037011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3038011878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303502190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303602190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303502190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303602190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303702190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303802190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303902190078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3034028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3035028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3034028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3035028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3036028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3037028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3038028078d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303502811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303602811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303502811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303602811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303702811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303802811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303902811878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30360282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30370282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30360282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30370282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30380282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "30390282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303a0282001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3037028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3038028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3037028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3038028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "3039028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303a028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303b028300001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303802840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303902840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684021900508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303802840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840280508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303902840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028118508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303a02840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b09068402820018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303b02840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b0906840283000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 192,
+.signature = "303c02840000001878d9147fe5fe3854ac16e4c84f17e683e148e6ef0b090684028400000018508a5143d5fd98d717318d720e6373fc8fd01e5e2631592f",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d021d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 1,
+.r = "f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67",
+.s = "3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991"
+},
+{
+.nbits = 224,
+.signature = "313d021d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "30813d021d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3082003d021d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "308300003d021d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3040011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3041011d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303c021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303c021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3040021cf589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303d028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3040028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3041028000f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e02811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f02811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303e02811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f02811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304002811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304102811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304202811d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f0282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "30400282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "303f0282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "30400282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "30410282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "30420282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "30430282001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3040028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3041028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3040028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3041028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3042028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3043028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "3044028300001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304102840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67011c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304202840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67021d003628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304102840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702803628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304202840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702811c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304302840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f670282001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304402840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f67028300001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 224,
+.signature = "304502840000001d00f589a6d9a6592a2cd22fcbed9c2944ee57b9cc78ab1aec4bad6f1f6702840000001c3628a3e559bece3b7de72303053e7f22abe60b8fdbe38fada2eb3991",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30450221008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40220191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 1,
+.r = "8bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4",
+.s = "191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6"
+},
+{
+.nbits = 256,
+.signature = "31450221008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40220191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3081450221008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40220191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308200450221008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40220191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30830000450221008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40220191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30450121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30460121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30450121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30460121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30470121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30480121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30490121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304402208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304402208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304602208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304802208bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30450280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30460280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30450280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30460280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30470280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30480280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30490280008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3046028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3046028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3048028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3049028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a028121008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304802820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304802820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a02820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304b02820021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30480283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30490283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30480283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30490283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a0283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304b0283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304c0283000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3049028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4022100191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3049028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40280191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028120191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304b028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d402820020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304c028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d40283000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d028400000021008bc56963daf0d722a24fc986bfa66cc68defd78fce9d2a9478b5342a6207f5d4028400000020191bac21ac15e50aab801392ee302021280a3230f149e1a0d99a972e7baf8fd6",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3065023100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154023075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 1,
+.r = "e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154",
+.s = "75e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8"
+},
+{
+.nbits = 384,
+.signature = "3165023100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154023075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "308165023100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154023075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30820065023100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154023075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3083000065023100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154023075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3065013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3066013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3065013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3066013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3067013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3068013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3069013100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30640230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30650230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30640230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30650230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30660230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30670230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30680230e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3065028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3066028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3065028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3066028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3067028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3068028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3069028000e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306602813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306702813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306602813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306702813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306802813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306902813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306a02813100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30670282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30680282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30670282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30680282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "30690282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306a0282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306b0282003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3068028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3069028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3068028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "3069028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306a028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306b028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306c028300003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306902840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154013075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306a02840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402310075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306902840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306a02840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402813075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306b02840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b1540282003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306c02840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b154028300003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 384,
+.signature = "306d02840000003100e047e0739e7b83290361ab57ea59b315d11151ae8a53b05a78a5e81f2f25bd8bba5a48e15cd6b3227fdde49d2375b15402840000003075e34bc82778015a720ae794db5b801f2eca5578e6eceb4d26de9ed4f337405a66b3a122f4986a0a7a50c30adb53eac8",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308188024201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930242011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 1,
+.r = "01c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493",
+.s = "011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93"
+},
+{
+.nbits = 521,
+.signature = "3188024201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930242011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "3088024201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930242011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30820088024201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930242011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "3083000088024201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930242011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308188014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308189014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308188014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308189014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c014201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818902430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a02430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818902430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a02430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b02430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c02430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818d02430001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308188028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308189028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308188028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "308189028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c028001c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818902814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a02814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818902814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a02814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b02814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c02814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818d02814201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818a0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818d0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818e0282004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818b028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818d028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818e028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818f028300004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c02840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818d02840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493024300011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818c02840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930280011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818d02840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028142011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818e02840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da49302820042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30818f02840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da4930283000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 521,
+.signature = "30819002840000004201c7d84ec9689e39497a6a2656477c08b35b3848d844f842eb7cfdc55dbd9f431e0bd714b616709db364097f7b8fdc7e17e020b7b0a485cd8022ae968f77410da493028400000042011b33b7d2bb4e09420db3c9cf7ee440d97f3c1bbcd8c506ffe1e09f5f03158f4eeae880075c5a621bf2463046c2b627302ce50e1211c4242ef6df2fa87bd1cc4d93",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30814502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30460281202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304602202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e1802812100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3082004502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047028200202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180282002100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304602202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304402202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502212ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3045021f2ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022200b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022000b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3085010000004502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a028501000000202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180285010000002100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308901000000000000004502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304e02890100000000000000202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304e02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18028901000000000000002100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30847fffffff02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902847fffffff2ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e1802847fffffff00b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3085ffffffffff02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a0285ffffffffff2ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180285ffffffffff00b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3088ffffffffffffffff02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d0288ffffffffffffffff2ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180288ffffffffffffffff00b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30ff02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502ff2ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e1802ff00b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502802ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18028000b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0500",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a498177304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30492500304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0004deadbeef",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a222549817702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30492224250002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d222202202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180004deadbeef022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304a02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e182226498177022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e1822252500022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e182223022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0004deadbeef",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304daa00bb00cd00304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304baa02aabb304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d2228aa00bb00cd0002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304b2226aa02aabb02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304d02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e182229aa00bb00cd00022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304b02202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e182227aa02aabb022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3081",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3080304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3049228002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180000022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e182280022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047022200002ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180223000000b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3080314502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3049228003202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180000022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e182280032100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "0500",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "2e4502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "2f4502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "314502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "324502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "ff4502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30493001023044202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304402202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3044202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db00",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db05000000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000fe02beef",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "308002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0002beef",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047300002202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db3000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302202202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "306802202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3023022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302402022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302302202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e1802",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702222ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180000022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022300b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0000",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3047022200002ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180223000000b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180000022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702222ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180500022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304702202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022300b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db0500",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30250281022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302402202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180281",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30250500022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302402202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180500",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304500202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304501202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304503202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304504202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3045ff202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18002100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18012100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18032100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18042100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18ff2100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30250200022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302402202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180200",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3049222402012b021fa3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304902202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e1822250201000220b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3044021fa3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304402202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180220b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "30460221ff2ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "304602202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e180222ff00b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "3026090180022100b329f479a2bbd0a5c384ee1493b1f5186a87139cac5df4087c134b49156847db",
+.valid = 0,
+.r = "",
+.s = ""
+},
+{
+.nbits = 256,
+.signature = "302502202ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e18090180",
+.valid = 0,
+.r = "",
+.s = ""
+},

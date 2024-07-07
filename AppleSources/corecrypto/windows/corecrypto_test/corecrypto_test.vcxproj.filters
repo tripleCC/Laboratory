@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ec_import_export.c" />
+    <ClCompile Include="..\..\cczp/crypto_test/crypto_test_cczp.c" />
+    <ClCompile Include="..\..\cccmac/crypto_test/crypto_test_cmac_runner.c" />
+    <ClCompile Include="..\..\ccrng/crypto_test/crypto_test_rng.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_aes_ccm_runner.c" />
+    <ClCompile Include="..\..\ccrng/crypto_test/crypto_test_rng_threads.c" />
+    <ClCompile Include="..\..\ccrsa/crypto_test/crypto_test_rsapss.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ecdh_runner.c" />
+    <ClCompile Include="..\..\ccsha2/crypto_test/crypto_test_sha256.c" />
+    <ClCompile Include="..\..\ccdh/crypto_test/crypto_test_dh.c" />
+    <ClCompile Include="..\..\ccaes/crypto_test/aes_validation.c" />
+    <ClCompile Include="..\..\ccpbkdf2/crypto_test/crypto_test_pbkdf2.c" />
+    <ClCompile Include="..\..\ccrsa/crypto_test/crypto_test_rsa_runner.c" />
+    <ClCompile Include="..\..\cczp/crypto_test/crypto_test_cczp_inv.c" />
+    <ClCompile Include="..\..\ccdrbg/crypto_test/crypto_test_drbg.c" />
+    <ClCompile Include="..\..\ccdrbg/crypto_test/crypto_test_drbg_hmac.c" />
+    <ClCompile Include="..\..\ccpad/crypto_test/crypto_test_pad.c" />
+    <ClCompile Include="..\..\ccdrbg/crypto_test/../src/ccdrbg_test.c" />
+    <ClCompile Include="..\..\ccsrp/crypto_test/ccsrptest.c" />
+    <ClCompile Include="..\..\cccmac/crypto_test/crypto_test_cmac.c" />
+    <ClCompile Include="..\..\ccdigest/crypto_test/crypto_test_digest.c" />
+    <ClCompile Include="..\..\ccrc2/crypto_test/crypto_test_rc2_modes.c" />
+    <ClCompile Include="..\..\cc/crypto_test/crypto_test_cc.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_ccm.c" />
+    <ClCompile Include="..\..\ccansikdf/crypto_test/crypto_test_ansikdf.c" />
+    <ClCompile Include="..\..\ccn/crypto_test/crypto_test_ccn.c" />
+    <ClCompile Include="..\..\ccaes/crypto_test/crypto_test_aes_modes.c" />
+    <ClCompile Include="..\..\ccprime/crypto_test/crypto_test_ccprime_rabin_miller.c" />
+    <ClCompile Include="..\..\ccrng/crypto_test/crypto_test_rng_uniform.c" />
+    <ClCompile Include="..\..\cccast/crypto_test/crypto_test_cast_modes.c" />
+    <ClCompile Include="..\..\ccdrbg/crypto_test/crypto_test_drbg_ctr.c" />
+    <ClCompile Include="..\..\ccec25519/crypto_test/crypto_test_ed25519.c" />
+    <ClCompile Include="..\..\ccrc4/crypto_test/crypto_test_rc4.c" />
+    <ClCompile Include="..\..\ccdh/src/ccdh_pairwise_consistency_check.c" />
+    <ClCompile Include="..\..\ccblowfish/crypto_test/crypto_test_blowfish_modes.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ecdsa.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ecdh.c" />
+    <ClCompile Include="..\..\ccdh/crypto_test/crypto_test_gp_lookup.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_eckeygen.c" />
+    <ClCompile Include="..\..\ccdrbg/crypto_test/ccdrbg_limits_test.c" />
+    <ClCompile Include="..\..\cchkdf/crypto_test/crypto_test_hkdf.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_gcm.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_siv_hmac.c" />
+    <ClCompile Include="..\..\ccec25519/crypto_test/crypto_test_curve25519.c" />
+    <ClCompile Include="..\..\ccdh/crypto_test/ccdh_test.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/ccmode_test.c" />
+    <ClCompile Include="..\..\cc/src/cc_debug.c" />
+    <ClCompile Include="..\..\ccnistkdf/crypto_test/crypto_test_nistkdf.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_xts.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_aes_gcm_runner.c" />
+    <ClCompile Include="..\..\ccchacha20poly1305/crypto_test/crypto_test_chacha20poly1305_runner.c" />
+    <ClCompile Include="..\..\cchmac/crypto_test/crypto_test_hmac.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_ctr.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_keyroll.c" />
+    <ClCompile Include="..\..\ccwrap/crypto_test/crypto_test_wrap.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ecwrapping.c" />
+    <ClCompile Include="..\..\ccder/crypto_test/crypto_test_der.c" />
+    <ClCompile Include="..\..\ccecies/crypto_test/crypto_test_ecies.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ecdsa_runner.c" />
+    <ClCompile Include="..\..\ccec/crypto_test/crypto_test_ec.c" />
+    <ClCompile Include="..\..\ccmode/crypto_test/crypto_test_modes.c" />
+    <ClCompile Include="..\..\ccchacha20poly1305/crypto_test/crypto_test_chacha.c" />
+    <ClCompile Include="..\..\ccrsa/crypto_test/crypto_test_rsa.c" />
+    <ClCompile Include="..\..\ccdes/crypto_test/crypto_test_des_modes.c" />
+    <ClCompile Include="..\..\ccrsa/crypto_test/crypto_test_rsapkcs1v15.c" />
+    <ClCompile Include="..\..\ccnistkdf/crypto_test/crypto_test_nistkdf_cmac.c" />
+    <ClCompile Include="..\..\corecrypto_test\main.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccconstanttime.h" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cccycles.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccdict.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccshadow.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccstats.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccsymmetric.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccsymmetric_pad.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cctestvector_parser.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cctest_driver.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cctest_tools.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cc_hex2bin.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\hexToString.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testbyteBuffer.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testccnBuffer.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testenv.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testlist.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testmore.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+    <ClCompile Include="..\..\corecrypto_test\lib\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\..\corecrypto_test\lib\*" />
+  </ItemGroup>
+</Project>

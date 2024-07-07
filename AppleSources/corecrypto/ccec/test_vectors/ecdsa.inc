@@ -1,0 +1,140 @@
+/* Copyright (c) (2014,2016,2019) Apple Inc. All rights reserved.
+ *
+ * corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+ * is contained in the License.txt file distributed with corecrypto) and only to 
+ * people who accept that license. IMPORTANT:  Any license rights granted to you by 
+ * Apple Inc. (if any) are limited to internal use within your organization only on 
+ * devices and computers you own or control, for the sole purpose of verifying the 
+ * security characteristics and correct functioning of the Apple Software.  You may 
+ * not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+*/
+
+// From http://tools.ietf.org/html/rfc6979#page-29
+
+/*
+struct ccecdsa_vector {
+    const struct ccdigest_info *di;	// digest
+    ccec_const_cp_t (*curve)(void); // curve
+    const char *priv_key; // private key
+    const char *msg;	  // message for signature
+    const char *k;		  // random used in ECDSA
+    const char *r;		  // Signature r
+    const char *s;		  // Signature s
+};
+*/
+{
+.di=di_SHA224,
+.curve=&ccec_cp_256,
+// Decryption private key
+.priv_key = "",
+.qx = "8fa138cbf6fef022bc6f39e5a7b17cc6c2d7a27aff9485e2dda390e0302e93e4",
+.qy = "6d86009c7af9dd7bfd8a066a4161c6b2f824a0d51628423d9c88608c4a6b0b0d",
+.msg = "\x8a\x3e\x03\xdb\xf1\x19\xf3\x6b\x34\xfc\x92\xcf\x77\x24\x28\x35\x85\x2a\xb0\xeb\x48\x2a\xb6\x16\x32\x54\xed\x67\x34\x64\x05\xb6\xdb\x79\x38\x86\x36\x42\x7a\x91\x0a\xfe\x3b\xf9\x99\xcc\xfc\x3c\x56\x08\x6f\xfb\xcc\x6b\x40\xc1\xc1\x72\xb0\x90\xf3\x5c\xda\x5b\x3f\x5e\xc3\x47\x16\xe4\x18\x4e\x8f\x75\x77\x5e\x01\xf6\x6c\xeb\x7d\x4f\x1f\x40\x3a\x82\x46\x62\x1e\x82\xb7\xa1\x6d\x95\xac\xe2\xf0\x0e\xb6\x11\xa4\x7a\x87\x3d\xfd\xb3\x3e\xaa\x8f\xc7\x0d\x48\x6a\x10\x32\x7b\xd6\x15\x4c\xb6\x2a\x46\xc4\xd2\x30\x1f\x63\x7f",
+// k
+.k = "",
+// Signature
+.r = "58b0cce54be05fa9c1af50ae5b47c2b1317081c6c08117b986b5551450a14432",
+.s = "b33871cef8f7851c0bd4914c7f2c471f886804bbdc652da2655cee75c52507a2",
+},
+
+{
+    .di=di_SHA1,
+    .curve=&ccec_cp_192,
+    // Decryption private key
+    .priv_key = "6FAB034934E4C0FC9AE67F5B5659A9D7D1FEFD187EE09FD4",
+    //Qsx = AC2C77F529F91689FEA0EA5EFEC7F210D8EEA0B9E047ED56
+    //Qsy = 3BC723E57670BD4887EBC732C523063D0A7C957BC97C1C43
+    .msg = "sample",
+    // k
+    .k = "37D7CA00D2C7B0E5E412AC03BD44BA837FDD5B28CD3B0021",
+    // Signature
+    .r = "98C6BD12B23EAF5E2A2045132086BE3EB8EBD62ABF6698FF",
+    .s = "57A22B07DEA9530F8DE9471B1DC6624472E8E2844BC25B64",
+},
+{
+    .di=di_SHA1,
+    .curve=&ccec_cp_224,
+    // Decryption private key
+    .priv_key = "F220266E1105BFE3083E03EC7A3A654651F45E37167E88600BF257C1",
+    //Qsx = 00CF08DA5AD719E42707FA431292DEA11244D64FC51610D94B130D6C
+    //Qsy = EEAB6F3DEBE455E3DBF85416F7030CBD94F34F2D6F232C69F3C1385A
+    .msg = "sample",
+    // k
+    .k = "7EEFADD91110D8DE6C2C470831387C50D3357F7F4D477054B8B426BC",
+    // Signature
+    .r = "22226F9D40A96E19C4A301CE5B74B115303C0F3A4FD30FC257FB57AC",
+    .s = "66D1CDD83E3AF75605DD6E2FEFF196D30AA7ED7A2EDF7AF475403D69",
+},
+{
+    .di=di_SHA1,
+    .curve=&ccec_cp_256,
+    // Decryption private key
+    .priv_key = "C9AFA9D845BA75166B5C215767B1D6934E50C3DB36E89B127B8A622B120F6721",
+    //Qsx = 60FED4BA255A9D31C961EB74C6356D68C049B8923B61FA6CE669622E60F29FB6
+    //Qsy = 7903FE1008B8BC99A41AE9E95628BC64F2F1B20C2D7E9F5177A3C294D4462299
+    .msg = "sample",
+    // k
+    .k = "882905F1227FD620FBF2ABF21244F0BA83D0DC3A9103DBBEE43A1FB858109DB4",
+    // Signature
+    .r = "61340C88C3AAEBEB4F6D667F672CA9759A6CCAA9FA8811313039EE4A35471D32",
+    .s = "6D7F147DAC089441BB2E2FE8F7A3FA264B9C475098FDCF6E00D7C996E1B8B7EB",
+},
+{
+    .di=di_SHA1,
+    .curve=&ccec_cp_384,
+    // Decryption private key
+    .priv_key = "6B9D3DAD2E1B8C1C05B19875B6659F4DE23C3B667BF297BA9AA47740787137D896D5724E4C70A825F872C9EA60D2EDF5",
+    //Qsx = EC3A4E415B4E19A4568618029F427FA5DA9A8BC4AE92E02E06AAE5286B300C64DEF8F0EA9055866064A254515480BC13
+    //Qsy = 8015D9B72D7D57244EA8EF9AC0C621896708A59367F9DFB9F54CA84B3F1C9DB1288B231C3AE0D4FE7344FD2533264720
+    .msg = "sample",
+    // k
+    .k = "4471EF7518BB2C7C20F62EAE1C387AD0C5E8E470995DB4ACF694466E6AB096630F29E5938D25106C3C340045A2DB01A7",
+    // Signature
+    .r = "EC748D839243D6FBEF4FC5C4859A7DFFD7F3ABDDF72014540C16D73309834FA37B9BA002899F6FDA3A4A9386790D4EB2",
+    .s = "A3BCFA947BEEF4732BF247AC17F71676CB31A847B9FF0CBC9C9ED4C1A5B3FACF26F49CA031D4857570CCB5CA4424A443",
+},
+{
+    .di=di_SHA1,
+    .curve=&ccec_cp_521,
+    // Decryption private key
+    .priv_key = "00FAD06DAA62BA3B25D2FB40133DA757205DE67F5BB0018FEE8C86E1B68C7E75CAA896EB32F1F47C70855836A6D16FCC1466F6D8FBEC67DB89EC0C08B0E996B83538",
+    //Qsx = 01894550D0785932E00EAA23B694F213F8C3121F86DC97A04E5A7167DB4E5BCD371123D46E45DB6B5D5370A7F20FB633155D38FFA16D2BD761DCAC474B9A2F5023A4
+    //Qsy = 00493101C962CD4D2FDDF782285E64584139C2F91B47F87FF82354D6630F746A28A0DB25741B5B34A828008B22ACC23F924FAAFBD4D33F81EA66956DFEAA2BFDFCF5
+    .msg = "sample",
+    // k
+    .k = "0089C071B419E1C2820962321787258469511958E80582E95D8378E0C2CCDB3CB42BEDE42F50E3FA3C71F5A76724281D31D9C89F0F91FC1BE4918DB1C03A5838D0F9",
+    // Signature
+    .r = "00343B6EC45728975EA5CBA6659BBB6062A5FF89EEA58BE3C80B619F322C87910FE092F7D45BB0F8EEE01ED3F20BABEC079D202AE677B243AB40B5431D497C55D75D",
+    .s = "00E7B0E675A9B24413D448B8CC119D2BF7B2D2DF032741C096634D6D65D0DBE3D5694625FB9E8104D3B842C1B0E2D0B98BEA19341E8676AEF66AE4EBA3D5475D5D16",
+},
+
+// Additional test where hash is truncated
+{
+    .di=di_SHA384,
+    .curve=&ccec_cp_256,
+    // Decryption private key
+    .priv_key = "408c1aa7e904373f2bdbe72286458082d4196be5c19c46feb0e5f4b39660c7a0",
+    //Qsx =      0c0e767ae4b15bf393e6ceb3cb12a62670335bd930d479a638341ab5faa7a60b
+    //Qsy =      32604712eb12c9a86147105bd76b941047f8c780b8777660d34c542d05e7b193
+    .msg = "sample",
+    // k
+    .k = "37D7CA00D2C7B0E5E412AC03BD44BA837FDD5B28CD3B0021",
+    // Signature
+    .r = "00def9583eaeb0711c5b37dc88c5c17194ed3f01a0cca32f66ec95a3c78247d1",
+    .s = "942d47cb9138440ecf350636ad9e6155a639e6fd7ba62ac3b1c1fcba9594cfc5",
+},
+{
+    .di=di_SHA512,
+    .curve=&ccec_cp_256,
+    // Decryption private key
+    .priv_key = "408c1aa7e904373f2bdbe72286458082d4196be5c19c46feb0e5f4b39660c7a0",
+    //Qsx =      0c0e767ae4b15bf393e6ceb3cb12a62670335bd930d479a638341ab5faa7a60b
+    //Qsy =      32604712eb12c9a86147105bd76b941047f8c780b8777660d34c542d05e7b193
+    .msg = "sample",
+    // k
+    .k = "37D7CA00D2C7B0E5E412AC03BD44BA837FDD5B28CD3B0021",
+    // Signature
+    .r = "00def9583eaeb0711c5b37dc88c5c17194ed3f01a0cca32f66ec95a3c78247d1",
+    .s = "3603ebc0efa1ed9a9674332f7ee52a6677eeb505a77717e518969a159ed5afc4",
+},
+

@@ -1,0 +1,85 @@
+// Copyright (c) (2021-2023) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+CC = $(TOOLCHAIN_DIR)/usr/local/efi/bin/efi-clang
+LD = $(TOOLCHAIN_DIR)/usr/local/efi/bin/efi-ld
+LIPO = $(TOOLCHAIN_DIR)/usr/local/efi/bin/efi-lipo
+
+CLANG_CXX_LANGUAGE_STANDARD = gnu++0x
+CLANG_CXX_LIBRARY = libc++
+
+EFI_ARCH = $(EFI_ARCH_$(arch))
+EFI_ARCH_x86_64 = X64
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) EFI
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) EFIX64
+
+DEBUG_INFORMATION_FORMAT = dwarf
+INSTALL_PATH = /usr/local/lib
+
+OTHER_CFLAGS = $(inherited) -Wno-undef
+OTHER_CFLAGS = $(inherited) -nostdlibinc
+OTHER_CFLAGS = $(inherited) -ibuiltininc
+
+OTHER_LDFLAGS = -static
+
+CORECRYPTO_EFI_ROOT=$(SDKROOT)/usr/local/efi
+CORECRYPTO_EFI_INCLUDE=$(CORECRYPTO_EFI_ROOT)/include
+CORECRYPTO_EFI_LIB=$(CORECRYPTO_EFI_ROOT)/lib
+
+CORECRYPTO_EFI_BASE_DIR = /usr/local/efi
+PUBLIC_HEADERS_FOLDER_PATH = $(CORECRYPTO_EFI_BASE_DIR)/include/corecrypto
+PRIVATE_HEADERS_FOLDER_PATH = $(PUBLIC_HEADERS_FOLDER_PATH)
+INSTALL_PATH = $(CORECRYPTO_EFI_BASE_DIR)/lib
+
+// Intentionally restrict includes to top-level-ish paths. The DDK is quite
+// deep, and it's better to be able to look at an #include line and be able to
+// figure out where the header is supposed to come from rather than combing
+// through a very nested, very repetitive hierarchy.
+CORECRYPTO_EFI_INCLUDE_DDK = $(CORECRYPTO_EFI_INCLUDE)/Include
+CORECRYPTO_EFI_INCLUDE_DDK = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk
+CORECRYPTO_EFI_INCLUDE_DDK = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Platform
+CORECRYPTO_EFI_INCLUDE_DDK = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Library
+CORECRYPTO_EFI_INCLUDE_DDK = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Include/X64
+CORECRYPTO_EFI_INCLUDE_DDK = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Include/X64
+
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Include
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Include/IndustryStandard
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Cpu/Pentium/Include
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Efi
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Efi/Include
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Framework
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Framework/Include
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Core/Dxe
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Library/Dxe/EfiIfrSupportLib
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Library/Dxe/Include
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Edk/Foundation/Library/Dxe/Include/X64
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Platform/Apple/Common
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Platform/Apple/Common/Include
+CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE = $(inherited) $(CORECRYPTO_EFI_INCLUDE)/Platform/Apple/Common/Library/Include
+
+SYSTEM_HEADER_SEARCH_PATHS = $(inherited) $(CORECRYPTO_EFI_INCLUDE_DDK_TRANSITIVE)
+SYSTEM_HEADER_SEARCH_PATHS = $(inherited) $(CORECRYPTO_EFI_INCLUDE_DDK)
+SYSTEM_HEADER_SEARCH_PATHS = $(inherited) $(CORECRYPTO_EFI_INCLUDE)
+
+LIBRARY_SEARCH_PATHS = $(inherited) $(SDK_DIR)/usr/local/efi/lib
+
+SYSTEM_FRAMEWORK_SEARCH_PATHS =
+HEADER_SEARCH_PATHS =
+FRAMEWORK_SEARCH_PATHS =
+
+GCC_WARN_ABOUT_MISSING_NEWLINE = NO
+LIBRARY_STYLE = STATIC
+SEPARATE_STRIP = NO
+
+STRIP_INSTALLED_PRODUCT[config=Release] = YES
+
+ENABLE_NS_ASSERTIONS[config=Release] = NO

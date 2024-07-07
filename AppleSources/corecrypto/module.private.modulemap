@@ -1,0 +1,167 @@
+module corecrypto [system] [extern_c] {
+    header "cc_config.h"
+    header "cc_error.h"
+    header "cc.h"
+    header "cc_priv.h"
+    header "ccaes.h"
+    header "ccansikdf.h"
+    header "ccchacha20poly1305_priv.h"
+    header "ccchacha20poly1305.h"
+    header "cccmac.h"
+    header "ccdh_gp.h"
+    header "ccdh.h"
+    header "ccdigest.h"
+    header "ccdigest_priv.h"
+    header "ccdigest.h"
+    header "ccdrbg_impl.h"
+    header "ccdrbg.h"
+    header "ccec.h"
+    header "ccec_priv.h"
+    header "ccec25519.h"
+    header "ccec25519_priv.h"
+    header "cchkdf.h"
+    header "cchmac.h"
+    header "ccmode.h"
+    header "ccmode_factory.h"
+    header "ccmode_impl.h"
+    header "ccmode_siv.h"
+    header "ccn.h"
+    header "ccnistkdf.h"
+    header "ccpad.h"
+    header "ccpbkdf2.h"
+    header "ccripemd.h"
+    header "ccrng_drbg.h"
+    header "ccrng_pbkdf2_prng.h"
+    header "ccrng_sequence.h"
+    header "ccrng_system.h"
+    header "ccrng.h"
+    header "ccrsa.h"
+    header "ccrsa_priv.h"
+    header "ccsha2.h"
+    header "ccwrap.h"
+    header "ccz_priv.h"
+    header "cczp_priv.h"
+    header "ccz.h"
+    header "cczp.h"
+    header "cc_fault_canary.h"
+    header "ccmode_siv_hmac.h"
+
+    explicit module asn1 {
+        header "ccasn1.h"
+        export *
+    }
+    
+    explicit module blowfish {
+        header "ccblowfish.h"
+        export *
+    }
+    
+    explicit module cast {
+        header "cccast.h"
+        export *
+    }
+    
+    explicit module h2c {
+        header "cch2c.h"
+        header "cch2c_priv.h"
+        export *
+    }
+    
+    explicit module der {
+        header "ccder_decode_eckey.h"
+        header "ccder_encode_eckey.h"
+        header "ccder.h"
+        export *
+    }
+    
+    explicit module des {
+        header "ccdes.h"
+        export *
+    }
+    
+    explicit module ecies {
+        header "ccecies.h"
+        header "ccecies_priv.h"
+        export *
+    }
+    
+    explicit module md2 {
+        header "ccmd2.h"
+        export *
+    }
+    
+    explicit module md4 {
+        header "ccmd4.h"
+        export *
+    }
+    
+    explicit module md5 {
+        header "ccmd5.h"
+        export *
+    }
+    
+    explicit module rc2 {
+        header "ccrc2.h"
+        export *
+    }
+    
+    explicit module rc4 {
+        header "ccrc4.h"
+        export *
+    }
+    
+    explicit module scrypt {
+        header "ccscrypt.h"
+        export *
+    }
+    
+    explicit module sha1 {
+        header "ccsha1.h"
+        export *
+    }
+
+    explicit module sha3 {
+        header "ccsha3.h"
+        export *
+    }
+    
+    explicit module srp {
+        header "ccsrp.h"
+        header "ccsrp_gp.h"
+        export *
+    }
+    
+    explicit module spake2 {
+        header "ccspake.h"
+        export *
+    }
+    
+    explicit module rsabssa {
+        header "ccrsabssa.h"
+        export *
+    }
+
+    explicit module kem {
+        header "cckem.h"
+        header "cckyber.h"
+        export *
+    }
+    
+    explicit module bfv {
+        header "ccbfv_priv.h"
+        export *
+    }
+    
+    explicit module he {
+        header "cche_priv.h"
+        export *
+    }
+
+    explicit module curve448 {
+        header "ccec448.h"
+        header "ccec448_priv.h"
+        export *
+    }
+    
+    export *
+}

@@ -1,0 +1,109 @@
+/* Copyright (c) (2022,2023) Apple Inc. All rights reserved.
+ *
+ * corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+ * is contained in the License.txt file distributed with corecrypto) and only to
+ * people who accept that license. IMPORTANT:  Any license rights granted to you by
+ * Apple Inc. (if any) are limited to internal use within your organization only on
+ * devices and computers you own or control, for the sole purpose of verifying the
+ * security characteristics and correct functioning of the Apple Software.  You may
+ * not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+ */
+
+#include "ccec_internal.h"
+#include "ccec448_internal.h"
+
+void cced448_full_add_ws(cc_ws_t ws,
+                         ccec_const_cp_t cp,
+                         ccec_projective_point_t r,
+                         ccec_const_projective_point_t s,
+                         ccec_const_projective_point_t t)
+{
+    cczp_const_t zp = ccec_cp_zp(cp);
+    cc_size n = cczp_n(zp);
+
+    CC_DECL_BP_WS(ws, bp);
+    cced448_point sx = CC_ALLOC_WS(ws, 4 * n);
+    cced448_point tx = CC_ALLOC_WS(ws, 4 * n);
+
+    cced448_to_ed448_point_ws(ws, cp, sx, s);
+    cced448_to_ed448_point_ws(ws, cp, tx, t);
+    cced448_add_points_unified_ws(ws, cp, sx, tx, sx, CCED448_ADD_POINTS_FLAG_SKIP_T);
+    cced448_from_ed448_point_ws(ws, cp, r, sx);
+
+    CC_FREE_BP_WS(ws, bp);
+}
+
+CC_WORKSPACE_OVERRIDE(ccec_full_add_ws, cced448_full_add_ws)
+
+static const struct ccec_funcs ccec_ed448_funcs = {
+    .cczp_add = cczp_add_default_ws,
+    .cczp_sub = cczp_sub_default_ws,
+    .cczp_mul = cczp_mul_default_ws,
+    .cczp_sqr = cczp_sqr_default_ws,
+    .cczp_mod = cczp_mod_default_ws,
+    .cczp_inv = cczp_inv_field_ws,
+    .cczp_sqrt = cczp_sqrt_default_ws,
+    .cczp_to = cczp_to_default_ws,
+    .cczp_from = cczp_from_default_ws,
+
+    .ccec_projectify = ccec_projectify_homogeneous_ws,
+    .ccec_affinify = ccec_affinify_homogeneous_ws,
+    .ccec_full_add = cced448_full_add_ws,
+    .ccec_mult = cced448_scalar_mult_ws
+};
+
+static const ccec_cp_decl(448) ccec_ed448_c_params =
+{
+    .hp = {
+        .n = CCN448_N,
+        .bitlen = 448,
+        .funcs = (cczp_funcs_t)&ccec_ed448_funcs
+    },
+    .p = {
+        CCN448_C(ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,fe,
+                 ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff)
+    },
+    .p0inv = (cc_unit)1U,
+    .pr2 = {
+        CCN448_C(00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,03,
+                 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,02)
+    },
+    .gx = {
+        CCN448_C(4f,19,70,c6,6b,ed,0d,ed,22,1d,15,a6,22,bf,36,da,9e,14,65,70,47,0f,17,67,ea,6d,e3,24,
+                 a3,d3,a4,64,12,ae,1a,f7,2a,b6,65,11,43,3b,80,e1,8b,00,93,8e,26,26,a8,2b,c7,0c,c0,5e)
+    },
+    .gy = {
+        CCN448_C(69,3f,46,71,6e,b6,bc,24,88,76,20,37,56,c9,c7,62,4b,ea,73,73,6c,a3,98,40,87,78,9c,1e,
+                 05,a0,c2,d7,3a,d3,ff,1c,e6,7c,39,c4,fd,bd,13,2c,4e,d7,c8,ad,98,08,79,5b,f2,30,fa,14)
+    },
+    .hq = {
+        .n = CCN448_N,
+        .bitlen = 446,
+        .funcs = CCZP_FUNCS_DEFAULT
+    },
+    .q = {
+        CCN448_C(3f,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,ff,
+                 7c,ca,23,e9,c4,4e,db,49,ae,d6,36,90,21,6c,c2,72,8d,c5,8f,55,23,78,c2,92,ab,58,44,f3)
+    },
+    .q0inv = (cc_unit)0x3bd440fae918bc5,
+    .qr2 = {
+        CCN448_C(34,02,a9,39,f8,23,b7,29,20,52,bc,b7,e4,d0,70,af,1a,9c,c1,4b,a3,c4,7c,44,ae,17,cf,72,
+                 5e,e4,d8,38,0d,66,de,23,88,ea,18,59,7a,f3,2c,4b,c1,b1,95,d9,e3,53,92,57,04,9b,9b,60)
+    }
+};
+
+ccec_const_cp_t ccec_cp_ed448_c(void)
+{
+    return (ccec_const_cp_t)&ccec_ed448_c_params;
+}
+
+ccec_const_cp_t ccec_cp_ed448(void)
+{
+#if CCN_MULMOD_448_ASM
+    return ccec_cp_ed448_asm();
+#elif (CCN_UNIT_SIZE == 8) && CC_DUNIT_SUPPORTED
+    return ccec_cp_ed448_opt();
+#else
+    return ccec_cp_ed448_c();
+#endif
+}

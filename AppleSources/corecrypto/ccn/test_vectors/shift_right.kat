@@ -1,0 +1,616 @@
+/* Copyright (c) (2020) Apple Inc. All rights reserved.
+ *
+ * corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+ * is contained in the License.txt file distributed with corecrypto) and only to
+ * people who accept that license. IMPORTANT:  Any license rights granted to you by
+ * Apple Inc. (if any) are limited to internal use within your organization only on
+ * devices and computers you own or control, for the sole purpose of verifying the
+ * security characteristics and correct functioning of the Apple Software.  You may
+ * not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+ */
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "0",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97b36380",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cbd9b1c0",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365ecd8e0",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c70",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97b3638",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cbd9b1c",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "6",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365ecd8e",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "7",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c7",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "8",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97b363",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "9",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cbd9b1",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "a",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365ecd8",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "b",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "c",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97b36",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "d",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cbd9b",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "e",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365ecd",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "f",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "10",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97b3",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "11",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cbd9",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "12",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365ec",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "13",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f6",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "14",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97b",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "15",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cbd",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "16",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365e",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "17",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "18",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd97",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "19",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66cb",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1a",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b365",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1b",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1c",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd9",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1d",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66c",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1e",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b36",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "1f",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "20",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596cd",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "21",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb66",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "22",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b3",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "23",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "24",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596c",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "25",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb6",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "26",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565b",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "27",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "28",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d596",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "29",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806acb",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2a",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403565",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2b",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab2",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2c",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d59",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2d",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806ac",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2e",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa5740356",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "2f",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01ab",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "30",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d5",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "31",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806a",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "32",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa574035",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "33",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01a",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "34",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00d",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "35",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae806",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "36",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57403",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "37",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba01",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "38",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d00",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "39",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae80",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3a",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa5740",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3b",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba0",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3c",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d0",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3d",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae8",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3e",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa574",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "3f",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552ba",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "40",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95d",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "41",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154ae",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "42",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa57",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "43",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552b",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "44",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a95",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "45",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154a",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "46",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa5",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "47",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080552",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "48",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a9",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "49",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420154",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4a",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100aa",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4b",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a46108055",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4c",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402a",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4d",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e691842015",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4e",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100a",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "4f",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a4610805",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "50",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308402",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "51",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e69184201",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "52",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2100",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "53",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461080",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "54",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd230840",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "55",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918420",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "56",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c210",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "57",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a46108",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "58",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd23084",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "59",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e691842",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5a",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c21",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5b",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a4610",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5c",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd2308",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5d",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e69184",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5e",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c2",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "5f",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a461",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "60",
+},
+
+{
+    .r = "6ce746ffa7979ce10b751cd230",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "61",
+},
+
+{
+    .r = "3673a37fd3cbce7085ba8e6918",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "62",
+},
+
+{
+    .r = "1b39d1bfe9e5e73842dd47348c",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "63",
+},
+
+{
+    .r = "d9ce8dff4f2f39c216ea39a46",
+    .x = "d9ce8dff4f2f39c216ea39a461080552ba01ab2d9b2f66c701",
+    .k = "64",
+},

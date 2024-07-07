@@ -1,0 +1,59 @@
+// Copyright (c) (2021-2022) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+#include "dylib_base.xcconfig"
+
+BUILD_VARIANTS = normal asan coverage
+
+DYLIB_INSTALL_NAME_BASE = @rpath
+
+ENABLE_TESTABILITY = YES
+
+// TAPI does not verify anything in directories with the ".app" suffix.
+INSTALL_PATH = /AppleInternal/Tests/corecrypto/dylib.app
+
+PRODUCT_NAME = corecrypto_test
+
+SUPPORTS_TEXT_BASED_API = NO
+
+_GCC_PREPROCESSOR_DEFINITIONS_coverage = CORECRYPTO_COVERAGE
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) CORECRYPTO_BUILT_FOR_TESTING=1
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) $(_GCC_PREPROCESSOR_DEFINITIONS_$(CURRENT_VARIANT))
+
+CORECRYPTO_TEST_UBSAN_ENABLED = undefined,nullability,integer,local-bounds
+CORECRYPTO_TEST_UBSAN_DISABLED = alignment,unsigned-integer-overflow,unsigned-shift-base
+CORECRYPTO_TEST_UBSAN_FLAGS = -fsanitize=$(CORECRYPTO_TEST_UBSAN_ENABLED)
+CORECRYPTO_TEST_UBSAN_FLAGS = $(inherited) -fno-sanitize-recover=$(CORECRYPTO_TEST_UBSAN_ENABLED)
+CORECRYPTO_TEST_UBSAN_FLAGS = $(inherited) -fno-sanitize=$(CORECRYPTO_TEST_UBSAN_DISABLED)
+
+// OTHER_CFLAGS
+_OTHER_CFLAGS_asan = -fsanitize=address
+_OTHER_CFLAGS_asan = $(inherited) $(CORECRYPTO_TEST_UBSAN_FLAGS)
+
+_OTHER_CFLAGS_tsan = -fsanitize=thread
+_OTHER_CFLAGS_tsan = $(inherited) $(CORECRYPTO_TEST_UBSAN_FLAGS)
+
+_OTHER_CFLAGS_coverage = -fprofile-instr-generate
+_OTHER_CFLAGS_coverage = $(inherited) -fcoverage-mapping
+
+OTHER_CFLAGS = $(inherited) $(_OTHER_CFLAGS_$(CURRENT_VARIANT))
+
+// OTHER_LDFLAGS
+_OTHER_LDFLAGS_asan = -fsanitize=address
+_OTHER_LDFLAGS_asan = $(inherited) -rpath /usr/appleinternal/lib/sanitizers
+
+_OTHER_LDFLAGS_tsan = -fsanitize=thread
+_OTHER_LDFLAGS_tsan = $(inherited) -rpath /usr/appleinternal/lib/sanitizers
+
+_OTHER_LDFLAGS_coverage = -fprofile-instr-generate
+_OTHER_LDFLAGS_coverage = $(inherited) -fcoverage-mapping
+
+OTHER_LDFLAGS = $(inherited) $(_OTHER_LDFLAGS_$(CURRENT_VARIANT))

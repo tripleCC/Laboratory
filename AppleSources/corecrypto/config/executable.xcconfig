@@ -1,0 +1,92 @@
+// Copyright (c) (2021-2022) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+/// Executable defaults
+BUILD_VARIANTS = $(_BUILD_VARIANTS_$(TARGET_NAME):default=normal)
+
+INSTALL_PATH = $(_INSTALL_PATH_$(TARGET_NAME):default=/usr/local/bin)
+DISABLE_VLA_WARNINGS_AS_ERRORS = $(_DISABLE_VLA_WARNINGS_AS_ERRORS_$(TARGET_NAME):default=)
+FORMAT_NONLITERAL_WARNINGS_AS_ERRORS = $(_FORMAT_NONLITERAL_WARNINGS_AS_ERRORS_$(TARGET_NAME):default=)
+
+_STRIP_STYLE_debugging = debugging
+STRIP_STYLE = $($(_STRIP_STYLE_$(TARGET_NAME):default=inherited))
+
+_CORECRYPTO_UNINITIALIZED_WARNINGS_AS_ERRORS_NO = NO
+CORECRYPTO_UNINITIALIZED_WARNINGS_AS_ERRORS = $($(_CORECRYPTO_UNINITIALIZED_WARNINGS_AS_ERRORS_$(TARGET_NAME):default=inherited))
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(_FRAMEWORK_SEARCH_PATHS_$(TARGET_NAME))
+
+_CODE_SIGN_ENTITLEMENTS = $(TARGET_NAME)/Entitlements.plist
+CODE_SIGN_ENTITLEMENTS = $($(_CODE_SIGN_ENTITLEMENTS_$(TARGET_NAME):default=inherited))
+
+/// ccdh_gen_gp
+_DISABLE_VLA_WARNINGS_AS_ERRORS_ccdh_gen_gp = 1
+
+/// prng_seedctl
+_INSTALL_PATH_prng_seedctl = /usr/libexec
+_CODE_SIGN_ENTITLEMENTS_prng_seedctl = _CODE_SIGN_ENTITLEMENTS
+
+/// hmacfiletool
+_INSTALL_PATH_hmacfiletool = $(TOOLCHAIN_INSTALL_DIR)/usr/local/bin
+
+/// corecrypto_perf
+_DISABLE_VLA_WARNINGS_AS_ERRORS_corecrypto_perf = 1
+
+/// corecrypto_thermal
+_DISABLE_VLA_WARNINGS_AS_ERRORS_corecrypto_thermal = 1
+_STRIP_STYLE_corecrypto_thermal = _STRIP_STYLE_debugging
+_FRAMEWORK_SEARCH_PATHS_corecrypto_thermal = $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks
+
+/// cc_fips_test
+_INSTALL_PATH_cc_fips_test = /usr/libexec
+_DISABLE_VLA_WARNINGS_AS_ERRORS_cc_fips_test = 1
+
+/// corecrypto_test
+_BUILD_VARIANTS_corecrypto_test = normal asan coverage
+
+_INSTALL_PATH_corecrypto_test = /AppleInternal/Tests/corecrypto
+_STRIP_STYLE_corecrypto_test = _STRIP_STYLE_debugging
+_DISABLE_VLA_WARNINGS_AS_ERRORS_corecrypto_test = 1
+_FRAMEWORK_SEARCH_PATHS_corecrypto_test = $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks
+
+
+// $(_OTHER_CFLAGS_$(CORECRYPTO_DYLIB_VARIANT)_$(CURRENT_VARIANT))
+_OTHER_LDFLAGS_corecrypto_test = $(inherited) -rpath @executable_path
+_OTHER_LDFLAGS_corecrypto_test = $(inherited) -rpath @executable_path/dylib.app
+_OTHER_LDFLAGS_corecrypto_test = $(inherited) -rpath /AppleInternal/Tests/corecrypto/dylib.app
+
+_OTHER_LDFLAGS_corecrypto_test_asan = $(inherited) -rpath /usr/appleinternal/lib/sanitizers
+_OTHER_LDFLAGS_corecrypto_test_tsan = $(inherited) -rpath /usr/appleinternal/lib/sanitizers
+
+_OTHER_LDFLAGS_corecrypto_test_normal = $(inherited) -lcorecrypto_test
+_OTHER_LDFLAGS_corecrypto_test_asan = $(inherited) -lcorecrypto_test_asan
+_OTHER_LDFLAGS_corecrypto_test_tsan = $(inherited) -lcorecrypto_test_tsan
+_OTHER_LDFLAGS_corecrypto_test_coverage = $(inherited) -lcorecrypto_test_coverage
+
+_OTHER_LDFLAGS_corecrypto_test_asan = $(inherited) -fsanitize=address
+_OTHER_LDFLAGS_corecrypto_test_tsan = $(inherited) -fsanitize=thread
+_OTHER_LDFLAGS_corecrypto_test_coverage = $(inherited) -fcoverage-mapping
+_OTHER_LDFLAGS_corecrypto_test_coverage = $(inherited) -fprofile-instr-generate
+
+OTHER_LDFLAGS = $(inherited) $(_OTHER_LDFLAGS_$(TARGET_NAME))
+OTHER_LDFLAGS = $(inherited) $(_OTHER_LDFLAGS_$(TARGET_NAME)_$(CURRENT_VARIANT))
+
+_OTHER_CFLAGS_corecrypto_test_asan = -fsanitize=address
+_OTHER_CFLAGS_corecrypto_test_tsan = -fsanitize=thread
+_OTHER_CFLAGS_corecrypto_test_coverage = -fcoverage-mapping
+_OTHER_CFLAGS_corecrypto_test_coverage = $(inherited) -fprofile-instr-generate
+OTHER_CFLAGS = $(inherited) $(_OTHER_CFLAGS_$(TARGET_NAME))
+OTHER_CFLAGS = $(inherited) $(_OTHER_CFLAGS_$(TARGET_NAME)_$(CURRENT_VARIANT))
+
+_GCC_PREPROCESSOR_DEFINITIONS_corecrypto_test = CORECRYPTO_BUILT_FOR_TESTING=1
+_GCC_PREPROCESSOR_DEFINITIONS_corecrypto_test_coverage = $(inherited) CORECRYPTO_COVERAGE
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) $(_GCC_PREPROCESSOR_DEFINITIONS_$(TARGET_NAME))
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) $(_GCC_PREPROCESSOR_DEFINITIONS_$(TARGET_NAME)_$(CURRENT_VARIANT))

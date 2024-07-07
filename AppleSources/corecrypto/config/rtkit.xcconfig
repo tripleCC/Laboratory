@@ -1,0 +1,27 @@
+// Copyright (c) (2021,2022) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+ARCHS[sdk=macosx*] = $(ARCHS_STANDARD)
+SDKROOT = rtkit.internal
+INSTALL_PATH = $(RTKIT_ROOT)/usr/local/lib
+TARGETED_DEVICE_FAMILY = rtkit
+PRIVATE_HEADERS_FOLDER_PATH = $(RTKIT_ROOT)/usr/local/include/corecrypto
+PUBLIC_HEADERS_FOLDER_PATH = $(RTKIT_ROOT)/usr/local/include/corecrypto
+HEADER_SEARCH_PATHS = $(SRCROOT)/cc $(SRCROOT)/ccmode $(SRCROOT)/cccmac $(SRCROOT)/ccrng $(SRCROOT)/cc_fips $(SRCROOT)/ccec25519 $(TOOLCHAIN_DIR)/usr/include $(SDKROOT)/usr/local/standalone/RTKit/usr/include $(SDKROOT)/usr/include $(inherited) $(SRCROOT)/acceleratecrypto/Header
+GCC_PREPROCESSOR_DEFINITIONS = RTKIT $(inherited)
+
+_PRODUCT_NAME_corecrypto_rtkitos = corecrypto_rtkit
+_PRODUCT_NAME_corecrypto_rtkitwifi = $(TARGET_NAME)
+PRODUCT_NAME = $(_PRODUCT_NAME_$(TARGET_NAME))
+
+_OTHER_CFLAGS_CPU_corecrypto_rtkitos = $(RTKIT_CPU_FLAG)
+_OTHER_CFLAGS_CPU_corecrypto_rtkitwifi = $(RTKITWIFI_CPU_FLAG)
+_OTHER_CFLAGS_CPU = $(_OTHER_CFLAGS_CPU_$(TARGET_NAME))
+OTHER_CFLAGS = -Wno-error=#warnings -Wno-incompatible-sysroot -Wundef -Wundef-prefix=TARGET_ $(inherited) -ffreestanding $(_OTHER_CFLAGS_CPU)

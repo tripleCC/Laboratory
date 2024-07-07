@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{607340c2-79e3-4afa-a4a4-18f7ff5af083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="corecrypto">
+      <UniqueIdentifier>{2314c6e5-4139-4c7b-a8a0-4272309c92f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccansikdf.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_cccmac.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccdh.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccdigest.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccec.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccec25519.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_cchmac.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_cbc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_ccm.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_cfb.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_cfb8.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_ctr.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_ecb.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_gcm.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_ofb.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_omac.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_xts.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccn.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccpbkdf2.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccrsa.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccsrp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_cczp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_cczp_inv.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_family.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_rng.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_stats.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\ccstats.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cczp\crypto_test\cczp_inv_slow.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\testbyteBuffer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\hexToString.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccchacha.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccchachapoly.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccmode_siv.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_ccpoly.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\ccperf_drbg.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_perf\src\main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrng\crypto_test\ccrng_test.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\corecrypto_perf\corecrypto\ccperf.h">
+      <Filter>corecrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_perf\src\ccperf_stats.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

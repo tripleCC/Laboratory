@@ -1,0 +1,25 @@
+.\" Copyright (c) (2012,2015,2017,2019,2020) Apple Inc. All rights reserved.
+.\" 
+.\" corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+.\" is contained in the License.txt file distributed with corecrypto) and only to
+.\" people who accept that license. IMPORTANT:  Any license rights granted to you by
+.\" Apple Inc. (if any) are limited to internal use within your organization only on
+.\" devices and computers you own or control, for the sole purpose of verifying the
+.\" security characteristics and correct functioning of the Apple Software.  You may
+.\" not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+.Dd February 2, 2012
+.Dt hmacfiletool 1
+.Os Darwin
+.Sh NAME
+.Nm hmacfiletool
+.Nd Calculates integrity HMACs and stores them in the binary
+.Sh DESCRIPTION
+Calculates the expected HMAC of the code segments of the supplied module, and replaces a placeholder value with the calculated HMAC.
+This HMAC is used by
+.Ar cc_fips_test
+during the POST integrity checks in
+.Ar launchd ,
+the
+.Ar kernel ,
+and the
+.Ar SEP .

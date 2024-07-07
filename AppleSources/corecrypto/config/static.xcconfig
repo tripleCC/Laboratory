@@ -1,0 +1,33 @@
+// Copyright (c) (2021-2023) Apple Inc. All rights reserved.
+//
+// corecrypto is licensed under Apple Inc.’s Internal Use License Agreement (which
+// is contained in the License.txt file distributed with corecrypto) and only to
+// people who accept that license. IMPORTANT:  Any license rights granted to you by
+// Apple Inc. (if any) are limited to internal use within your organization only on
+// devices and computers you own or control, for the sole purpose of verifying the
+// security characteristics and correct functioning of the Apple Software.  You may
+// not, directly or indirectly, redistribute the Apple Software or any portions thereof.
+
+CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES_ERROR
+
+CLANG_ENABLE_OBJC_WEAK = YES
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+BUILD_VARIANTS = normal trace noasm
+BUILD_VARIANTS[sdk=driverkit*] = normal
+
+// SDK_INSTALL_ROOT is related to DriverKit
+INSTALL_PATH = $(SDK_INSTALL_ROOT)/usr/local/lib
+
+SKIP_INSTALL[sdk=driverkit*] = YES
+
+STRIP_STYLE = debugging
+
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/acceleratecrypto/Header
+
+OTHER_CFLAGS = -fno-stack-check -DBUILDKERNEL=0 -Wno-error=#warnings -Wundef -Wundef-prefix=TARGET_ $(inherited)
+OTHER_CFLAGS[sdk=macosx*] = -Wno-error=#warnings $(inherited)
+
+OTHER_CFLAGS_noasm = -DCC_USE_ASM=0
+OTHER_CFLAGS_trace = -DCORECRYPTO_POST_TRACE

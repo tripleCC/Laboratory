@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4A8B12F-53E0-40BE-BD85-31888C76B2A1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>corecrypto</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>CORECRYPTO_DONOT_USE_TRANSPARENT_UNION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes\corecrypto;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast\corecrypto;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes\corecrypto;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest\corecrypto;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1\corecrypto;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp\corecrypto;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng\corecrypto;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec\corecrypto;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa\corecrypto;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4\corecrypto;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac\corecrypto;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf\corecrypto;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4\corecrypto;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2\corecrypto;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime\corecrypto;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\cc_fips;$(ProjectDir)..\..\ccchacha20poly1305;$(ProjectDir)..\..\ccblowfish\corecrypto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>if defined DSTROOT ( mkdir "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_macros.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_memory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_runtime_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccaes\corecrypto\ccaes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccasn1\corecrypto\ccasn1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cctest\corecrypto\cctest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccansikdf\corecrypto\ccansikdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccecies\corecrypto\ccecies.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdigest\corecrypto\ccdigest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdes\corecrypto\ccdes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccast\corecrypto\cccast.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc2\corecrypto\ccrc2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchkdf\corecrypto\cchkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd2\corecrypto\ccmd2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd4\corecrypto\ccmd4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd5\corecrypto\ccmd5.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc4\corecrypto\ccrc4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccripemd\corecrypto\ccripemd.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccblowfish\corecrypto\ccblowfish.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_CommonCrypto.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccmac\corecrypto\cccmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_decode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_encode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec25519\corecrypto\ccec25519.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchmac\corecrypto\cchmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_siv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_factory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccn\corecrypto\ccn.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccnistkdf\corecrypto\ccnistkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha1\corecrypto\ccsha1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha2\corecrypto\ccsha2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_system.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_pbkdf2_prng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpbkdf2\corecrypto\ccpbkdf2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleIntenal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccwrap\corecrypto\ccwrap.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpad\corecrypto\ccpad.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cczp\corecrypto\cczp.h" "$(DSTROOT)\AppleInternal\include\corecrypto" ) else ( echo "DSTROOT is not defined" )</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>if defined DSTROOT (
+mkdir "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+copy "$(TargetPath)" "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+) else ( echo "DSTROOT is not defined." )</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes\corecrypto;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast\corecrypto;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes\corecrypto;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest\corecrypto;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1\corecrypto;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp\corecrypto;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng\corecrypto;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec\corecrypto;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa\corecrypto;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4\corecrypto;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac\corecrypto;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf\corecrypto;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4\corecrypto;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2\corecrypto;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime\corecrypto;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\cc_fips;$(ProjectDir)..\..\ccchacha20poly1305;$(ProjectDir)..\..\ccblowfish\corecrypto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>if defined DSTROOT ( mkdir "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_macros.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_memory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_runtime_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccaes\corecrypto\ccaes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccasn1\corecrypto\ccasn1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cctest\corecrypto\cctest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccansikdf\corecrypto\ccansikdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccecies\corecrypto\ccecies.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdigest\corecrypto\ccdigest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdes\corecrypto\ccdes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccast\corecrypto\cccast.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc2\corecrypto\ccrc2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchkdf\corecrypto\cchkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd2\corecrypto\ccmd2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd4\corecrypto\ccmd4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd5\corecrypto\ccmd5.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc4\corecrypto\ccrc4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccripemd\corecrypto\ccripemd.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccblowfish\corecrypto\ccblowfish.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_CommonCrypto.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccmac\corecrypto\cccmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_decode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_encode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec25519\corecrypto\ccec25519.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchmac\corecrypto\cchmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_siv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_factory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccn\corecrypto\ccn.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccnistkdf\corecrypto\ccnistkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha1\corecrypto\ccsha1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha2\corecrypto\ccsha2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_system.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_pbkdf2_prng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpbkdf2\corecrypto\ccpbkdf2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleIntenal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccwrap\corecrypto\ccwrap.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpad\corecrypto\ccpad.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cczp\corecrypto\cczp.h" "$(DSTROOT)\AppleInternal\include\corecrypto" ) else ( echo "DSTROOT is not defined" )</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>if defined DSTROOT (
+mkdir "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+copy "$(TargetPath)" "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+) else ( echo "DSTROOT is not defined." )</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MSCompatibility>true</MSCompatibility>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes\corecrypto;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast\corecrypto;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes\corecrypto;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest\corecrypto;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1\corecrypto;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp\corecrypto;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng\corecrypto;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec\corecrypto;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa\corecrypto;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4\corecrypto;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac\corecrypto;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf\corecrypto;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4\corecrypto;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2\corecrypto;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime\corecrypto;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\cc_fips;$(ProjectDir)..\..\ccchacha20poly1305;$(ProjectDir)..\..\ccblowfish\corecrypto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>if defined DSTROOT ( mkdir "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_macros.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_memory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_runtime_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccaes\corecrypto\ccaes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccasn1\corecrypto\ccasn1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cctest\corecrypto\cctest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccansikdf\corecrypto\ccansikdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccecies\corecrypto\ccecies.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdigest\corecrypto\ccdigest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdes\corecrypto\ccdes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccast\corecrypto\cccast.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc2\corecrypto\ccrc2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchkdf\corecrypto\cchkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd2\corecrypto\ccmd2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd4\corecrypto\ccmd4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd5\corecrypto\ccmd5.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc4\corecrypto\ccrc4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccripemd\corecrypto\ccripemd.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccblowfish\corecrypto\ccblowfish.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_CommonCrypto.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccmac\corecrypto\cccmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_decode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_encode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec25519\corecrypto\ccec25519.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchmac\corecrypto\cchmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_siv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_factory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccn\corecrypto\ccn.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccnistkdf\corecrypto\ccnistkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha1\corecrypto\ccsha1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha2\corecrypto\ccsha2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_system.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_pbkdf2_prng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpbkdf2\corecrypto\ccpbkdf2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleIntenal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccwrap\corecrypto\ccwrap.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpad\corecrypto\ccpad.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cczp\corecrypto\cczp.h" "$(DSTROOT)\AppleInternal\include\corecrypto" ) else ( echo "DSTROOT is not defined" )</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>if defined DSTROOT (
+mkdir "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+copy "$(TargetPath)" "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+) else ( echo "DSTROOT is not defined." )</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes\corecrypto;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast\corecrypto;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes\corecrypto;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest\corecrypto;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1\corecrypto;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp\corecrypto;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng\corecrypto;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec\corecrypto;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa\corecrypto;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4\corecrypto;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac\corecrypto;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf\corecrypto;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4\corecrypto;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2\corecrypto;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime\corecrypto;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\cc_fips;$(ProjectDir)..\..\ccchacha20poly1305;$(ProjectDir)..\..\ccblowfish\corecrypto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>if defined DSTROOT ( mkdir "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_macros.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_memory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cc\corecrypto\cc_runtime_config.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccaes\corecrypto\ccaes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccasn1\corecrypto\ccasn1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cctest\corecrypto\cctest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccansikdf\corecrypto\ccansikdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccecies\corecrypto\ccecies.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdh\corecrypto\ccdh_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdigest\corecrypto\ccdigest.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdes\corecrypto\ccdes.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccast\corecrypto\cccast.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc2\corecrypto\ccrc2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchkdf\corecrypto\cchkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd2\corecrypto\ccmd2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd4\corecrypto\ccmd4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmd5\corecrypto\ccmd5.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrc4\corecrypto\ccrc4.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccripemd\corecrypto\ccripemd.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccblowfish\corecrypto\ccblowfish.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_CommonCrypto.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cccmac\corecrypto\cccmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccdrbg\corecrypto\ccdrbg_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_decode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccder\corecrypto\ccder_encode_eckey.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec25519\corecrypto\ccec25519.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccec\corecrypto\ccec_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cchmac\corecrypto\cchmac.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_siv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_factory.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode_impl.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccn\corecrypto\ccn.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccnistkdf\corecrypto\ccnistkdf.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha1\corecrypto\ccsha1.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsha2\corecrypto\ccsha2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccsrp\corecrypto\ccsrp_gp.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_system.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrng\corecrypto\ccrng_pbkdf2_prng.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpbkdf2\corecrypto\ccpbkdf2.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccrsa\corecrypto\ccrsa_priv.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccmode\corecrypto\ccmode.h" "$(DSTROOT)\AppleIntenal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccwrap\corecrypto\ccwrap.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\ccpad\corecrypto\ccpad.h" "$(DSTROOT)\AppleInternal\include\corecrypto"
+copy /y "$(ProjectDir)..\..\cczp\corecrypto\cczp.h" "$(DSTROOT)\AppleInternal\include\corecrypto" ) else ( echo "DSTROOT is not defined" )</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>if defined DSTROOT (
+mkdir "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+copy "$(TargetPath)" "$(DSTROOT)\AppleInternal\lib$(PlatformArchitecture)"
+) else ( echo "DSTROOT is not defined." )</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ccaes\corecrypto\ccaes.h" />
+    <ClInclude Include="..\..\ccaes\src\ccaes_vng_ccm.h" />
+    <ClInclude Include="..\..\ccaes\src\ccaes_vng_ctr.h" />
+    <ClInclude Include="..\..\ccaes\src\gladman\ccaes_gladman_opt.h" />
+    <ClInclude Include="..\..\ccaes\src\gladman\ccaes_gladman_tab.h" />
+    <ClInclude Include="..\..\ccaes\src\gladman\gladman_aes.h" />
+    <ClInclude Include="..\..\ccblowfish\src\ltc_blowfish.h" />
+    <ClInclude Include="..\..\cccast\src\cast.h" />
+    <ClInclude Include="..\..\cccast\src\cast_lcl.h" />
+    <ClInclude Include="..\..\cccast\src\cast_s.h" />
+    <ClInclude Include="..\..\ccchacha20poly1305\corecrypto\ccchacha20poly1305.h" />
+    <ClInclude Include="..\..\ccchacha20poly1305\corecrypto\ccchacha20poly1305_priv.h" />
+    <ClInclude Include="..\..\ccder\corecrypto\ccder.h" />
+    <ClInclude Include="..\..\ccder\corecrypto\ccder_decode_eckey.h" />
+    <ClInclude Include="..\..\ccder\corecrypto\ccder_encode_eckey.h" />
+    <ClInclude Include="..\..\ccder\corecrypto\ccder_encode_octet_string.h" />
+    <ClInclude Include="..\..\ccder\corecrypto\ccder_priv.h" />
+    <ClInclude Include="..\..\ccdes\src\ltc_des.h" />
+    <ClInclude Include="..\..\ccdh\corecrypto\ccdh.h" />
+    <ClInclude Include="..\..\ccdh\corecrypto\ccdh_gp.h" />
+    <ClInclude Include="..\..\ccdh\corecrypto\ccdh_priv.h" />
+    <ClInclude Include="..\..\ccdigest\corecrypto\ccdigest.h" />
+    <ClInclude Include="..\..\ccdigest\corecrypto\ccdigest_priv.h" />
+    <ClInclude Include="..\..\ccdrbg\corecrypto\ccdrbg.h" />
+    <ClInclude Include="..\..\ccdrbg\corecrypto\ccdrbg_impl.h" />
+    <ClInclude Include="..\..\ccdrbg\corecrypto\ccdrbg_test.h" />
+    <ClInclude Include="..\..\ccec25519\corecrypto\ccec25519.h" />
+    <ClInclude Include="..\..\ccec\corecrypto\ccec.h" />
+    <ClInclude Include="..\..\ccec\corecrypto\ccec_priv.h" />
+    <ClInclude Include="..\..\cchkdf\corecrypto\cchkdf.h" />
+    <ClInclude Include="..\..\cchmac\corecrypto\cchmac.h" />
+    <ClInclude Include="..\..\ccmd4\corecrypto\ccmd4.h" />
+    <ClInclude Include="..\..\ccmd5\corecrypto\ccmd5.h" />
+    <ClInclude Include="..\..\ccmode\corecrypto\ccmode.h" />
+    <ClInclude Include="..\..\ccmode\corecrypto\ccmode_factory.h" />
+    <ClInclude Include="..\..\ccmode\corecrypto\ccmode_impl.h" />
+    <ClInclude Include="..\..\ccmode\corecrypto\ccmode_internal.h" />
+    <ClInclude Include="..\..\ccmode\corecrypto\ccmode_siv.h" />
+    <ClInclude Include="..\..\ccmode\src\ccmode_gcm_tables.h" />
+    <ClInclude Include="..\..\ccnistkdf\corecrypto\ccnistkdf.h" />
+    <ClInclude Include="..\..\ccnistkdf\src\ccnistkdf_priv.h" />
+    <ClInclude Include="..\..\ccn\corecrypto\ccn.h" />
+    <ClInclude Include="..\..\ccpad\corecrypto\ccpad.h" />
+    <ClInclude Include="..\..\ccpad\src\ccpad_cts_helper.h" />
+    <ClInclude Include="..\..\ccpbkdf2\corecrypto\ccpbkdf2.h" />
+    <ClInclude Include="..\..\ccrc2\src\ltc_rc2.h" />
+    <ClInclude Include="..\..\ccrsa\corecrypto\ccder_rsa.h" />
+    <ClInclude Include="..\..\ccrsa\corecrypto\ccrsa.h" />
+    <ClInclude Include="..\..\ccrsa\corecrypto\ccrsa_priv.h" />
+    <ClInclude Include="..\..\ccsha1\corecrypto\ccsha1.h" />
+    <ClInclude Include="..\..\ccsha2\corecrypto\ccsha2.h" />
+    <ClInclude Include="..\..\ccsha2\src\ccsha2_internal.h" />
+    <ClInclude Include="..\..\ccsrp\corecrypto\ccsrp.h" />
+    <ClInclude Include="..\..\ccsrp\corecrypto\ccsrp_gp.h" />
+    <ClInclude Include="..\..\ccsrp\corecrypto\ccsrp_internal.h" />
+    <ClInclude Include="..\..\ccwrap\corecrypto\ccwrap.h" />
+    <ClInclude Include="..\..\cczp\corecrypto\cczp.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_fault_canary.h" />
+    <ClInclude Include="..\..\cc\corecrypto\ccarm_intrinsic_compatability.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_absolute_time.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_config.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_debug.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_macros.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_memory.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_priv.h" />
+    <ClInclude Include="..\..\cc\corecrypto\cc_runtime_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ccaes\src\ccaes_cbc_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_cbc_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_ccm_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_ccm_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_cfb8_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_cfb8_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_cfb_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_cfb_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_ctr_crypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_ecb_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_ecb_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_gcm_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_gcm_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_ofb_crypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_siv_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_siv_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_xts_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ccaes_xts_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\gladman\ccaes_gladman_cbc_decrypt.c" />
+    <ClCompile Include="..\..\ccaes\src\gladman\ccaes_gladman_cbc_encrypt.c" />
+    <ClCompile Include="..\..\ccaes\src\gladman\ccaes_gladman_crypt.c" />
+    <ClCompile Include="..\..\ccaes\src\gladman\ccaes_gladman_key.c" />
+    <ClCompile Include="..\..\ccaes\src\gladman\ccaes_gladman_tab.c" />
+    <ClCompile Include="..\..\ccaes\src\ltc\ccaes_ltc_ecb_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ltc\ccaes_ltc_ecb_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccaes\src\ltc\ccaes_ltc_tab.c" />
+    <ClCompile Include="..\..\ccansikdf\src\ccansikdf_x963.c" />
+    <ClCompile Include="..\..\ccblowfish\src\ccblowfish_constructed_modes.c" />
+    <ClCompile Include="..\..\ccblowfish\src\ccblowfish_ltc_common.c" />
+    <ClCompile Include="..\..\ccblowfish\src\ccblowfish_ltc_ecb_decrypt.c" />
+    <ClCompile Include="..\..\ccblowfish\src\ccblowfish_ltc_ecb_encrypt.c" />
+    <ClCompile Include="..\..\cccast\src\cccast_constructed_modes.c" />
+    <ClCompile Include="..\..\cccast\src\cccast_ecb_decrypt_mode.c" />
+    <ClCompile Include="..\..\cccast\src\cccast_ecb_encrypt_mode.c" />
+    <ClCompile Include="..\..\cccast\src\cccast_setup.c" />
+    <ClCompile Include="..\..\cccast\src\c_enc.c" />
+    <ClCompile Include="..\..\cccast\src\c_skey.c" />
+    <ClCompile Include="..\..\ccchacha20poly1305\src\ccchacha20poly1305.c" />
+    <ClCompile Include="..\..\cccmac\src\cccmac_final.c" />
+    <ClCompile Include="..\..\cccmac\src\cccmac_generate_subkey.c" />
+    <ClCompile Include="..\..\cccmac\src\cccmac_init.c" />
+    <ClCompile Include="..\..\cccmac\src\cccmac_one_shot.c" />
+    <ClCompile Include="..\..\cccmac\src\cccmac_update.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_bitstring.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_constructed_tl.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_eckey.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_len.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_oid.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_seqii.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_sequence_tl.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_tag.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_tl.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_uint.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_uint64.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_decode_uint_n.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_body.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_body_nocopy.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_constructed_tl.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_eckey.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_implicit_integer.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_implicit_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_implicit_raw_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_implicit_uint64.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_integer.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_len.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_oid.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_raw_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_tag.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_tl.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_encode_uint64.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_implicit_integer.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_implicit_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_implicit_raw_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_implicit_uint64.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_integer.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_len.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_oid.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_raw_octet_string.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_tag.c" />
+    <ClCompile Include="..\..\ccder\src\ccder_sizeof_uint64.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes3_ecb_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes3_ecb_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes3_ltc_common.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes3_ltc_ecb_decrypt.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes3_ltc_ecb_encrypt.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_cbc_cksum.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_constructed_modes.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_ecb_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_ecb_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_key.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_ltc_common.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_ltc_ecb_decrypt.c" />
+    <ClCompile Include="..\..\ccdes\src\ccdes_ltc_ecb_encrypt.c" />
+    <ClCompile Include="..\..\ccdes\src\ltc_des.c" />
+    <ClCompile Include="..\..\ccdh\src\ccder_decode_dhparams.c" />
+    <ClCompile Include="..\..\ccdh\src\ccder_encode_dhparams.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_check_pub.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_compute_shared_secret.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_export_pub.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_generate_key.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_generate_private_key.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_apple768.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc2409group02.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc3526group05.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc3526group14.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc3526group15.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc3526group16.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc3526group17.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc3526group18.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc5114_MODP_1024_160.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc5114_MODP_2048_224.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_gp_rfc5114_MODP_2048_256.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_import_full.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_import_priv.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_import_pub.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_init_gp.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_init_gp_from_bytes.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_init_gp_with_order.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_pairwise_consistency_check.c" />
+    <ClCompile Include="..\..\ccdh\src\ccdh_power_blinded.c" />
+    <ClCompile Include="..\..\ccdigest\src\ccdigest.c" />
+    <ClCompile Include="..\..\ccdigest\src\ccdigest_final_64le.c" />
+    <ClCompile Include="..\..\ccdigest\src\ccdigest_init.c" />
+    <ClCompile Include="..\..\ccdigest\src\ccdigest_oid_lookup.c" />
+    <ClCompile Include="..\..\ccdigest\src\ccdigest_update.c" />
+    <ClCompile Include="..\..\ccdrbg\src\ccdrbg_nistctr.c" />
+    <ClCompile Include="..\..\ccdrbg\src\ccdrbg_nisthmac.c" />
+    <ClCompile Include="..\..\ccdrbg\src\ccdrbg_test.c" />
+    <ClCompile Include="..\..\ccec25519\src\cced25519.c" />
+    <ClCompile Include="..\..\ccec25519\src\cced25519_make_key_pair.c" />
+    <ClCompile Include="..\..\ccec25519\src\cced25519_sign.c" />
+    <ClCompile Include="..\..\ccec25519\src\cced25519_verify.c" />
+    <ClCompile Include="..\..\ccec25519\src\curve25519-donna.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_decrypt_gcm.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_decrypt_gcm_composite.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_decrypt_gcm_plaintext_size.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_decrypt_gcm_setup.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_encrypt_gcm.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_encrypt_gcm_ciphertext_size.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_encrypt_gcm_composite.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_encrypt_gcm_setup.c" />
+    <ClCompile Include="..\..\ccecies\src\ccecies_pub_key_size.c" />
+    <ClCompile Include="..\..\ccec\src\ccecdh_compute_shared_secret.c" />
+    <ClCompile Include="..\..\ccec\src\ccecdh_generate_key.c" />
+    <ClCompile Include="..\..\ccec\src\ccecdh_pairwise_consistency_check.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_affinify.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_compact_export.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_compact_generate_key.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_compact_import_priv.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_compact_import_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_compute_key.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_cp192.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_cp224.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_cp256.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_cp384.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_cp521.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_curve_for_length_lookup.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_debug.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_der_export_diversified_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_der_export_priv.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_der_import_diversified_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_der_import_priv.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_diversify_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_double.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_export_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_full_add.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_full_sub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_key.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_key_deterministic.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_key_fips.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_key_internal_fips.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_key_internal_legacy.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_key_legacy.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_scalar_fips_extrabits.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_scalar_fips_retry.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_generate_scalar_legacy.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_get_cp.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_get_fullkey_components.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_get_pubkey_components.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_import_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_is_point.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_make_priv.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_make_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_make_pub_from_priv.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_mult.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_pairwise_consistency_check.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_pgp_key_checksum.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_projectify.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_raw_import.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_affine_point_from_x.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_rfc6637_kdf.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_rfc6637_unwrap.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_rfc6637_wrap.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_rfc6637_wrap_core.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_rfc6637_wrap_diversified.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_sign.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_signature_r_s_size.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_sign_composite.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_sign_internal.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_twin_mult.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_validate_pub.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_validate_pub_and_projectify.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_validate_scalar.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_verify.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_verify_composite.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_verify_internal.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_x963_export.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_x963_import_priv.c" />
+    <ClCompile Include="..\..\ccec\src\ccec_x963_import_pub.c" />
+    <ClCompile Include="..\..\cchkdf\src\cchkdf.c" />
+    <ClCompile Include="..\..\cchmac\src\cchmac.c" />
+    <ClCompile Include="..\..\cchmac\src\cchmac_final.c" />
+    <ClCompile Include="..\..\cchmac\src\cchmac_init.c" />
+    <ClCompile Include="..\..\cchmac\src\cchmac_update.c" />
+    <ClCompile Include="..\..\ccmd2\src\ccmd2_ltc.c" />
+    <ClCompile Include="..\..\ccmd4\src\ccmd4_initial_state.c" />
+    <ClCompile Include="..\..\ccmd4\src\ccmd4_ltc.c" />
+    <ClCompile Include="..\..\ccmd5\src\ccmd5.c" />
+    <ClCompile Include="..\..\ccmd5\src\ccmd5_ltc.c" />
+    <ClCompile Include="..\..\ccmode\src\cccbc_one_shot.c" />
+    <ClCompile Include="..\..\ccmode\src\ccgcm_inc_iv.c" />
+    <ClCompile Include="..\..\ccmode\src\ccgcm_init_with_iv.c" />
+    <ClCompile Include="..\..\ccmode\src\ccgcm_one_shot.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cbc_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cbc_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cbc_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_cbcmac.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_finalize.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_reset.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ccm_set_iv.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cfb8_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cfb8_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cfb8_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cfb_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cfb_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_cfb_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ctr_crypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ctr_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ctr_setctr.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_cbc_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_cbc_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_ccm_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_ccm_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_cfb8_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_cfb8_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_cfb_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_cfb_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_ctr_crypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_gcm_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_gcm_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_ofb_crypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_omac_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_omac_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_siv_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_siv_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_xts_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_factory_xts_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_finalize.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_gf_mult.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_gmac.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_mult_h.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_reset.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_gcm_set_iv.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ofb_crypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_ofb_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_omac_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_omac_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_omac_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_siv_auth.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_siv_decrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_siv_encrypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_siv_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_siv_reset.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_xts_crypt.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_xts_init.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_xts_key_sched.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_xts_mult_alpha.c" />
+    <ClCompile Include="..\..\ccmode\src\ccmode_xts_set_tweak.c" />
+    <ClCompile Include="..\..\ccmode\src\ccxts_one_shot.c" />
+    <ClCompile Include="..\..\ccnistkdf\src\ccnistkdf_ctr_hmac.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_abs.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_add.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_add1.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_bitlen.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_cmp.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_cond_swap.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_debug.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_gcd.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_lcm.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_mul.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_mul1.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_n.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_random_bits.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_read_uint.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_set.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_shift_left.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_shift_left_multi.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_shift_right.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_shift_right_multi.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_sqr.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_sub.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_sub1.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_write_int.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_write_uint.c" />
+    <ClCompile Include="..\..\ccn\src\ccn_zero_multi.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_cts1_decrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_cts1_encrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_cts2_decrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_cts2_encrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_cts3_decrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_cts3_encrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_pkcs7_decrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_pkcs7_ecb_decrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_pkcs7_ecb_encrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_pkcs7_encrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_pkcs7_padding_decode.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_xts_decrypt.c" />
+    <ClCompile Include="..\..\ccpad\src\ccpad_xts_encrypt.c" />
+    <ClCompile Include="..\..\ccpbkdf2\src\ccpbkdf2_hmac.c" />
+    <ClCompile Include="..\..\ccprime\src\ccprime_rabin_miller.c" />
+    <ClCompile Include="..\..\ccrc2\src\ccrc2_constructed_modes.c" />
+    <ClCompile Include="..\..\ccrc2\src\ccrc2_ltc_decrypt_mode.c" />
+    <ClCompile Include="..\..\ccrc2\src\ccrc2_ltc_encrypt_mode.c" />
+    <ClCompile Include="..\..\ccrc2\src\ccrc2_ltc_setup.c" />
+    <ClCompile Include="..\..\ccrc4\src\ccrc4.c" />
+    <ClCompile Include="..\..\ccrc4\src\ccrc4_eay.c" />
+    <ClCompile Include="..\..\ccrc4\src\ccrc4_test.c" />
+    <ClCompile Include="..\..\ccripemd\src\ccrmd160_ltc.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_cryptographic.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_drbg.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_ecfips_test.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_entropy.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_pbkdf2_prng.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_rsafips_test.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_sequence.c" />
+    <ClCompile Include="..\..\ccrng\src\ccrng_system.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_decode_rsa_priv.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_decode_rsa_priv_n.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_decode_rsa_pub.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_decode_rsa_pub_n.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_decode_rsa_pub_x509.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_decode_rsa_pub_x509_n.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_encode_rsa_priv.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_encode_rsa_priv_size.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_encode_rsa_pub.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccder_encode_rsa_pub_size.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccmgf.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_decrypt_eme_pkcs1v15.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_decrypt_eme_pkcs1v15_blinded.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_decrypt_oaep.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_decrypt_oaep_blinded.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_eme_pkcs1v15_decode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_eme_pkcs1v15_encode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_emsa_pkcs1v15_encode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_emsa_pkcs1v15_verify.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_emsa_pss_decode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_emsa_pss_encode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_encrypt_eme_pkcs1v15.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_encrypt_oaep.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_export_pub.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_generate_fips186_key.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_generate_key.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_get_fullkey_components.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_get_pubkey_components.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_import_pub.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_init_pub.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_make_pub.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_oaep_decode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_oaep_encode.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_pairwise_consistency_check.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_priv_crypt.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_priv_crypt_blinded.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_pub_crypt.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_sign_pkcs1v15.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_sign_pss.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_sign_pss_blinded.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_verify_pkcs1v15.c" />
+    <ClCompile Include="..\..\ccrsa\src\ccrsa_verify_pss.c" />
+    <ClCompile Include="..\..\ccsha1\src\ccdigest_final_64be.c" />
+    <ClCompile Include="..\..\ccsha1\src\ccsha1.c" />
+    <ClCompile Include="..\..\ccsha1\src\ccsha1_eay.c" />
+    <ClCompile Include="..\..\ccsha1\src\ccsha1_initial_state.c" />
+    <ClCompile Include="..\..\ccsha1\src\ccsha1_ltc.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha224_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha224_initial_state.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha224_ltc_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha256_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha256_initial_state.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha256_K.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha256_ltc_compress.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha256_ltc_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha384_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha384_initial_state.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha384_ltc_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha512_di.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha512_initial_state.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha512_K.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha512_ltc_compress.c" />
+    <ClCompile Include="..\..\ccsha2\src\ccsha512_ltc_di.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_client.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_generate_K_from_S.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_generate_salt_and_verification.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_gp_rfc5054_1024.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_gp_rfc5054_2048.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_gp_rfc5054_3072.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_gp_rfc5054_4096.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_gp_rfc5054_8192.c" />
+    <ClCompile Include="..\..\ccsrp\src\ccsrp_server.c" />
+    <ClCompile Include="..\..\ccsrp\crypto_test\ccsrp_test_calculations.c" />
+    <ClCompile Include="..\..\cctest\src\cc_hex2bin.c" />
+    <ClCompile Include="..\..\ccwrap\src\ccwrap_auth_decrypt.c" />
+    <ClCompile Include="..\..\ccwrap\src\ccwrap_auth_encrypt.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_add.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_div2.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_init.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_mod.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_mul.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_power.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_power_fast.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_sqr.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_sqrt.c" />
+    <ClCompile Include="..\..\cczp\src\cczp_sub.c" />
+    <ClCompile Include="..\..\cc\src\cc_clear.c" />
+    <ClCompile Include="..\..\cc\src\cc_fault_canary.c" />
+    <ClCompile Include="..\..\cc\src\cc_cmp_safe.c" />
+    <ClCompile Include="..\..\cc\src\cc_debug.c" />
+    <ClCompile Include="..\..\cc\src\cc_try_abort.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ccaes\src\gladman\README" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

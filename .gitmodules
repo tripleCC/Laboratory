@@ -36,7 +36,7 @@
 	url = git@github.com:apple-oss-distributions/objc4.git
 [submodule "AppleSources/dyld"]
 	path = AppleSources/dyld
-	url = git@github.com:apple-oss-distributions/dyld.git
+	url =  git@github.com:tripleCC/dyld.git
 [submodule "AppleSources/CF"]
 	path = AppleSources/CF
 	url = git@github.com:apple-oss-distributions/CF.git
@@ -48,4 +48,13 @@
 	url = git@github.com:tripleCC/ld64.git
 [submodule "AppleSources/tapi"]
 	path = AppleSources/tapi
-	url = git@github.com:apple-oss-distributions/tapi.git
+	url = git@github.com:tripleCC/tapi.git
+[submodule "AppleSources/llvm-project"]
+	path = AppleSources/llvm-project
+	url = git@github.com:apple/llvm-project.git
+[submodule "AppleSources/libplatform"]
+	path = AppleSources/libplatform
+	url = git@github.com:tripleCC/libplatform.git
+[submodule "AppleSources/CommonCrypto"]
+	path = AppleSources/CommonCrypto
+	url = git@github.com:apple-oss-distributions/CommonCrypto.git

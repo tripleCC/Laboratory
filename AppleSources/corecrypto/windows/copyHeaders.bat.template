@@ -1,0 +1,7 @@
+set DSTFLDR=%DSTROOT%AppleInternal\include\corecrypto\
+if defined DSTROOT ( mkdir %DSTFLDR%
+CopyPublicHeaders
+mkdir %DSTFLDR%\private\
+CopyPrivateHeaders
+) else ( echo "DSTROOT is not defined" )
+exit /b 0
