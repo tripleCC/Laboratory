@@ -30,7 +30,7 @@
 	url = git@github.com:tripleCC/Tai-e-assignments.git
 [submodule "AppleSources/xnu"]
 	path = AppleSources/xnu
-	url = git@github.com:apple-oss-distributions/xnu.git
+	url = git@github.com:tripleCC/xnu.git
 [submodule "AppleSources/objc4"]
 	path = AppleSources/objc4
 	url = git@github.com:tripleCC/objc4.git
@@ -58,3 +58,9 @@
 [submodule "AppleSources/CommonCrypto"]
 	path = AppleSources/CommonCrypto
 	url = git@github.com:apple-oss-distributions/CommonCrypto.git
+[submodule "AppleSources/libpthread"]
+	path = AppleSources/libpthread
+	url = git@github.com:tripleCC/libpthread.git
+[submodule "AppleSources/Libc"]
+	path = AppleSources/Libc
+	url = git@github.com:tripleCC/Libc.git
